@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Workshop of Wonders: a crafting and discovery game for young builders.">
+<title>Workshop of Wonders</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A0%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1 class="title">Workshop of Wonders<small>Craft. Discover. Build.</small></h1>
+  <div class="progress" id="progress" aria-live="polite"></div>
+  <div class="tools">
+    <div class="modeswitch" id="modeSwitch" role="group" aria-label="Game mode" hidden></div>
+    <span class="save" id="saveStatus" aria-live="polite"></span>
+    <button class="btn small" id="soundBtn" data-icon="note_block" aria-pressed="false"><span id="soundLabel">Sound off</span></button>
+  </div>
+</header>
+<nav class="dock" aria-label="Main">
+  <button class="btn only-narrow" id="btnQuests" data-icon="writable_book">Quests <span class="badge" id="questBadge"></span></button>
+  <button class="btn" id="btnBook" data-icon="book">Book</button>
+  <button class="btn" id="btnMap" data-icon="map">Map</button>
+  <button class="btn" id="btnHelp" data-icon="lantern">Help</button>
+  <button class="btn" id="btnSettings" data-icon="anvil">Settings</button>
+</nav>
+<p class="banner" id="banner" hidden>Creative Sandbox: every item is free in the Supply Crate. Your adventure is saved separately.</p>
+<main class="layout">
+  <aside class="col questcol">
+    <section class="panel quests" aria-labelledby="qTitle">
+      <h2 id="qTitle">Quests</h2>
+      <div id="questList"></div>
+    </section>
+  </aside>
+  <div class="col">
+    <section class="workshop" aria-label="Your workshop">
+      <div class="doors" id="doors"></div>
+      <div class="shelf" id="shelf" aria-label="Workshop shelf"></div>
+    </section>
+    <section class="panel bench" aria-label="Crafting bench">
+      <div class="tabs" id="benchTabs" role="tablist" aria-label="Stations"></div>
+      <div id="benchBody"></div>
+      <div class="holding" id="holding" hidden></div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+    </section>
+  </div>
+  <aside class="col">
+    <section class="panel" aria-label="Bag and supplies" data-drop="bag">
+      <div class="bagtabs" id="bagTabs" role="tablist"></div>
+      <div class="bagtools" id="bagTools"></div>
+      <div class="items" id="items"></div>
+    </section>
+  </aside>
+</main>
+<noscript><p class="panel" style="margin:14px">Workshop of Wonders needs JavaScript turned on.</p></noscript>
+<script src="../src/icons.js"></script>
+<script src="../src/data_core.js"></script>
+<script src="../src/data_more.js"></script>
+<script src="../src/data_world.js"></script>
+<script src="../src/engine.js"></script>
+<script src="../src/audio.js"></script>
+<script src="../src/ui.js"></script>
+</body>
+</html>

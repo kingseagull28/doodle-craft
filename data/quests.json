@@ -1,0 +1,1098 @@
+[
+ {
+  "id": "t1_planks",
+  "name": "Make some planks",
+  "description": "Put an Oak Log in the crafting grid and collect the planks.",
+  "tier": 1,
+  "prerequisites": [],
+  "conditions": {
+   "craft": [
+    "oak_planks"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_sticks",
+  "name": "Snap some sticks",
+  "description": "Stack two planks on top of each other.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_planks"
+  ],
+  "conditions": {
+   "craft": [
+    "stick"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_table",
+  "name": "Build a Crafting Table",
+  "description": "Fill the 2 by 2 grid with planks. It makes your grid bigger!",
+  "tier": 1,
+  "prerequisites": [
+   "t1_sticks"
+  ],
+  "conditions": {
+   "craft": [
+    "crafting_table"
+   ]
+  },
+  "rewards": {
+   "grid3": true
+  },
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_pickaxe",
+  "name": "Wooden Pickaxe",
+  "description": "Three planks across the top, two sticks down the middle.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_table"
+  ],
+  "conditions": {
+   "craft": [
+    "wooden_pickaxe"
+   ]
+  },
+  "rewards": {
+   "biome": "forest"
+  },
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_furnace",
+  "name": "Build a Furnace",
+  "description": "Make a ring of cobblestone with an empty middle.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_pickaxe"
+  ],
+  "conditions": {
+   "craft": [
+    "furnace"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_stone_tools",
+  "name": "Stone Tools",
+  "description": "Make two different stone tools.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_furnace"
+  ],
+  "conditions": {
+   "craftAny": [
+    "stone_pickaxe",
+    "stone_axe",
+    "stone_shovel",
+    "stone_hoe",
+    "stone_sword"
+   ],
+   "count": 2
+  },
+  "rewards": {
+   "biome": "mine"
+  },
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_upgrade",
+  "name": "Workshop Upgrade",
+  "description": "Craft a Chest, a Torch and some Glass to brighten up the workshop.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_stone_tools"
+  ],
+  "conditions": {
+   "craft": [
+    "chest",
+    "torch",
+    "glass"
+   ]
+  },
+  "rewards": {
+   "tier": 2,
+   "biome": "forge"
+  },
+  "optional": false,
+  "milestone": true,
+  "biome": null
+ },
+ {
+  "id": "t1_lumber",
+  "name": "Lumberjack",
+  "description": "Make planks from 5 different kinds of trees.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_pickaxe"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#planks"
+   ],
+   "count": 5
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_boat",
+  "name": "Ahoy!",
+  "description": "Build any wooden boat.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_table"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#vehicle_boat"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_castle",
+  "name": "Castle Builder",
+  "description": "Craft Stone Bricks and Stone Brick Stairs.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_furnace"
+  ],
+  "conditions": {
+   "craft": [
+    "stone_bricks",
+    "stone_brick_stairs"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t1_camp",
+  "name": "Camp Night",
+  "description": "Build a Campfire.",
+  "tier": 1,
+  "prerequisites": [
+   "t1_pickaxe"
+  ],
+  "conditions": {
+   "craft": [
+    "campfire"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_iron",
+  "name": "Iron Age",
+  "description": "Smelt Raw Iron into an Iron Ingot.",
+  "tier": 2,
+  "prerequisites": [
+   "t1_upgrade"
+  ],
+  "conditions": {
+   "craft": [
+    "iron_ingot"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_bucket",
+  "name": "Bucket Time",
+  "description": "Craft a Bucket.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_iron"
+  ],
+  "conditions": {
+   "craft": [
+    "bucket"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_pick",
+  "name": "Iron Pickaxe",
+  "description": "Craft an Iron Pickaxe.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_iron"
+  ],
+  "conditions": {
+   "craft": [
+    "iron_pickaxe"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_armor",
+  "name": "Armor Up",
+  "description": "Craft any piece of iron armor.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_iron"
+  ],
+  "conditions": {
+   "craftAny": [
+    "iron_helmet",
+    "iron_chestplate",
+    "iron_leggings",
+    "iron_boots"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_diamond",
+  "name": "Diamonds!",
+  "description": "Craft a Diamond Pickaxe.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_pick"
+  ],
+  "conditions": {
+   "craft": [
+    "diamond_pickaxe"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_master",
+  "name": "Forge Master",
+  "description": "Craft an Anvil, a Lantern and a Smithing Table.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_bucket",
+   "t2_armor",
+   "t2_diamond"
+  ],
+  "conditions": {
+   "craft": [
+    "anvil",
+    "lantern",
+    "smithing_table"
+   ]
+  },
+  "rewards": {
+   "tier": 3,
+   "biome": "farm"
+  },
+  "optional": false,
+  "milestone": true,
+  "biome": null
+ },
+ {
+  "id": "t2_full_iron",
+  "name": "Knight in Shining Armor",
+  "description": "Craft all four pieces of iron armor.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_armor"
+  ],
+  "conditions": {
+   "craft": [
+    "iron_helmet",
+    "iron_chestplate",
+    "iron_leggings",
+    "iron_boots"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_gems",
+  "name": "Gem Collector",
+  "description": "Craft blocks of Diamond, Emerald and Lapis.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_diamond"
+  ],
+  "conditions": {
+   "craft": [
+    "diamond_block",
+    "emerald_block",
+    "lapis_block"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t2_spy",
+  "name": "Lookout",
+  "description": "Craft a Spyglass.",
+  "tier": 2,
+  "prerequisites": [
+   "t2_iron"
+  ],
+  "conditions": {
+   "craft": [
+    "spyglass"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_bread",
+  "name": "Baker",
+  "description": "Bake a loaf of Bread from wheat.",
+  "tier": 3,
+  "prerequisites": [
+   "t2_master"
+  ],
+  "conditions": {
+   "craft": [
+    "bread"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_cookie",
+  "name": "Cookie Time",
+  "description": "Make Cookies with wheat and cocoa.",
+  "tier": 3,
+  "prerequisites": [
+   "t3_bread"
+  ],
+  "conditions": {
+   "craft": [
+    "cookie"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_dye",
+  "name": "Splash of Color",
+  "description": "Turn a flower into dye.",
+  "tier": 3,
+  "prerequisites": [
+   "t2_master"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#dye"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_wool",
+  "name": "Colorful Wool",
+  "description": "Dye some wool any color you like.",
+  "tier": 3,
+  "prerequisites": [
+   "t3_dye"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#color_wool"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_book",
+  "name": "Bookworm",
+  "description": "Make a Book from paper and leather.",
+  "tier": 3,
+  "prerequisites": [
+   "t2_master"
+  ],
+  "conditions": {
+   "craft": [
+    "book"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_feast",
+  "name": "Grand Feast",
+  "description": "Make a Cake and a Pumpkin Pie for a party!",
+  "tier": 3,
+  "prerequisites": [
+   "t3_cookie",
+   "t3_wool",
+   "t3_book"
+  ],
+  "conditions": {
+   "craft": [
+    "cake",
+    "pumpkin_pie"
+   ]
+  },
+  "rewards": {
+   "tier": 4,
+   "biome": "machine"
+  },
+  "optional": false,
+  "milestone": true,
+  "biome": null
+ },
+ {
+  "id": "t3_rainbow",
+  "name": "Rainbow Maker",
+  "description": "Dye wool in 6 different colors.",
+  "tier": 3,
+  "prerequisites": [
+   "t3_wool"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#color_wool"
+   ],
+   "count": 6
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_chef",
+  "name": "Little Chef",
+  "description": "Cook 5 different foods in the furnace.",
+  "tier": 3,
+  "prerequisites": [
+   "t3_bread"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#cooked"
+   ],
+   "count": 5
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_bed",
+  "name": "Bedtime",
+  "description": "Craft a bed in any color.",
+  "tier": 3,
+  "prerequisites": [
+   "t3_wool"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#bed"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_garden",
+  "name": "Happy Garden",
+  "description": "Craft a Composter and a Beehive.",
+  "tier": 3,
+  "prerequisites": [
+   "t3_bread"
+  ],
+  "conditions": {
+   "craft": [
+    "composter",
+    "beehive"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t3_snow",
+  "name": "Snow Buddy",
+  "description": "Build a Snow Pal from a pumpkin and snow.",
+  "tier": 3,
+  "prerequisites": [
+   "t2_master"
+  ],
+  "conditions": {
+   "craft": [
+    "snow_pal"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t4_torch",
+  "name": "Red Power",
+  "description": "Craft a Redstone Torch.",
+  "tier": 4,
+  "prerequisites": [
+   "t3_feast"
+  ],
+  "conditions": {
+   "craft": [
+    "redstone_torch"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t4_piston",
+  "name": "Push It",
+  "description": "Craft a Piston.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_torch"
+  ],
+  "conditions": {
+   "craft": [
+    "piston"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t4_rails",
+  "name": "All Aboard",
+  "description": "Craft a Minecart and some Rails.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_torch"
+  ],
+  "conditions": {
+   "craft": [
+    "minecart",
+    "rail"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t4_time",
+  "name": "Tick Tock",
+  "description": "Craft a Clock or a Compass.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_torch"
+  ],
+  "conditions": {
+   "craftAny": [
+    "clock",
+    "compass"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t4_room",
+  "name": "Clockwork Room",
+  "description": "Craft an Observer and a Crafter.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_piston",
+   "t4_rails",
+   "t4_time"
+  ],
+  "conditions": {
+   "craft": [
+    "observer",
+    "crafter"
+   ]
+  },
+  "rewards": {
+   "tier": 5,
+   "biome": "magic"
+  },
+  "optional": false,
+  "milestone": true,
+  "biome": null
+ },
+ {
+  "id": "t4_express",
+  "name": "Express Train",
+  "description": "Craft a Powered Rail and a Minecart with Chest.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_rails"
+  ],
+  "conditions": {
+   "craft": [
+    "powered_rail",
+    "chest_minecart"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t4_lamp",
+  "name": "Lights On",
+  "description": "Craft a Redstone Lamp.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_torch"
+  ],
+  "conditions": {
+   "craft": [
+    "redstone_lamp"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t4_parrot",
+  "name": "Wind-up Friend",
+  "description": "Build a Clockwork Parrot.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_time"
+  ],
+  "conditions": {
+   "craft": [
+    "clockwork_parrot"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_stand",
+  "name": "Potion Lab",
+  "description": "Craft a Brewing Stand.",
+  "tier": 5,
+  "prerequisites": [
+   "t4_room"
+  ],
+  "conditions": {
+   "craft": [
+    "brewing_stand"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_awkward",
+  "name": "Awkward!",
+  "description": "Brew an Awkward Potion from a Water Bottle and Nether Wart.",
+  "tier": 5,
+  "prerequisites": [
+   "t5_stand"
+  ],
+  "conditions": {
+   "craft": [
+    "awkward_potion"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_potion",
+  "name": "First Potion",
+  "description": "Brew any potion with a real effect.",
+  "tier": 5,
+  "prerequisites": [
+   "t5_awkward"
+  ],
+  "conditions": {
+   "craftAny": [
+    "potion_of_swiftness",
+    "potion_of_leaping",
+    "potion_of_healing",
+    "potion_of_poison",
+    "potion_of_regeneration",
+    "potion_of_strength",
+    "potion_of_fire_resistance",
+    "potion_of_night_vision",
+    "potion_of_water_breathing",
+    "potion_of_slow_falling"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_sparkle",
+  "name": "Sparkle!",
+  "description": "Mix Glowstone Dust, Redstone and Sugar.",
+  "tier": 5,
+  "prerequisites": [
+   "t4_room"
+  ],
+  "conditions": {
+   "craft": [
+    "sparkle_dust"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_eye",
+  "name": "Eye of Ender",
+  "description": "Craft an Eye of Ender.",
+  "tier": 5,
+  "prerequisites": [
+   "t4_room"
+  ],
+  "conditions": {
+   "craft": [
+    "ender_eye"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_enchant",
+  "name": "Enchanter",
+  "description": "Craft an Enchanting Table.",
+  "tier": 5,
+  "prerequisites": [
+   "t4_room"
+  ],
+  "conditions": {
+   "craft": [
+    "enchanting_table"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_archmage",
+  "name": "Archmage",
+  "description": "Craft a Wonder Wand and a Spell Book.",
+  "tier": 5,
+  "prerequisites": [
+   "t5_potion",
+   "t5_sparkle",
+   "t5_eye",
+   "t5_enchant"
+  ],
+  "conditions": {
+   "craft": [
+    "wonder_wand",
+    "spell_book"
+   ]
+  },
+  "rewards": {
+   "tier": 6,
+   "biome": "legend"
+  },
+  "optional": false,
+  "milestone": true,
+  "biome": null
+ },
+ {
+  "id": "t5_potions",
+  "name": "Potion Master",
+  "description": "Brew 8 different potions.",
+  "tier": 5,
+  "prerequisites": [
+   "t5_potion"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#potion"
+   ],
+   "count": 8
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_secret",
+  "name": "Secret Finder",
+  "description": "Find any secret recipe.",
+  "tier": 5,
+  "prerequisites": [
+   "t4_room"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#secret"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t5_secrets",
+  "name": "Secret Keeper",
+  "description": "Find all four secret recipes.",
+  "tier": 5,
+  "prerequisites": [
+   "t5_secret"
+  ],
+  "conditions": {
+   "craftAny": [
+    "#secret"
+   ],
+   "count": 4
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t6_netherite",
+  "name": "Netherite!",
+  "description": "Make a Netherite Ingot.",
+  "tier": 6,
+  "prerequisites": [
+   "t5_archmage"
+  ],
+  "conditions": {
+   "craft": [
+    "netherite_ingot"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t6_upgrade",
+  "name": "Ultimate Upgrade",
+  "description": "Upgrade any diamond tool at the Smithing station.",
+  "tier": 6,
+  "prerequisites": [
+   "t6_netherite"
+  ],
+  "conditions": {
+   "craftAny": [
+    "netherite_pickaxe",
+    "netherite_axe",
+    "netherite_shovel",
+    "netherite_hoe",
+    "netherite_sword"
+   ],
+   "count": 1
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t6_beacon",
+  "name": "Beam of Light",
+  "description": "Craft a Beacon.",
+  "tier": 6,
+  "prerequisites": [
+   "t5_archmage"
+  ],
+  "conditions": {
+   "craft": [
+    "beacon"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t6_parts",
+  "name": "Engine Parts",
+  "description": "Craft all six Wonder Engine parts.",
+  "tier": 6,
+  "prerequisites": [
+   "t6_netherite"
+  ],
+  "conditions": {
+   "craft": [
+    "ember_scale",
+    "prism_lens",
+    "sky_gear",
+    "heartwood_core",
+    "star_compass",
+    "rainbow_crystal"
+   ]
+  },
+  "rewards": {},
+  "optional": false,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t6_engine",
+  "name": "The Wonder Engine",
+  "description": "Put all the parts together with a Beacon in the middle row.",
+  "tier": 6,
+  "prerequisites": [
+   "t6_parts",
+   "t6_beacon",
+   "t6_upgrade"
+  ],
+  "conditions": {
+   "craft": [
+    "wonder_engine"
+   ]
+  },
+  "rewards": {
+   "sandbox": true
+  },
+  "optional": false,
+  "milestone": true,
+  "biome": null
+ },
+ {
+  "id": "t6_gear",
+  "name": "Legendary Gear",
+  "description": "Craft the Starforged Sword and the Crown of Wonders.",
+  "tier": 6,
+  "prerequisites": [
+   "t6_upgrade"
+  ],
+  "conditions": {
+   "craft": [
+    "starforged_sword",
+    "crown_of_wonders"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
+  "id": "t6_collector",
+  "name": "Grand Collector",
+  "description": "Discover 300 items.",
+  "tier": 6,
+  "prerequisites": [
+   "t5_archmage"
+  ],
+  "conditions": {
+   "discoverCount": 300
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ }
+]

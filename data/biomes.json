@@ -1,0 +1,170 @@
+[
+ {
+  "id": "workshop",
+  "name": "Starter Workshop",
+  "tier": 1,
+  "color": "#c69c5e",
+  "icon": "crafting_table",
+  "blurb": "Your cozy workshop with a little crafting table.",
+  "resources": [
+   "oak_log",
+   "dirt",
+   "cobblestone",
+   "sand",
+   "coal"
+  ]
+ },
+ {
+  "id": "forest",
+  "name": "Whispering Forest",
+  "tier": 1,
+  "color": "#4f8a3a",
+  "icon": "birch_log",
+  "blurb": "Eight kinds of trees, vines, apples and feathers.",
+  "resources": [
+   "spruce_log",
+   "birch_log",
+   "jungle_log",
+   "acacia_log",
+   "dark_oak_log",
+   "mangrove_log",
+   "cherry_log",
+   "vine",
+   "apple",
+   "string",
+   "feather",
+   "snowball"
+  ]
+ },
+ {
+  "id": "mine",
+  "name": "Pebble Mine",
+  "tier": 1,
+  "color": "#7d7d7d",
+  "icon": "granite",
+  "blurb": "Gravel, flint, clay and speckled stones.",
+  "resources": [
+   "gravel",
+   "flint",
+   "clay_ball",
+   "granite",
+   "diorite",
+   "andesite"
+  ]
+ },
+ {
+  "id": "forge",
+  "name": "Glowing Forge",
+  "tier": 2,
+  "color": "#d8804a",
+  "icon": "iron_ingot",
+  "blurb": "Ores and gems to melt and shape.",
+  "resources": [
+   "raw_iron",
+   "raw_gold",
+   "raw_copper",
+   "diamond",
+   "emerald",
+   "lapis_lazuli",
+   "amethyst_shard",
+   "quartz",
+   "obsidian"
+  ]
+ },
+ {
+  "id": "farm",
+  "name": "Sunny Farm",
+  "tier": 3,
+  "color": "#7ab83a",
+  "icon": "wheat",
+  "blurb": "Crops, flowers, animals and a water well.",
+  "resources": [
+   "wheat_seeds",
+   "wheat",
+   "sugar_cane",
+   "cocoa_beans",
+   "pumpkin",
+   "melon_slice",
+   "carrot",
+   "potato",
+   "beetroot",
+   "sweet_berries",
+   "red_mushroom",
+   "brown_mushroom",
+   "cactus",
+   "kelp",
+   "egg",
+   "milk_bucket",
+   "water_bucket",
+   "leather",
+   "bone",
+   "white_wool",
+   "ink_sac",
+   "honeycomb",
+   "honey_bottle",
+   "raw_beef",
+   "raw_porkchop",
+   "raw_chicken",
+   "raw_mutton",
+   "raw_cod",
+   "raw_salmon",
+   "dandelion",
+   "poppy",
+   "cornflower",
+   "blue_orchid",
+   "allium",
+   "azure_bluet",
+   "orange_tulip",
+   "pink_tulip",
+   "oxeye_daisy",
+   "lily_of_the_valley"
+  ]
+ },
+ {
+  "id": "machine",
+  "name": "Clockwork Room",
+  "tier": 4,
+  "color": "#c8382a",
+  "icon": "redstone",
+  "blurb": "Redstone, slime and glowing dust.",
+  "resources": [
+   "redstone",
+   "slime_ball",
+   "glowstone_dust"
+  ]
+ },
+ {
+  "id": "magic",
+  "name": "Moonlit Chamber",
+  "tier": 5,
+  "color": "#8a4ad8",
+  "icon": "nether_wart",
+  "blurb": "Rare ingredients for potions and spells.",
+  "resources": [
+   "nether_wart",
+   "blaze_rod",
+   "ghast_tear",
+   "spider_eye",
+   "gunpowder",
+   "ender_pearl",
+   "phantom_membrane",
+   "rabbit_foot",
+   "pufferfish",
+   "prismarine_shard"
+  ]
+ },
+ {
+  "id": "legend",
+  "name": "Hall of Legends",
+  "tier": 6,
+  "color": "#f7c843",
+  "icon": "nether_star",
+  "blurb": "The rarest treasures in the world.",
+  "resources": [
+   "ancient_debris",
+   "netherrack",
+   "netherite_upgrade_smithing_template",
+   "nether_star"
+  ]
+ }
+]
