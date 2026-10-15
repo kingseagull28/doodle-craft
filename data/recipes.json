@@ -23209,6 +23209,63 @@
   ]
  },
  {
+  "id": "odyssey_moon",
+  "name": "Odyssey Moon",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "emerald",
+    "emerald"
+   ],
+   [
+    "emerald",
+    "emerald",
+    null
+   ],
+   [
+    null,
+    "emerald",
+    "emerald"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "emerald",
+    "quantity": 6
+   }
+  ],
+  "output": {
+   "itemId": "odyssey_moon",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:2"
+  ],
+  "category": "jump_man",
+  "tier": 2,
+  "hints": [
+   "It is a Jump Man thing.",
+   "It uses Emerald.",
+   "Arrange: 6 Emerald in the pattern shown."
+  ],
+  "discoveryMessage": "You got a Moon! It sparkles so green.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "jump_man",
+   "light",
+   "original"
+  ]
+ },
+ {
   "id": "netherite_scrap",
   "name": "Netherite Scrap",
   "method": "smelting",

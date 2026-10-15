@@ -437,4 +437,6 @@
   shapeless('extra_life_mushroom', 1, ['red_mushroom', 'green_dye'], { orig: true, msg: 'An Extra Life Mushroom! Lucky you!' });
   item('invincibility_star', 'Invincibility Star', 'jump_man', 2, { t: 'big_star', a: '#f7d248', c: '#fff4b0', b: '#d89a1a' }, 'A twinkling gold star. You feel super strong!', ['jump_man', 'light', 'original'], O);
   shaped('invincibility_star', 1, ['.G.', 'GGG', 'G.G'], { G: 'gold_ingot' }, { orig: true, msg: 'An Invincibility Star! Nothing can stop you now!' });
+  item('odyssey_moon', 'Odyssey Moon', 'jump_man', 2, { t: 'moon', a: '#3ad86a', c: '#a8f0b8', b: '#1f8a40' }, 'A shiny green moon. Collect them all!', ['jump_man', 'light', 'original'], O);
+  shaped('odyssey_moon', 1, ['.EE', 'EE.', '.EE'], { E: 'emerald' }, { orig: true, msg: 'You got a Moon! It sparkles so green.' });
 })(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));

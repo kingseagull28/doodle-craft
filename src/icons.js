@@ -394,6 +394,11 @@
       '.....acaaab.....', '.aaaaacaaaaaaab.', '..acaaaaaaaaab..', '...acakaakaab...',
       '....aakaakab....', '....aaaaaaab....', '...aaaaaaaaab...', '...aaab..aaab...',
       '..aaab....aaab..', '..aab......aab..', '................', '................'],
+    moon: [
+      '................', '.....ccaabb.....', '...cccaabb......', '..ccaaabb.......',
+      '..caaabb........', '.ccaaab.........', '.cwaabb.........', '.caaabb.........',
+      '.caaabb.........', '.caaabb.........', '.ccaaab.........', '..caaabb........',
+      '..ccaaabb.......', '...cccaabb......', '.....ccaabb.....', '................'],
     heart: [
       '................', '................', '................', '...aaa...aaa....',
       '..acwaa.aaaab...', '..acaaaaaaaab...', '..aaaaaaaaaab...', '...aaaaaaaab....',

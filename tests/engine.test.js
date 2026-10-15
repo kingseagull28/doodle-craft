@@ -398,6 +398,11 @@ test('Invincibility Star is six Gold Ingots in a star shape', () => {
   eq(E.match(grid([[G, _, G], [G, G, G], [_, G, _]]), 3), null, 'upside down is not a star');
   eq(r.sourceType, 'original_extension'); eq(D.items.invincibility_star.category, 'jump_man');
 });
+test('Odyssey Moon is six Emeralds in a moon shape', () => {
+  const Em = 'emerald';
+  const r = E.match(grid([[_, Em, Em], [Em, Em, _], [_, Em, Em]]), 3); eq(r && r.id, 'odyssey_moon'); eq(r.output.quantity, 1);
+  eq(r.sourceType, 'original_extension'); eq(D.items.odyssey_moon.category, 'jump_man');
+});
 
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 failures.forEach(f => console.log('  FAIL ' + f));

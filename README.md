@@ -44,9 +44,9 @@ The UI never contains recipe rules. Crafting, the book, hints, quests and unlock
 
 ## Content
 
-* **544 items, 487 recipes, 57 quests, 8 areas, 6 tiers.**
+* **545 items, 488 recipes, 57 quests, 8 areas, 6 tiers.**
 * Recipes by method: 434 crafting grid (321 shaped, 113 shapeless), 21 smelting, 20 brewing, 9 smithing.
-* 453 recipes are Minecraft-style references (Java Edition 1.21) and 34 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
+* 453 recipes are Minecraft-style references (Java Edition 1.21) and 35 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
 * 4 secret recipes (Disco Ball, Rubber Duck, Bubble Wand, Party Cake Hat).
 * Recipes by the tier they first become reachable: 169, 90, 134, 35, 33, 21.
 
@@ -91,7 +91,7 @@ Saves to `localStorage` after every change (debounced) and when the page is hidd
 
 ## Verified (tests actually run)
 
-Engine tests, 74 passing: dataset validity and reachability, recipe count, conflict detection (including an injected conflict), shaped/shapeless/translation/mirroring/empty-cell rules, quantities, grid size limits, station gating, fuel, brewing and smithing, consumption, double-collect protection, harmless failures, returning items, swaps, replenishing, locked supplies, sorting, 200 repeated crafts, Make again, remainders, discoveries, quest prerequisites, 3x3 unlock, tier and biome unlocks, sandbox isolation, hints (arrangement, missing ingredient, no unrelated reveals, secrets never hinted), save round trip, import/export, invalid JSON, unknown IDs, wrong types, newer versions, migration, bad imports not touching progress, no key injection, backup recovery, reset confirmation, refusing to save invalid state, book autofill, saves surviving an update that removes an item, the TNT recipe, the Jump Man recipes, and older saves receiving supplies added to areas they already opened.
+Engine tests, 75 passing: dataset validity and reachability, recipe count, conflict detection (including an injected conflict), shaped/shapeless/translation/mirroring/empty-cell rules, quantities, grid size limits, station gating, fuel, brewing and smithing, consumption, double-collect protection, harmless failures, returning items, swaps, replenishing, locked supplies, sorting, 200 repeated crafts, Make again, remainders, discoveries, quest prerequisites, 3x3 unlock, tier and biome unlocks, sandbox isolation, hints (arrangement, missing ingredient, no unrelated reveals, secrets never hinted), save round trip, import/export, invalid JSON, unknown IDs, wrong types, newer versions, migration, bad imports not touching progress, no key injection, backup recovery, reset confirmation, refusing to save invalid state, book autofill, saves surviving an update that removes an item, the TNT recipe, the Jump Man recipes, and older saves receiving supplies added to areas they already opened.
 
 Browser tests in Chromium, 40 passing: mouse click-to-place, double-click safety, mouse drag to the table and back to the bag, friendly failure messages, book search and detail, mystery silhouettes, progressive hints, 3x3 unlock in play, keyboard Enter to select and place, Supply Crate x64, progress surviving reload, furnace smelting, hints toggle, reset cancel and confirm, invalid import rejected, no console errors, phone width with no horizontal scroll, touch tap-to-place, touch hold-then-drag, quick swipes not starting drags, table and bag visible together on a phone, new items scrolled into view, every dialog fitting a 375px phone, zero network requests at runtime, and corrupt-save recovery.
 

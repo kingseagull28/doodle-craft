@@ -12906,6 +12906,33 @@
   ]
  },
  {
+  "id": "odyssey_moon",
+  "name": "Odyssey Moon",
+  "description": "A shiny green moon. Collect them all!",
+  "category": "jump_man",
+  "tier": 2,
+  "icon": {
+   "t": "moon",
+   "a": "#3ad86a",
+   "c": "#a8f0b8",
+   "b": "#1f8a40"
+  },
+  "tags": [
+   "jump_man",
+   "light",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:odyssey_moon"
+  ]
+ },
+ {
   "id": "ancient_debris",
   "name": "Ancient Debris",
   "description": "A super-rare, super-tough rock.",
