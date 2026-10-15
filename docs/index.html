@@ -1170,6 +1170,12 @@ button { font: inherit; color: inherit; }
       case 'hole':
         rect(6, 6, 9, 9, '#1d1d1d'); rect(5, 7, 10, 8, '#1d1d1d'); rect(7, 5, 8, 10, '#1d1d1d');
         break;
+      case 'question':
+        var qm = [[6, 3, 9, 3], [5, 4, 6, 5], [9, 4, 10, 5], [8, 6, 9, 6], [7, 7, 8, 8], [7, 10, 8, 11]];
+        qm.forEach(function (q) { rect(q[0] + 1, q[1] + 1, q[2] + 1, q[3] + 1, shade(a, -0.55)); });
+        qm.forEach(function (q) { rect(q[0], q[1], q[2], q[3], '#fffbe8'); });
+        set(2, 2, shade(a, -0.45)); set(13, 2, shade(a, -0.45)); set(2, 13, shade(a, -0.45)); set(13, 13, shade(a, -0.45));
+        break;
       case 'latch':
         rect(0, 6, 15, 6, shade(a, -0.4)); rect(7, 5, 8, 8, '#d0d0d0'); rect(7, 8, 8, 8, '#8a8a8a');
         rect(0, 0, 15, 0, shade(a, -0.35)); rect(0, 15, 15, 15, shade(a, -0.35));
@@ -1351,7 +1357,8 @@ button { font: inherit; color: inherit; }
     ['materials', 'Materials'], ['wood_stone', 'Wood and stone'], ['tools', 'Tools'],
     ['building', 'Building blocks'], ['metals_gems', 'Metals and gems'], ['farming_food', 'Farming and food'],
     ['animals', 'Animals and creatures'], ['transport', 'Transportation'], ['machinery', 'Machinery'],
-    ['armor', 'Armor and equipment'], ['magic', 'Potions and magic'], ['legendary', 'Legendary creations']
+    ['armor', 'Armor and equipment'], ['magic', 'Potions and magic'], ['legendary', 'Legendary creations'],
+    ['jump_man', 'Jump Man']
   ];
   D.tiers = [
     null,
@@ -2075,6 +2082,10 @@ button { font: inherit; color: inherit; }
   shapeless('party_hat_cake', 1, ['cake', 'leather_helmet'], { orig: true, secret: true, msg: 'Hats off! Wait, it is a cake. You found a secret!' });
   item('clockwork_parrot', 'Clockwork Parrot', 'animals', 4, { t: 'duck', a: '#3ac04a', x: '#e8403a' }, 'A wind-up parrot that chirps on the hour.', ['creature', 'machine', 'original'], O);
   shaped('clockwork_parrot', 1, ['FFF', 'FCF', '.R.'], { F: 'feather', C: 'clock', R: 'repeater' }, O);
+
+  // Jump Man
+  item('question_block', 'Question Block', 'jump_man', 1, B('lamp', '#f7c843', { b: '#c8861a', face: 'question' }), 'A glowing block with a big question mark. What is inside?', ['jump_man', 'light', 'original'], O);
+  shaped('question_block', 1, ['BBB', 'BCB', 'BBB'], { B: 'bricks', C: 'chest' }, { orig: true, msg: 'A Question Block! It glows so bright.' });
 })(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));
 
 /* ---- data_world.js ---- */
@@ -2237,7 +2248,7 @@ button { font: inherit; color: inherit; }
   const D = W.Data;
   const E = W.Engine = {};
   const SCHEMA_VERSION = 2;
-  const GAME_VERSION = '1.1.0';
+  const GAME_VERSION = '1.2.0';
   E.SCHEMA_VERSION = SCHEMA_VERSION; E.GAME_VERSION = GAME_VERSION;
   const STATION_ITEM = { smelting: 'furnace', brewing: 'brewing_stand', smithing: 'smithing_table' };
   E.STATION_ITEM = STATION_ITEM;
@@ -2319,7 +2330,8 @@ button { font: inherit; color: inherit; }
     materials: 'It is a basic material.', wood_stone: 'It belongs with wood and stone things.', tools: 'It is a tool.',
     building: 'It is a building block or decoration.', metals_gems: 'It is made of metal or gems.', farming_food: 'It is food or comes from the farm.',
     animals: 'It has to do with animals or creatures.', transport: 'It helps you travel.', machinery: 'It is part of a machine.',
-    armor: 'It is armor or adventure gear.', magic: 'It is magical.', legendary: 'It is a legendary creation.'
+    armor: 'It is armor or adventure gear.', magic: 'It is magical.', legendary: 'It is a legendary creation.',
+    jump_man: 'It is a Jump Man thing.'
   };
   function rarest(r) {
     let best = null, bt = -1;

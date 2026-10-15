@@ -5,7 +5,7 @@
   const D = W.Data;
   const E = W.Engine = {};
   const SCHEMA_VERSION = 2;
-  const GAME_VERSION = '1.1.0';
+  const GAME_VERSION = '1.2.0';
   E.SCHEMA_VERSION = SCHEMA_VERSION; E.GAME_VERSION = GAME_VERSION;
   const STATION_ITEM = { smelting: 'furnace', brewing: 'brewing_stand', smithing: 'smithing_table' };
   E.STATION_ITEM = STATION_ITEM;
@@ -87,7 +87,8 @@
     materials: 'It is a basic material.', wood_stone: 'It belongs with wood and stone things.', tools: 'It is a tool.',
     building: 'It is a building block or decoration.', metals_gems: 'It is made of metal or gems.', farming_food: 'It is food or comes from the farm.',
     animals: 'It has to do with animals or creatures.', transport: 'It helps you travel.', machinery: 'It is part of a machine.',
-    armor: 'It is armor or adventure gear.', magic: 'It is magical.', legendary: 'It is a legendary creation.'
+    armor: 'It is armor or adventure gear.', magic: 'It is magical.', legendary: 'It is a legendary creation.',
+    jump_man: 'It is a Jump Man thing.'
   };
   function rarest(r) {
     let best = null, bt = -1;

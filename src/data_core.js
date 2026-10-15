@@ -14,7 +14,8 @@
     ['materials', 'Materials'], ['wood_stone', 'Wood and stone'], ['tools', 'Tools'],
     ['building', 'Building blocks'], ['metals_gems', 'Metals and gems'], ['farming_food', 'Farming and food'],
     ['animals', 'Animals and creatures'], ['transport', 'Transportation'], ['machinery', 'Machinery'],
-    ['armor', 'Armor and equipment'], ['magic', 'Potions and magic'], ['legendary', 'Legendary creations']
+    ['armor', 'Armor and equipment'], ['magic', 'Potions and magic'], ['legendary', 'Legendary creations'],
+    ['jump_man', 'Jump Man']
   ];
   D.tiers = [
     null,

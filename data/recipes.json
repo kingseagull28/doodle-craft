@@ -23045,6 +23045,67 @@
   ]
  },
  {
+  "id": "question_block",
+  "name": "Question Block",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "bricks",
+    "bricks",
+    "bricks"
+   ],
+   [
+    "bricks",
+    "chest",
+    "bricks"
+   ],
+   [
+    "bricks",
+    "bricks",
+    "bricks"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "bricks",
+    "quantity": 8
+   },
+   {
+    "itemId": "chest",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "question_block",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:1"
+  ],
+  "category": "jump_man",
+  "tier": 1,
+  "hints": [
+   "It is a Jump Man thing.",
+   "It uses Bricks and 1 other kind of ingredient.",
+   "Arrange: 8 Bricks, 1 Chest in the pattern shown."
+  ],
+  "discoveryMessage": "A Question Block! It glows so bright.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "jump_man",
+   "light",
+   "original"
+  ]
+ },
+ {
   "id": "netherite_scrap",
   "name": "Netherite Scrap",
   "method": "smelting",

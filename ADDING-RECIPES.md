@@ -17,7 +17,7 @@ item('pizza', 'Pizza', 'farming_food', 3,
   ['food', 'original'], { orig: true });               // tags, and mark it original
 ```
 
-Categories: `materials, wood_stone, tools, building, metals_gems, farming_food, animals, transport, machinery, armor, magic, legendary`.
+Categories: `materials, wood_stone, tools, building, metals_gems, farming_food, animals, transport, machinery, armor, magic, legendary, jump_man`.
 Icon templates are listed in `src/icons.js` (`pickaxe`, `gem`, `bottle`, `pie`, `duck`, `star`...), or use `{ t: 'block', s: 'planks', a: '#color' }` for blocks.
 
 ## A new recipe

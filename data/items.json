@@ -12825,6 +12825,34 @@
   ]
  },
  {
+  "id": "question_block",
+  "name": "Question Block",
+  "description": "A glowing block with a big question mark. What is inside?",
+  "category": "jump_man",
+  "tier": 1,
+  "icon": {
+   "t": "block",
+   "s": "lamp",
+   "a": "#f7c843",
+   "b": "#c8861a",
+   "face": "question"
+  },
+  "tags": [
+   "jump_man",
+   "light",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:question_block"
+  ]
+ },
+ {
   "id": "ancient_debris",
   "name": "Ancient Debris",
   "description": "A super-rare, super-tough rock.",

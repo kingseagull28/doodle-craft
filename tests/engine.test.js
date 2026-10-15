@@ -381,6 +381,13 @@ test('older saves get supplies added to areas they already opened', () => {
   const st = fresh(); st.biomes.push('machine'); st.resources = st.resources.filter(r => r !== 'gunpowder');
   const r = E.importSave(E.exportSave(st)); ok(r.ok); ok(r.state.resources.indexOf('gunpowder') >= 0); ok(r.state.discoveredItems.gunpowder);
 });
+test('Question Block is bricks around a chest, in the Jump Man category', () => {
+  const Bk = 'bricks', C = 'chest';
+  const r = E.match(grid([[Bk, Bk, Bk], [Bk, C, Bk], [Bk, Bk, Bk]]), 3); eq(r && r.id, 'question_block'); eq(r.output.quantity, 1);
+  eq(E.match(grid([[Bk, Bk, Bk], [Bk, _, Bk], [Bk, Bk, Bk]]), 3), null, 'no chest, no Question Block');
+  eq(r.sourceType, 'original_extension');
+  eq(D.items.question_block.category, 'jump_man'); ok(D.categories.some(c => c[0] === 'jump_man' && c[1] === 'Jump Man'));
+});
 
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 failures.forEach(f => console.log('  FAIL ' + f));

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 (2026-10-15)
+* New book category: Jump Man.
+* Added the Question Block, a glowing yellow block with a question mark (8 Bricks around a Chest, original recipe).
+
 ## 1.1.0 (2026-10-15)
 * Added TNT (5 Gunpowder and 4 Sand in a checkerboard, Java 1.21 recipe) and Minecart with TNT.
 * Gunpowder now comes from the Clockwork Room (tier 4) instead of the Moonlit Chamber.

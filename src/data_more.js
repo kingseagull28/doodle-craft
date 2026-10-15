@@ -429,4 +429,8 @@
   shapeless('party_hat_cake', 1, ['cake', 'leather_helmet'], { orig: true, secret: true, msg: 'Hats off! Wait, it is a cake. You found a secret!' });
   item('clockwork_parrot', 'Clockwork Parrot', 'animals', 4, { t: 'duck', a: '#3ac04a', x: '#e8403a' }, 'A wind-up parrot that chirps on the hour.', ['creature', 'machine', 'original'], O);
   shaped('clockwork_parrot', 1, ['FFF', 'FCF', '.R.'], { F: 'feather', C: 'clock', R: 'repeater' }, O);
+
+  // Jump Man
+  item('question_block', 'Question Block', 'jump_man', 1, B('lamp', '#f7c843', { b: '#c8861a', face: 'question' }), 'A glowing block with a big question mark. What is inside?', ['jump_man', 'light', 'original'], O);
+  shaped('question_block', 1, ['BBB', 'BCB', 'BBB'], { B: 'bricks', C: 'chest' }, { orig: true, msg: 'A Question Block! It glows so bright.' });
 })(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));

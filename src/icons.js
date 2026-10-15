@@ -753,6 +753,12 @@
       case 'hole':
         rect(6, 6, 9, 9, '#1d1d1d'); rect(5, 7, 10, 8, '#1d1d1d'); rect(7, 5, 8, 10, '#1d1d1d');
         break;
+      case 'question':
+        var qm = [[6, 3, 9, 3], [5, 4, 6, 5], [9, 4, 10, 5], [8, 6, 9, 6], [7, 7, 8, 8], [7, 10, 8, 11]];
+        qm.forEach(function (q) { rect(q[0] + 1, q[1] + 1, q[2] + 1, q[3] + 1, shade(a, -0.55)); });
+        qm.forEach(function (q) { rect(q[0], q[1], q[2], q[3], '#fffbe8'); });
+        set(2, 2, shade(a, -0.45)); set(13, 2, shade(a, -0.45)); set(2, 13, shade(a, -0.45)); set(13, 13, shade(a, -0.45));
+        break;
       case 'latch':
         rect(0, 6, 15, 6, shade(a, -0.4)); rect(7, 5, 8, 8, '#d0d0d0'); rect(7, 8, 8, 8, '#8a8a8a');
         rect(0, 0, 15, 0, shade(a, -0.35)); rect(0, 15, 15, 15, shade(a, -0.35));

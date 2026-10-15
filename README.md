@@ -44,9 +44,9 @@ The UI never contains recipe rules. Crafting, the book, hints, quests and unlock
 
 ## Content
 
-* **541 items, 484 recipes, 57 quests, 8 areas, 6 tiers.**
+* **542 items, 485 recipes, 57 quests, 8 areas, 6 tiers.**
 * Recipes by method: 434 crafting grid (321 shaped, 113 shapeless), 21 smelting, 20 brewing, 9 smithing.
-* 453 recipes are Minecraft-style references (Java Edition 1.21) and 31 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
+* 453 recipes are Minecraft-style references (Java Edition 1.21) and 32 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
 * 4 secret recipes (Disco Ball, Rubber Duck, Bubble Wand, Party Cake Hat).
 * Recipes by the tier they first become reachable: 169, 90, 134, 35, 33, 21.
 
