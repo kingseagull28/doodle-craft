@@ -26,9 +26,19 @@ A crafting and discovery browser game for kids aged 6 to 9 (Minecraft-style reci
 2. `node tests/engine.test.js` must report 0 failed. It also validates the whole dataset (unknown IDs, recipe conflicts, unreachable items, impossible quests).
 3. `node tools/build.js` to rebuild `docs/index.html`.
 4. `node tools/export-data.js` if items, recipes, quests or biomes changed.
-5. For content or gameplay changes, bump `GAME_VERSION` in `src/engine.js` (1.1.0 to 1.2.0 for new content, 1.1.1 for fixes) and add an entry at the top of `CHANGELOG.md`. Update the counts in `README.md` if they changed.
+5. For content or gameplay changes, add a line under `## Unreleased` at the top of `CHANGELOG.md` (create the heading if it is missing). Do not change `GAME_VERSION` per change. Update the counts in `README.md` if they changed.
 6. Add tests in `tests/engine.test.js` for new rules or recipes worth protecting.
 7. Commit with a clear message. Do not push; the owner pushes from GitHub Desktop.
+
+### Releasing (once per push)
+
+The version goes up once per push, not per change. When the owner says they are ready to push:
+
+1. Bump `GAME_VERSION` in `src/engine.js` once for everything under `## Unreleased` (1.2.0 to 1.3.0 if anything new was added, 1.2.1 for fixes only).
+2. Rename `## Unreleased` in `CHANGELOG.md` to `## <version> (<today>)`.
+3. Run the tests and the build, then commit as "Release <version>".
+
+If `GAME_VERSION` was already bumped in commits that are not pushed yet (`git log origin/main..HEAD`), fold the changes into that version instead of bumping again.
 
 `tests/browser.test.py` needs Python and Playwright. Treat it as optional and skip it if those are not installed.
 

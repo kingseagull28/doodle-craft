@@ -54,4 +54,4 @@ The validator catches unknown items, typos, two recipes fighting over the same p
 * **Adding** items, recipes and quests is always safe.
 * **Never reuse an old ID** for something different.
 * Renaming or removing is survivable (old saves quietly drop the missing thing) but the player loses that item, so prefer adding over renaming.
-* Bump `GAME_VERSION` in `src/engine.js` and add a line to `CHANGELOG.md`.
+* Add a line under `## Unreleased` in `CHANGELOG.md`. `GAME_VERSION` goes up once per push, not per change (see `CLAUDE.md`).
