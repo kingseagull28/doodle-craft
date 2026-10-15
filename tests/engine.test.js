@@ -392,6 +392,12 @@ test('Extra Life Mushroom is a Red Mushroom with Green Dye', () => {
   const r = E.match(grid([['red_mushroom', 'green_dye', _], [_, _, _], [_, _, _]]), 2); eq(r && r.id, 'extra_life_mushroom'); eq(r.output.quantity, 1);
   eq(r.sourceType, 'original_extension'); eq(D.items.extra_life_mushroom.category, 'jump_man');
 });
+test('Invincibility Star is six Gold Ingots in a star shape', () => {
+  const G = 'gold_ingot';
+  const r = E.match(grid([[_, G, _], [G, G, G], [G, _, G]]), 3); eq(r && r.id, 'invincibility_star'); eq(r.output.quantity, 1);
+  eq(E.match(grid([[G, _, G], [G, G, G], [_, G, _]]), 3), null, 'upside down is not a star');
+  eq(r.sourceType, 'original_extension'); eq(D.items.invincibility_star.category, 'jump_man');
+});
 
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 failures.forEach(f => console.log('  FAIL ' + f));

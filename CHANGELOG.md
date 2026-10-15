@@ -4,6 +4,7 @@
 * New book category: Jump Man.
 * Added the Question Block, a glowing yellow block with a question mark (8 Bricks around a Chest, original recipe).
 * Added the Extra Life Mushroom to the Jump Man category (Red Mushroom and Green Dye, original recipe).
+* Added the Invincibility Star to the Jump Man category (6 Gold Ingots in a star shape, original recipe).
 
 ## 1.1.0 (2026-10-15)
 * Added TNT (5 Gunpowder and 4 Sand in a checkerboard, Java 1.21 recipe) and Minecart with TNT.

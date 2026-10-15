@@ -435,4 +435,6 @@
   shaped('question_block', 1, ['BBB', 'BCB', 'BBB'], { B: 'bricks', C: 'chest' }, { orig: true, msg: 'A Question Block! It glows so bright.' });
   item('extra_life_mushroom', 'Extra Life Mushroom', 'jump_man', 3, { t: 'mushroom', a: '#3ab04a', x: '#f2ead8' }, 'A lucky green mushroom with white spots. One more try!', ['jump_man', 'mushroom', 'original'], O);
   shapeless('extra_life_mushroom', 1, ['red_mushroom', 'green_dye'], { orig: true, msg: 'An Extra Life Mushroom! Lucky you!' });
+  item('invincibility_star', 'Invincibility Star', 'jump_man', 2, { t: 'big_star', a: '#f7d248', c: '#fff4b0', b: '#d89a1a' }, 'A twinkling gold star. You feel super strong!', ['jump_man', 'light', 'original'], O);
+  shaped('invincibility_star', 1, ['.G.', 'GGG', 'G.G'], { G: 'gold_ingot' }, { orig: true, msg: 'An Invincibility Star! Nothing can stop you now!' });
 })(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));

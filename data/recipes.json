@@ -23152,6 +23152,63 @@
   ]
  },
  {
+  "id": "invincibility_star",
+  "name": "Invincibility Star",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "gold_ingot",
+    null
+   ],
+   [
+    "gold_ingot",
+    "gold_ingot",
+    "gold_ingot"
+   ],
+   [
+    "gold_ingot",
+    null,
+    "gold_ingot"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "gold_ingot",
+    "quantity": 6
+   }
+  ],
+  "output": {
+   "itemId": "invincibility_star",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:2"
+  ],
+  "category": "jump_man",
+  "tier": 2,
+  "hints": [
+   "It is a Jump Man thing.",
+   "It uses Gold Ingot.",
+   "Arrange: 6 Gold Ingot in the pattern shown."
+  ],
+  "discoveryMessage": "An Invincibility Star! Nothing can stop you now!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "jump_man",
+   "light",
+   "original"
+  ]
+ },
+ {
   "id": "netherite_scrap",
   "name": "Netherite Scrap",
   "method": "smelting",

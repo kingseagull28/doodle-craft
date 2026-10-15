@@ -12879,6 +12879,33 @@
   ]
  },
  {
+  "id": "invincibility_star",
+  "name": "Invincibility Star",
+  "description": "A twinkling gold star. You feel super strong!",
+  "category": "jump_man",
+  "tier": 2,
+  "icon": {
+   "t": "big_star",
+   "a": "#f7d248",
+   "c": "#fff4b0",
+   "b": "#d89a1a"
+  },
+  "tags": [
+   "jump_man",
+   "light",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:invincibility_star"
+  ]
+ },
+ {
   "id": "ancient_debris",
   "name": "Ancient Debris",
   "description": "A super-rare, super-tough rock.",
