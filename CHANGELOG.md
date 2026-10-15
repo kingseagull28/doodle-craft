@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.0 (2026-10-15)
+* Added the Extra Life Mushroom to the Jump Man category (Red Mushroom and Green Dye, original recipe).
+
 ## 1.2.0 (2026-10-15)
 * New book category: Jump Man.
 * Added the Question Block, a glowing yellow block with a question mark (8 Bricks around a Chest, original recipe).

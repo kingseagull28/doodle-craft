@@ -388,6 +388,10 @@ test('Question Block is bricks around a chest, in the Jump Man category', () => 
   eq(r.sourceType, 'original_extension');
   eq(D.items.question_block.category, 'jump_man'); ok(D.categories.some(c => c[0] === 'jump_man' && c[1] === 'Jump Man'));
 });
+test('Extra Life Mushroom is a Red Mushroom with Green Dye', () => {
+  const r = E.match(grid([['red_mushroom', 'green_dye', _], [_, _, _], [_, _, _]]), 2); eq(r && r.id, 'extra_life_mushroom'); eq(r.output.quantity, 1);
+  eq(r.sourceType, 'original_extension'); eq(D.items.extra_life_mushroom.category, 'jump_man');
+});
 
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 failures.forEach(f => console.log('  FAIL ' + f));

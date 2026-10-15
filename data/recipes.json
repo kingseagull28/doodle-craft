@@ -23106,6 +23106,52 @@
   ]
  },
  {
+  "id": "extra_life_mushroom",
+  "name": "Extra Life Mushroom",
+  "method": "crafting_grid",
+  "type": "shapeless",
+  "gridSize": 2,
+  "pattern": null,
+  "list": [
+   "red_mushroom",
+   "green_dye"
+  ],
+  "ingredients": [
+   {
+    "itemId": "red_mushroom",
+    "quantity": 1
+   },
+   {
+    "itemId": "green_dye",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "extra_life_mushroom",
+   "quantity": 1
+  },
+  "remainders": [],
+  "unlockRequirements": [
+   "tier:3"
+  ],
+  "category": "jump_man",
+  "tier": 3,
+  "hints": [
+   "It is a Jump Man thing.",
+   "It uses Red Mushroom and 1 other kind of ingredient.",
+   "Put these anywhere in the grid: 1 Red Mushroom, 1 Green Dye."
+  ],
+  "discoveryMessage": "An Extra Life Mushroom! Lucky you!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "jump_man",
+   "mushroom",
+   "original"
+  ]
+ },
+ {
   "id": "netherite_scrap",
   "name": "Netherite Scrap",
   "method": "smelting",

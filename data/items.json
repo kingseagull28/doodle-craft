@@ -12853,6 +12853,32 @@
   ]
  },
  {
+  "id": "extra_life_mushroom",
+  "name": "Extra Life Mushroom",
+  "description": "A lucky green mushroom with white spots. One more try!",
+  "category": "jump_man",
+  "tier": 3,
+  "icon": {
+   "t": "mushroom",
+   "a": "#3ab04a",
+   "x": "#f2ead8"
+  },
+  "tags": [
+   "jump_man",
+   "mushroom",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:extra_life_mushroom"
+  ]
+ },
+ {
   "id": "ancient_debris",
   "name": "Ancient Debris",
   "description": "A super-rare, super-tough rock.",

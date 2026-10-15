@@ -433,4 +433,6 @@
   // Jump Man
   item('question_block', 'Question Block', 'jump_man', 1, B('lamp', '#f7c843', { b: '#c8861a', face: 'question' }), 'A glowing block with a big question mark. What is inside?', ['jump_man', 'light', 'original'], O);
   shaped('question_block', 1, ['BBB', 'BCB', 'BBB'], { B: 'bricks', C: 'chest' }, { orig: true, msg: 'A Question Block! It glows so bright.' });
+  item('extra_life_mushroom', 'Extra Life Mushroom', 'jump_man', 3, { t: 'mushroom', a: '#3ab04a', x: '#f2ead8' }, 'A lucky green mushroom with white spots. One more try!', ['jump_man', 'mushroom', 'original'], O);
+  shapeless('extra_life_mushroom', 1, ['red_mushroom', 'green_dye'], { orig: true, msg: 'An Extra Life Mushroom! Lucky you!' });
 })(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));

@@ -5,7 +5,7 @@
   const D = W.Data;
   const E = W.Engine = {};
   const SCHEMA_VERSION = 2;
-  const GAME_VERSION = '1.2.0';
+  const GAME_VERSION = '1.3.0';
   E.SCHEMA_VERSION = SCHEMA_VERSION; E.GAME_VERSION = GAME_VERSION;
   const STATION_ITEM = { smelting: 'furnace', brewing: 'brewing_stand', smithing: 'smithing_table' };
   E.STATION_ITEM = STATION_ITEM;
