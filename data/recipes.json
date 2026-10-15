@@ -19709,6 +19709,66 @@
   ]
  },
  {
+  "id": "tnt",
+  "name": "TNT",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "gunpowder",
+    "sand",
+    "gunpowder"
+   ],
+   [
+    "sand",
+    "gunpowder",
+    "sand"
+   ],
+   [
+    "gunpowder",
+    "sand",
+    "gunpowder"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "gunpowder",
+    "quantity": 5
+   },
+   {
+    "itemId": "sand",
+    "quantity": 4
+   }
+  ],
+  "output": {
+   "itemId": "tnt",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:4"
+  ],
+  "category": "machinery",
+  "tier": 4,
+  "hints": [
+   "It is part of a machine.",
+   "It uses Gunpowder and 1 other kind of ingredient.",
+   "Arrange: 5 Gunpowder, 4 Sand in the pattern shown."
+  ],
+  "discoveryMessage": "TNT! Don't worry, nothing explodes in the workshop. It is safe on your shelf.",
+  "sourceType": "vanilla_reference",
+  "referenceVersion": "Minecraft Java Edition 1.21",
+  "secret": false,
+  "tags": [
+   "redstone",
+   "machine"
+  ]
+ },
+ {
   "id": "hopper",
   "name": "Hopper",
   "method": "crafting_grid",
@@ -20403,6 +20463,50 @@
   ]
  },
  {
+  "id": "tnt_minecart",
+  "name": "Minecart with TNT",
+  "method": "crafting_grid",
+  "type": "shapeless",
+  "gridSize": 2,
+  "pattern": null,
+  "list": [
+   "tnt",
+   "minecart"
+  ],
+  "ingredients": [
+   {
+    "itemId": "tnt",
+    "quantity": 1
+   },
+   {
+    "itemId": "minecart",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "tnt_minecart",
+   "quantity": 1
+  },
+  "remainders": [],
+  "unlockRequirements": [
+   "tier:4"
+  ],
+  "category": "transport",
+  "tier": 4,
+  "hints": [
+   "It helps you travel.",
+   "It uses TNT and 1 other kind of ingredient.",
+   "Put these anywhere in the grid: 1 TNT, 1 Minecart."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "vanilla_reference",
+  "referenceVersion": "Minecraft Java Edition 1.21",
+  "secret": false,
+  "tags": [
+   "vehicle"
+  ]
+ },
+ {
   "id": "hopper_minecart",
   "name": "Minecart with Hopper",
   "method": "crafting_grid",
@@ -20901,7 +21005,7 @@
   "tier": 5,
   "hints": [
    "It is magical.",
-   "It uses Gunpowder and 2 other kinds of ingredient.",
+   "It uses Blaze Powder and 2 other kinds of ingredient.",
    "Put these anywhere in the grid: 1 Gunpowder, 1 Blaze Powder, 1 Coal or Charcoal."
   ],
   "discoveryMessage": "",
@@ -20939,10 +21043,10 @@
   },
   "remainders": [],
   "unlockRequirements": [
-   "tier:5"
+   "tier:4"
   ],
   "category": "magic",
-  "tier": 5,
+  "tier": 4,
   "hints": [
    "It is magical.",
    "It uses Gunpowder and 1 other kind of ingredient.",

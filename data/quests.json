@@ -739,6 +739,24 @@
   "biome": null
  },
  {
+  "id": "t4_tnt",
+  "name": "Big Red Block",
+  "description": "Craft TNT from Gunpowder and Sand.",
+  "tier": 4,
+  "prerequisites": [
+   "t4_torch"
+  ],
+  "conditions": {
+   "craft": [
+    "tnt"
+   ]
+  },
+  "rewards": {},
+  "optional": true,
+  "milestone": false,
+  "biome": null
+ },
+ {
   "id": "t4_parrot",
   "name": "Wind-up Friend",
   "description": "Build a Clockwork Parrot.",

@@ -10585,6 +10585,30 @@
   ]
  },
  {
+  "id": "gunpowder",
+  "name": "Gunpowder",
+  "description": "Grey powder for TNT, fireworks and potions.",
+  "category": "machinery",
+  "tier": 4,
+  "icon": {
+   "t": "dust",
+   "a": "#5a5a5a"
+  },
+  "tags": [
+   "brewing",
+   "redstone"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": true,
+  "isOriginalContent": false,
+  "secret": false,
+  "resource": true,
+  "fuel": 0,
+  "unlockRequirements": [
+   "biome:machine"
+  ]
+ },
+ {
   "id": "glowstone_dust",
   "name": "Glowstone Dust",
   "description": "Glowing yellow dust.",
@@ -11018,6 +11042,33 @@
   ]
  },
  {
+  "id": "tnt",
+  "name": "TNT",
+  "description": "A big red block that goes boom in Minecraft. In your workshop it stays safely on the shelf.",
+  "category": "machinery",
+  "tier": 4,
+  "icon": {
+   "t": "block",
+   "s": "stripes",
+   "a": "#d8382a",
+   "b": "#b02a1e",
+   "face": "tnt"
+  },
+  "tags": [
+   "redstone",
+   "machine"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": true,
+  "isOriginalContent": false,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:tnt"
+  ]
+ },
+ {
   "id": "hopper",
   "name": "Hopper",
   "description": "A funnel that moves items.",
@@ -11309,6 +11360,30 @@
   ]
  },
  {
+  "id": "tnt_minecart",
+  "name": "Minecart with TNT",
+  "description": "A minecart carrying TNT. Handle with care!",
+  "category": "transport",
+  "tier": 4,
+  "icon": {
+   "t": "minecart",
+   "a": "#8a8a8a",
+   "x": "#d8382a"
+  },
+  "tags": [
+   "vehicle"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": true,
+  "isOriginalContent": false,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:tnt_minecart"
+  ]
+ },
+ {
   "id": "hopper_minecart",
   "name": "Minecart with Hopper",
   "description": "A minecart that picks up items.",
@@ -11412,29 +11487,6 @@
    "t": "eye",
    "a": "#a01a3a",
    "x": "#e0405a"
-  },
-  "tags": [
-   "brewing"
-  ],
-  "stackLimit": 64,
-  "isVanillaReference": true,
-  "isOriginalContent": false,
-  "secret": false,
-  "resource": true,
-  "fuel": 0,
-  "unlockRequirements": [
-   "biome:magic"
-  ]
- },
- {
-  "id": "gunpowder",
-  "name": "Gunpowder",
-  "description": "Grey powder for fireworks.",
-  "category": "magic",
-  "tier": 5,
-  "icon": {
-   "t": "dust",
-   "a": "#5a5a5a"
   },
   "tags": [
    "brewing"
@@ -11789,7 +11841,7 @@
   "name": "Firework Rocket",
   "description": "Whoosh! Sparkles in the sky.",
   "category": "magic",
-  "tier": 5,
+  "tier": 4,
   "icon": {
    "t": "rod",
    "a": "#d8403a",

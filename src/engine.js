@@ -5,7 +5,7 @@
   const D = W.Data;
   const E = W.Engine = {};
   const SCHEMA_VERSION = 2;
-  const GAME_VERSION = '1.0.0';
+  const GAME_VERSION = '1.1.0';
   E.SCHEMA_VERSION = SCHEMA_VERSION; E.GAME_VERSION = GAME_VERSION;
   const STATION_ITEM = { smelting: 'furnace', brewing: 'brewing_stand', smithing: 'smithing_table' };
   E.STATION_ITEM = STATION_ITEM;
@@ -670,8 +670,11 @@
     st.adventure = pickWs(obj.adventure); st.sandbox = pickWs(obj.sandbox);
     st.mode = obj.mode; st.sandboxUnlocked = obj.sandboxUnlocked; st.grid3 = obj.grid3; st.tier = obj.tier;
     st.biomes = obj.biomes.slice(); st.resources = obj.resources.slice();
+    // supplies added to an already-open area by a game update become available right away
+    st.biomes.forEach(function (bid) { D.biomes.find(function (b) { return b.id === bid; }).resources.forEach(function (rid) { if (st.resources.indexOf(rid) < 0) st.resources.push(rid); }); });
     st.discoveredItems = Object.assign({}, obj.discoveredItems); st.discoveredRecipes = Object.assign({}, obj.discoveredRecipes);
     st.crafted = Object.assign({}, obj.crafted); st.quests = Object.assign({}, obj.quests); st.hintLevels = Object.assign({}, obj.hintLevels);
+    st.resources.forEach(function (rid) { if (!st.discoveredItems[rid]) st.discoveredItems[rid] = Date.now(); });
     st.seenBiomes = isObj(obj.seenBiomes) ? Object.assign({}, obj.seenBiomes) : {};
     st.settings = { sound: obj.settings.sound, music: obj.settings.music, hints: obj.settings.hints,
       motion: ['auto', 'reduce', 'full'].indexOf(obj.settings.motion) >= 0 ? obj.settings.motion : 'auto', tutorialDone: !!obj.settings.tutorialDone };

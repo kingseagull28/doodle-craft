@@ -10,7 +10,7 @@ A crafting and discovery game for kids aged 6 to 9. Collect materials, place the
 
 ```
 node tools/build.js          # rebuilds docs/index.html from src/
-node tests/engine.test.js    # 68 engine and data tests (Node 18+)
+node tests/engine.test.js    # 71 engine and data tests (Node 18+)
 python3 tests/browser.test.py   # 40 end-to-end browser checks (needs: pip install playwright && playwright install chromium)
 node tools/export-data.js    # writes data/*.json
 ```
@@ -44,9 +44,9 @@ The UI never contains recipe rules. Crafting, the book, hints, quests and unlock
 
 ## Content
 
-* **539 items, 482 recipes, 56 quests, 8 areas, 6 tiers.**
-* Recipes by method: 432 crafting grid (320 shaped, 112 shapeless), 21 smelting, 20 brewing, 9 smithing.
-* 451 recipes are Minecraft-style references (Java Edition 1.21) and 31 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
+* **541 items, 484 recipes, 57 quests, 8 areas, 6 tiers.**
+* Recipes by method: 434 crafting grid (321 shaped, 113 shapeless), 21 smelting, 20 brewing, 9 smithing.
+* 453 recipes are Minecraft-style references (Java Edition 1.21) and 31 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
 * 4 secret recipes (Disco Ball, Rubber Duck, Bubble Wand, Party Cake Hat).
 * Recipes by the tier they first become reachable: 169, 90, 134, 35, 33, 21.
 
@@ -75,11 +75,11 @@ The pattern (shaped) or list (shapeless) is the single source of truth. `ingredi
 | 1 Wood and stone | planks, sticks, Crafting Table (unlocks the 3x3 grid), wooden pickaxe (opens Forest), furnace, stone tools (opens Mine) | Workshop Upgrade opens the Forge |
 | 2 Metals and gems | iron ingot, bucket, iron pickaxe, any iron armor, diamond pickaxe | Forge Master opens the Farm |
 | 3 Farming and cooking | bread, cookies, a dye, colored wool, a book | Grand Feast opens the Clockwork Room |
-| 4 Redstone and machines | redstone torch, piston, minecart and rails, clock or compass | Clockwork Room opens the Moonlit Chamber |
+| 4 Redstone and machines | redstone torch, piston, minecart and rails, clock or compass (TNT is a bonus challenge here) | Clockwork Room opens the Moonlit Chamber |
 | 5 Magic and secrets | brewing stand, awkward potion, a real potion, Sparkle Dust, Eye of Ender, Enchanting Table | Archmage opens the Hall of Legends |
 | 6 Legendary | netherite ingot, a netherite upgrade, beacon, six engine parts | The Wonder Engine unlocks Creative Sandbox |
 
-Plus 22 optional bonus challenges. Each area adds new materials to the Supply Crate. Resources are unlimited: tap anything in the crate to take 1, 8 or 64. Crafting still consumes real quantities, and a failed mix never destroys anything.
+Plus 23 optional bonus challenges. Each area adds new materials to the Supply Crate. Resources are unlimited: tap anything in the crate to take 1, 8 or 64. Crafting still consumes real quantities, and a failed mix never destroys anything.
 
 **Design choice:** the spec asks for a crafting table in the starting kit and a 3x3 unlock after an early milestone. Since a Minecraft pickaxe needs a 3x3 grid, the workshop starts with a small 2x2 table and building a Crafting Table upgrades it to 3x3, which matches how Minecraft works.
 
@@ -87,11 +87,11 @@ Plus 22 optional bonus challenges. Each area adds new materials to the Supply Cr
 
 ## Saving
 
-Saves to `localStorage` after every change (debounced) and when the page is hidden. Before overwriting, the previous valid save is kept as a backup. Loading validates every field; a corrupt save falls back to the backup, and if both fail a new game starts while the unreadable data is preserved under a separate key. Saves carry a schema version, schema 1 saves are migrated, and newer versions are refused politely. If a game update removes an item, your own saved game drops just that item instead of being rejected. Import validates structure, types and every item, recipe and quest ID, rebuilds a clean state object (unknown keys are dropped), and asks before replacing progress. Reset needs explicit confirmation.
+Saves to `localStorage` after every change (debounced) and when the page is hidden. Before overwriting, the previous valid save is kept as a backup. Loading validates every field; a corrupt save falls back to the backup, and if both fail a new game starts while the unreadable data is preserved under a separate key. Saves carry a schema version, schema 1 saves are migrated, and newer versions are refused politely. If a game update removes an item, your own saved game drops just that item instead of being rejected. If an update adds a new supply to an area you already opened, it shows up in your Supply Crate right away. Import validates structure, types and every item, recipe and quest ID, rebuilds a clean state object (unknown keys are dropped), and asks before replacing progress. Reset needs explicit confirmation.
 
 ## Verified (tests actually run)
 
-Engine tests, 68 passing: dataset validity and reachability, recipe count, conflict detection (including an injected conflict), shaped/shapeless/translation/mirroring/empty-cell rules, quantities, grid size limits, station gating, fuel, brewing and smithing, consumption, double-collect protection, harmless failures, returning items, swaps, replenishing, locked supplies, sorting, 200 repeated crafts, Make again, remainders, discoveries, quest prerequisites, 3x3 unlock, tier and biome unlocks, sandbox isolation, hints (arrangement, missing ingredient, no unrelated reveals, secrets never hinted), save round trip, import/export, invalid JSON, unknown IDs, wrong types, newer versions, migration, bad imports not touching progress, no key injection, backup recovery, reset confirmation, refusing to save invalid state, book autofill, and saves surviving an update that removes an item.
+Engine tests, 71 passing: dataset validity and reachability, recipe count, conflict detection (including an injected conflict), shaped/shapeless/translation/mirroring/empty-cell rules, quantities, grid size limits, station gating, fuel, brewing and smithing, consumption, double-collect protection, harmless failures, returning items, swaps, replenishing, locked supplies, sorting, 200 repeated crafts, Make again, remainders, discoveries, quest prerequisites, 3x3 unlock, tier and biome unlocks, sandbox isolation, hints (arrangement, missing ingredient, no unrelated reveals, secrets never hinted), save round trip, import/export, invalid JSON, unknown IDs, wrong types, newer versions, migration, bad imports not touching progress, no key injection, backup recovery, reset confirmation, refusing to save invalid state, book autofill, saves surviving an update that removes an item, the TNT recipe, and older saves receiving supplies added to areas they already opened.
 
 Browser tests in Chromium, 40 passing: mouse click-to-place, double-click safety, mouse drag to the table and back to the bag, friendly failure messages, book search and detail, mystery silhouettes, progressive hints, 3x3 unlock in play, keyboard Enter to select and place, Supply Crate x64, progress surviving reload, furnace smelting, hints toggle, reset cancel and confirm, invalid import rejected, no console errors, phone width with no horizontal scroll, touch tap-to-place, touch hold-then-drag, quick swipes not starting drags, table and bag visible together on a phone, new items scrolled into view, every dialog fitting a 375px phone, zero network requests at runtime, and corrupt-save recovery.
 

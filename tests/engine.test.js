@@ -366,6 +366,22 @@ test('imports stay strict about unknown ids', () => {
   ok(!E.importSave(JSON.stringify(o)).ok);
 });
 
+
+test('TNT uses the real checkerboard recipe', () => {
+  const G = 'gunpowder', Sd = 'sand';
+  const r = E.match(grid([[G, Sd, G], [Sd, G, Sd], [G, Sd, G]]), 3); eq(r && r.id, 'tnt'); eq(r.output.quantity, 1);
+  eq(E.match(grid([[Sd, G, Sd], [G, Sd, G], [Sd, G, Sd]]), 3), null, 'swapped checkerboard is not TNT');
+  eq(D.items.tnt.tier, 4); eq(D.items.gunpowder.tier, 4);
+});
+test('gunpowder unlocks with the Clockwork Room', () => {
+  const st = fresh(); ['oak_planks','stick','crafting_table','wooden_pickaxe','furnace','stone_pickaxe','stone_axe','chest','torch','glass','iron_ingot','bucket','iron_pickaxe','iron_helmet','diamond_pickaxe','anvil','lantern','smithing_table','bread','cookie','red_dye','red_wool','book','cake','pumpkin_pie'].forEach(i => { st.crafted[i] = 1; });
+  E.evaluateQuests(st); ok(st.biomes.indexOf('machine') >= 0); ok(E.replenish(st, 'gunpowder', 5).ok);
+});
+test('older saves get supplies added to areas they already opened', () => {
+  const st = fresh(); st.biomes.push('machine'); st.resources = st.resources.filter(r => r !== 'gunpowder');
+  const r = E.importSave(E.exportSave(st)); ok(r.ok); ok(r.state.resources.indexOf('gunpowder') >= 0); ok(r.state.discoveredItems.gunpowder);
+});
+
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 failures.forEach(f => console.log('  FAIL ' + f));
 process.exit(fail ? 1 : 0);

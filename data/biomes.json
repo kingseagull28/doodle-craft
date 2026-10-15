@@ -126,11 +126,12 @@
   "tier": 4,
   "color": "#c8382a",
   "icon": "redstone",
-  "blurb": "Redstone, slime and glowing dust.",
+  "blurb": "Redstone, slime, gunpowder and glowing dust.",
   "resources": [
    "redstone",
    "slime_ball",
-   "glowstone_dust"
+   "glowstone_dust",
+   "gunpowder"
   ]
  },
  {
@@ -145,7 +146,6 @@
    "blaze_rod",
    "ghast_tear",
    "spider_eye",
-   "gunpowder",
    "ender_pearl",
    "phantom_membrane",
    "rabbit_foot",

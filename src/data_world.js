@@ -69,8 +69,8 @@
       resources: ['raw_iron', 'raw_gold', 'raw_copper', 'diamond', 'emerald', 'lapis_lazuli', 'amethyst_shard', 'quartz', 'obsidian'] },
     { id: 'farm', name: 'Sunny Farm', tier: 3, color: '#7ab83a', icon: 'wheat', blurb: 'Crops, flowers, animals and a water well.',
       resources: res(function (it) { return it.tier === 3; }) },
-    { id: 'machine', name: 'Clockwork Room', tier: 4, color: '#c8382a', icon: 'redstone', blurb: 'Redstone, slime and glowing dust.',
-      resources: ['redstone', 'slime_ball', 'glowstone_dust'] },
+    { id: 'machine', name: 'Clockwork Room', tier: 4, color: '#c8382a', icon: 'redstone', blurb: 'Redstone, slime, gunpowder and glowing dust.',
+      resources: ['redstone', 'slime_ball', 'glowstone_dust', 'gunpowder'] },
     { id: 'magic', name: 'Moonlit Chamber', tier: 5, color: '#8a4ad8', icon: 'nether_wart', blurb: 'Rare ingredients for potions and spells.',
       resources: res(function (it) { return it.tier === 5; }) },
     { id: 'legend', name: 'Hall of Legends', tier: 6, color: '#f7c843', icon: 'nether_star', blurb: 'The rarest treasures in the world.',
@@ -126,6 +126,7 @@
   quest('t4_room', 'Clockwork Room', 'Craft an Observer and a Crafter.', 4, { craft: ['observer', 'crafter'] }, { tier: 5, biome: 'magic' }, { pre: ['t4_piston', 't4_rails', 't4_time'], milestone: true });
   quest('t4_express', 'Express Train', 'Craft a Powered Rail and a Minecart with Chest.', 4, { craft: ['powered_rail', 'chest_minecart'] }, {}, { pre: ['t4_rails'], opt: true });
   quest('t4_lamp', 'Lights On', 'Craft a Redstone Lamp.', 4, { craft: ['redstone_lamp'] }, {}, { pre: ['t4_torch'], opt: true });
+  quest('t4_tnt', 'Big Red Block', 'Craft TNT from Gunpowder and Sand.', 4, { craft: ['tnt'] }, {}, { pre: ['t4_torch'], opt: true });
   quest('t4_parrot', 'Wind-up Friend', 'Build a Clockwork Parrot.', 4, { craft: ['clockwork_parrot'] }, {}, { pre: ['t4_time'], opt: true });
   // Tier 5
   quest('t5_stand', 'Potion Lab', 'Craft a Brewing Stand.', 5, { craft: ['brewing_stand'] }, {}, { pre: ['t4_room'] });

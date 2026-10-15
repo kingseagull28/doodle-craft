@@ -250,6 +250,7 @@
   // =============== TIER 4: REDSTONE AND MACHINERY ===============
   item('redstone', 'Redstone Dust', 'machinery', 4, { t: 'dust', a: '#e0282a' }, 'Magic red dust that carries power.', ['redstone'], { res: true });
   item('slime_ball', 'Slimeball', 'animals', 4, { t: 'orb', a: '#7cc95a', w: '#c8f0b0' }, 'Bouncy green goo.', ['animal_drop'], { res: true });
+  item('gunpowder', 'Gunpowder', 'machinery', 4, { t: 'dust', a: '#5a5a5a' }, 'Grey powder for TNT, fireworks and potions.', ['brewing', 'redstone'], { res: true });
   item('glowstone_dust', 'Glowstone Dust', 'machinery', 4, { t: 'dust', a: '#f8d870' }, 'Glowing yellow dust.', ['light', 'brewing'], { res: true });
   item('redstone_block', 'Block of Redstone', 'machinery', 4, B('metal', '#b8181a'), 'A block that is always powered.', ['redstone', 'storage_block']);
   shaped('redstone_block', 1, ['RRR', 'RRR', 'RRR'], { R: 'redstone' });
@@ -285,6 +286,8 @@
   shaped('jukebox', 1, ['PPP', 'PDP', 'PPP'], { P: '#planks', D: 'diamond' });
   item('daylight_detector', 'Daylight Detector', 'machinery', 4, MK('slab', 'planks', '#b8945f', { face: 'daylight' }), 'Senses the sun.', ['redstone']);
   shaped('daylight_detector', 1, ['GGG', 'QQQ', 'SSS'], { G: 'glass', Q: 'quartz', S: '#wooden_slabs' });
+  item('tnt', 'TNT', 'machinery', 4, B('stripes', '#d8382a', { b: '#b02a1e', face: 'tnt' }), 'A big red block that goes boom in Minecraft. In your workshop it stays safely on the shelf.', ['redstone', 'machine']);
+  shaped('tnt', 1, ['GSG', 'SGS', 'GSG'], { G: 'gunpowder', S: 'sand' }, { msg: 'TNT! Don\'t worry, nothing explodes in the workshop. It is safe on your shelf.' });
   item('hopper', 'Hopper', 'machinery', 4, { t: 'hopper', a: '#4a4a4a' }, 'A funnel that moves items.', ['machine']);
   shaped('hopper', 1, ['I.I', 'ICI', '.I.'], { I: 'iron_ingot', C: 'chest' });
   item('compass', 'Compass', 'tools', 4, { t: 'dial', a: '#a8a8a8', x: '#e0282a' }, 'Always points home.', ['tool']);
@@ -309,6 +312,8 @@
   shapeless('chest_minecart', 1, ['chest', 'minecart']);
   item('furnace_minecart', 'Minecart with Furnace', 'transport', 4, { t: 'minecart', a: '#8a8a8a', x: '#5a5a5a' }, 'A minecart that pushes itself.', ['vehicle']);
   shapeless('furnace_minecart', 1, ['furnace', 'minecart']);
+  item('tnt_minecart', 'Minecart with TNT', 'transport', 4, { t: 'minecart', a: '#8a8a8a', x: '#d8382a' }, 'A minecart carrying TNT. Handle with care!', ['vehicle']);
+  shapeless('tnt_minecart', 1, ['tnt', 'minecart']);
   item('hopper_minecart', 'Minecart with Hopper', 'transport', 4, { t: 'minecart', a: '#8a8a8a', x: '#4a4a4a' }, 'A minecart that picks up items.', ['vehicle']);
   shapeless('hopper_minecart', 1, ['hopper', 'minecart']);
 
@@ -319,7 +324,6 @@
   D.items.blaze_rod.fuel = 48;
   res5('ghast_tear', 'Ghast Tear', { t: 'drop', a: '#d8f0f8' }, 'A sparkly tear. Heals in potions.', ['brewing']);
   res5('spider_eye', 'Spider Eye', { t: 'eye', a: '#a01a3a', x: '#e0405a' }, 'A creepy red eye.', ['brewing']);
-  res5('gunpowder', 'Gunpowder', { t: 'dust', a: '#5a5a5a' }, 'Grey powder for fireworks.', ['brewing']);
   res5('ender_pearl', 'Ender Pearl', { t: 'pearl', a: '#1d6a5a', x: '#3ad8a0' }, 'A pearl that teleports things.', ['magic_item']);
   res5('phantom_membrane', 'Phantom Membrane', { t: 'membrane', a: '#c8c0a8' }, 'A light wing piece. Helps you float.', ['brewing']);
   res5('rabbit_foot', 'Rabbit\'s Foot', { t: 'rabbit_foot', a: '#c8a878' }, 'A lucky charm for jumping potions.', ['brewing']);

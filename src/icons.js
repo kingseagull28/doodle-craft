@@ -738,6 +738,13 @@
         rect(3, 7, 5, 12, '#7d7d7d'); rect(2, 7, 6, 8, '#a0a0a0');
         rect(10, 7, 11, 12, '#8b5a2b'); rect(9, 7, 12, 8, '#b0b0b0');
         break;
+      case 'tnt':
+        rect(0, 5, 15, 10, '#f2efe6'); rect(0, 5, 15, 5, '#d8d4c8'); rect(0, 10, 15, 10, '#c8c4b8');
+        rect(1, 6, 3, 6, '#1d1d1d'); rect(2, 7, 2, 9, '#1d1d1d');
+        rect(6, 6, 6, 9, '#1d1d1d'); rect(9, 6, 9, 9, '#1d1d1d'); set(7, 7, '#1d1d1d'); set(8, 8, '#1d1d1d');
+        rect(12, 6, 14, 6, '#1d1d1d'); rect(13, 7, 13, 9, '#1d1d1d');
+        rect(0, 0, 15, 0, shade(a, 0.2));
+        break;
       case 'mouth':
         rect(4, 8, 11, 13, '#1d1d1d'); rect(4, 8, 11, 8, '#3a3a3a');
         if (spec.lit) { rect(5, 11, 10, 13, x); rect(6, 10, 9, 10, shade(x, 0.3)); }

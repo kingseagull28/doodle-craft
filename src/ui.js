@@ -100,7 +100,7 @@
   }
 
   // ---------- workshop strip ----------
-  const SHELF = ['crafting_table', 'furnace', 'chest', 'barrel', 'workshop_shelf', 'smithing_table', 'anvil', 'cauldron', 'lantern', 'composter', 'beehive', 'bookshelf', 'jukebox', 'note_block', 'crafter', 'brewing_stand', 'enchanting_table', 'moon_lantern', 'seeing_sphere', 'disco_ball', 'beacon', 'wonder_engine'];
+  const SHELF = ['crafting_table', 'furnace', 'chest', 'barrel', 'workshop_shelf', 'smithing_table', 'anvil', 'cauldron', 'lantern', 'composter', 'beehive', 'bookshelf', 'jukebox', 'note_block', 'crafter', 'tnt', 'brewing_stand', 'enchanting_table', 'moon_lantern', 'seeing_sphere', 'disco_ball', 'beacon', 'wonder_engine'];
   function renderWorkshop() {
     const doors = $('#doors'); clear(doors);
     D.biomes.forEach(function (b) {

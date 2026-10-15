@@ -1155,6 +1155,13 @@ button { font: inherit; color: inherit; }
         rect(3, 7, 5, 12, '#7d7d7d'); rect(2, 7, 6, 8, '#a0a0a0');
         rect(10, 7, 11, 12, '#8b5a2b'); rect(9, 7, 12, 8, '#b0b0b0');
         break;
+      case 'tnt':
+        rect(0, 5, 15, 10, '#f2efe6'); rect(0, 5, 15, 5, '#d8d4c8'); rect(0, 10, 15, 10, '#c8c4b8');
+        rect(1, 6, 3, 6, '#1d1d1d'); rect(2, 7, 2, 9, '#1d1d1d');
+        rect(6, 6, 6, 9, '#1d1d1d'); rect(9, 6, 9, 9, '#1d1d1d'); set(7, 7, '#1d1d1d'); set(8, 8, '#1d1d1d');
+        rect(12, 6, 14, 6, '#1d1d1d'); rect(13, 7, 13, 9, '#1d1d1d');
+        rect(0, 0, 15, 0, shade(a, 0.2));
+        break;
       case 'mouth':
         rect(4, 8, 11, 13, '#1d1d1d'); rect(4, 8, 11, 8, '#3a3a3a');
         if (spec.lit) { rect(5, 11, 10, 13, x); rect(6, 10, 9, 10, shade(x, 0.3)); }
@@ -1889,6 +1896,7 @@ button { font: inherit; color: inherit; }
   // =============== TIER 4: REDSTONE AND MACHINERY ===============
   item('redstone', 'Redstone Dust', 'machinery', 4, { t: 'dust', a: '#e0282a' }, 'Magic red dust that carries power.', ['redstone'], { res: true });
   item('slime_ball', 'Slimeball', 'animals', 4, { t: 'orb', a: '#7cc95a', w: '#c8f0b0' }, 'Bouncy green goo.', ['animal_drop'], { res: true });
+  item('gunpowder', 'Gunpowder', 'machinery', 4, { t: 'dust', a: '#5a5a5a' }, 'Grey powder for TNT, fireworks and potions.', ['brewing', 'redstone'], { res: true });
   item('glowstone_dust', 'Glowstone Dust', 'machinery', 4, { t: 'dust', a: '#f8d870' }, 'Glowing yellow dust.', ['light', 'brewing'], { res: true });
   item('redstone_block', 'Block of Redstone', 'machinery', 4, B('metal', '#b8181a'), 'A block that is always powered.', ['redstone', 'storage_block']);
   shaped('redstone_block', 1, ['RRR', 'RRR', 'RRR'], { R: 'redstone' });
@@ -1924,6 +1932,8 @@ button { font: inherit; color: inherit; }
   shaped('jukebox', 1, ['PPP', 'PDP', 'PPP'], { P: '#planks', D: 'diamond' });
   item('daylight_detector', 'Daylight Detector', 'machinery', 4, MK('slab', 'planks', '#b8945f', { face: 'daylight' }), 'Senses the sun.', ['redstone']);
   shaped('daylight_detector', 1, ['GGG', 'QQQ', 'SSS'], { G: 'glass', Q: 'quartz', S: '#wooden_slabs' });
+  item('tnt', 'TNT', 'machinery', 4, B('stripes', '#d8382a', { b: '#b02a1e', face: 'tnt' }), 'A big red block that goes boom in Minecraft. In your workshop it stays safely on the shelf.', ['redstone', 'machine']);
+  shaped('tnt', 1, ['GSG', 'SGS', 'GSG'], { G: 'gunpowder', S: 'sand' }, { msg: 'TNT! Don\'t worry, nothing explodes in the workshop. It is safe on your shelf.' });
   item('hopper', 'Hopper', 'machinery', 4, { t: 'hopper', a: '#4a4a4a' }, 'A funnel that moves items.', ['machine']);
   shaped('hopper', 1, ['I.I', 'ICI', '.I.'], { I: 'iron_ingot', C: 'chest' });
   item('compass', 'Compass', 'tools', 4, { t: 'dial', a: '#a8a8a8', x: '#e0282a' }, 'Always points home.', ['tool']);
@@ -1948,6 +1958,8 @@ button { font: inherit; color: inherit; }
   shapeless('chest_minecart', 1, ['chest', 'minecart']);
   item('furnace_minecart', 'Minecart with Furnace', 'transport', 4, { t: 'minecart', a: '#8a8a8a', x: '#5a5a5a' }, 'A minecart that pushes itself.', ['vehicle']);
   shapeless('furnace_minecart', 1, ['furnace', 'minecart']);
+  item('tnt_minecart', 'Minecart with TNT', 'transport', 4, { t: 'minecart', a: '#8a8a8a', x: '#d8382a' }, 'A minecart carrying TNT. Handle with care!', ['vehicle']);
+  shapeless('tnt_minecart', 1, ['tnt', 'minecart']);
   item('hopper_minecart', 'Minecart with Hopper', 'transport', 4, { t: 'minecart', a: '#8a8a8a', x: '#4a4a4a' }, 'A minecart that picks up items.', ['vehicle']);
   shapeless('hopper_minecart', 1, ['hopper', 'minecart']);
 
@@ -1958,7 +1970,6 @@ button { font: inherit; color: inherit; }
   D.items.blaze_rod.fuel = 48;
   res5('ghast_tear', 'Ghast Tear', { t: 'drop', a: '#d8f0f8' }, 'A sparkly tear. Heals in potions.', ['brewing']);
   res5('spider_eye', 'Spider Eye', { t: 'eye', a: '#a01a3a', x: '#e0405a' }, 'A creepy red eye.', ['brewing']);
-  res5('gunpowder', 'Gunpowder', { t: 'dust', a: '#5a5a5a' }, 'Grey powder for fireworks.', ['brewing']);
   res5('ender_pearl', 'Ender Pearl', { t: 'pearl', a: '#1d6a5a', x: '#3ad8a0' }, 'A pearl that teleports things.', ['magic_item']);
   res5('phantom_membrane', 'Phantom Membrane', { t: 'membrane', a: '#c8c0a8' }, 'A light wing piece. Helps you float.', ['brewing']);
   res5('rabbit_foot', 'Rabbit\'s Foot', { t: 'rabbit_foot', a: '#c8a878' }, 'A lucky charm for jumping potions.', ['brewing']);
@@ -2138,8 +2149,8 @@ button { font: inherit; color: inherit; }
       resources: ['raw_iron', 'raw_gold', 'raw_copper', 'diamond', 'emerald', 'lapis_lazuli', 'amethyst_shard', 'quartz', 'obsidian'] },
     { id: 'farm', name: 'Sunny Farm', tier: 3, color: '#7ab83a', icon: 'wheat', blurb: 'Crops, flowers, animals and a water well.',
       resources: res(function (it) { return it.tier === 3; }) },
-    { id: 'machine', name: 'Clockwork Room', tier: 4, color: '#c8382a', icon: 'redstone', blurb: 'Redstone, slime and glowing dust.',
-      resources: ['redstone', 'slime_ball', 'glowstone_dust'] },
+    { id: 'machine', name: 'Clockwork Room', tier: 4, color: '#c8382a', icon: 'redstone', blurb: 'Redstone, slime, gunpowder and glowing dust.',
+      resources: ['redstone', 'slime_ball', 'glowstone_dust', 'gunpowder'] },
     { id: 'magic', name: 'Moonlit Chamber', tier: 5, color: '#8a4ad8', icon: 'nether_wart', blurb: 'Rare ingredients for potions and spells.',
       resources: res(function (it) { return it.tier === 5; }) },
     { id: 'legend', name: 'Hall of Legends', tier: 6, color: '#f7c843', icon: 'nether_star', blurb: 'The rarest treasures in the world.',
@@ -2195,6 +2206,7 @@ button { font: inherit; color: inherit; }
   quest('t4_room', 'Clockwork Room', 'Craft an Observer and a Crafter.', 4, { craft: ['observer', 'crafter'] }, { tier: 5, biome: 'magic' }, { pre: ['t4_piston', 't4_rails', 't4_time'], milestone: true });
   quest('t4_express', 'Express Train', 'Craft a Powered Rail and a Minecart with Chest.', 4, { craft: ['powered_rail', 'chest_minecart'] }, {}, { pre: ['t4_rails'], opt: true });
   quest('t4_lamp', 'Lights On', 'Craft a Redstone Lamp.', 4, { craft: ['redstone_lamp'] }, {}, { pre: ['t4_torch'], opt: true });
+  quest('t4_tnt', 'Big Red Block', 'Craft TNT from Gunpowder and Sand.', 4, { craft: ['tnt'] }, {}, { pre: ['t4_torch'], opt: true });
   quest('t4_parrot', 'Wind-up Friend', 'Build a Clockwork Parrot.', 4, { craft: ['clockwork_parrot'] }, {}, { pre: ['t4_time'], opt: true });
   // Tier 5
   quest('t5_stand', 'Potion Lab', 'Craft a Brewing Stand.', 5, { craft: ['brewing_stand'] }, {}, { pre: ['t4_room'] });
@@ -2225,7 +2237,7 @@ button { font: inherit; color: inherit; }
   const D = W.Data;
   const E = W.Engine = {};
   const SCHEMA_VERSION = 2;
-  const GAME_VERSION = '1.0.0';
+  const GAME_VERSION = '1.1.0';
   E.SCHEMA_VERSION = SCHEMA_VERSION; E.GAME_VERSION = GAME_VERSION;
   const STATION_ITEM = { smelting: 'furnace', brewing: 'brewing_stand', smithing: 'smithing_table' };
   E.STATION_ITEM = STATION_ITEM;
@@ -2890,8 +2902,11 @@ button { font: inherit; color: inherit; }
     st.adventure = pickWs(obj.adventure); st.sandbox = pickWs(obj.sandbox);
     st.mode = obj.mode; st.sandboxUnlocked = obj.sandboxUnlocked; st.grid3 = obj.grid3; st.tier = obj.tier;
     st.biomes = obj.biomes.slice(); st.resources = obj.resources.slice();
+    // supplies added to an already-open area by a game update become available right away
+    st.biomes.forEach(function (bid) { D.biomes.find(function (b) { return b.id === bid; }).resources.forEach(function (rid) { if (st.resources.indexOf(rid) < 0) st.resources.push(rid); }); });
     st.discoveredItems = Object.assign({}, obj.discoveredItems); st.discoveredRecipes = Object.assign({}, obj.discoveredRecipes);
     st.crafted = Object.assign({}, obj.crafted); st.quests = Object.assign({}, obj.quests); st.hintLevels = Object.assign({}, obj.hintLevels);
+    st.resources.forEach(function (rid) { if (!st.discoveredItems[rid]) st.discoveredItems[rid] = Date.now(); });
     st.seenBiomes = isObj(obj.seenBiomes) ? Object.assign({}, obj.seenBiomes) : {};
     st.settings = { sound: obj.settings.sound, music: obj.settings.music, hints: obj.settings.hints,
       motion: ['auto', 'reduce', 'full'].indexOf(obj.settings.motion) >= 0 ? obj.settings.motion : 'auto', tutorialDone: !!obj.settings.tutorialDone };
@@ -3221,7 +3236,7 @@ button { font: inherit; color: inherit; }
   }
 
   // ---------- workshop strip ----------
-  const SHELF = ['crafting_table', 'furnace', 'chest', 'barrel', 'workshop_shelf', 'smithing_table', 'anvil', 'cauldron', 'lantern', 'composter', 'beehive', 'bookshelf', 'jukebox', 'note_block', 'crafter', 'brewing_stand', 'enchanting_table', 'moon_lantern', 'seeing_sphere', 'disco_ball', 'beacon', 'wonder_engine'];
+  const SHELF = ['crafting_table', 'furnace', 'chest', 'barrel', 'workshop_shelf', 'smithing_table', 'anvil', 'cauldron', 'lantern', 'composter', 'beehive', 'bookshelf', 'jukebox', 'note_block', 'crafter', 'tnt', 'brewing_stand', 'enchanting_table', 'moon_lantern', 'seeing_sphere', 'disco_ball', 'beacon', 'wonder_engine'];
   function renderWorkshop() {
     const doors = $('#doors'); clear(doors);
     D.biomes.forEach(function (b) {
