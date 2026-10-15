@@ -403,6 +403,11 @@ test('Odyssey Moon is six Emeralds in a moon shape', () => {
   const r = E.match(grid([[_, Em, Em], [Em, Em, _], [_, Em, Em]]), 3); eq(r && r.id, 'odyssey_moon'); eq(r.output.quantity, 1);
   eq(r.sourceType, 'original_extension'); eq(D.items.odyssey_moon.category, 'jump_man');
 });
+test('Cappy is a Leather Helmet with two Eyes of Ender above and Red Dye below', () => {
+  const Ey = 'ender_eye';
+  const r = E.match(grid([[Ey, _, Ey], [_, 'leather_helmet', _], [_, 'red_dye', _]]), 3); eq(r && r.id, 'cappy'); eq(r.output.quantity, 1);
+  eq(r.sourceType, 'original_extension'); eq(D.items.cappy.category, 'jump_man');
+});
 
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 failures.forEach(f => console.log('  FAIL ' + f));

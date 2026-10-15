@@ -12933,6 +12933,33 @@
   ]
  },
  {
+  "id": "cappy",
+  "name": "Cappy",
+  "description": "A friendly red cap with two big eyes.",
+  "category": "jump_man",
+  "tier": 5,
+  "icon": {
+   "t": "eyed_cap",
+   "a": "#d8302a",
+   "c": "#f06a5a",
+   "b": "#8a1a14"
+  },
+  "tags": [
+   "jump_man",
+   "hat",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:cappy"
+  ]
+ },
+ {
   "id": "ancient_debris",
   "name": "Ancient Debris",
   "description": "A super-rare, super-tough rock.",

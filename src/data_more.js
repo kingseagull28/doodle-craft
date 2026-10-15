@@ -439,4 +439,6 @@
   shaped('invincibility_star', 1, ['.G.', 'GGG', 'G.G'], { G: 'gold_ingot' }, { orig: true, msg: 'An Invincibility Star! Nothing can stop you now!' });
   item('odyssey_moon', 'Odyssey Moon', 'jump_man', 2, { t: 'moon', a: '#3ad86a', c: '#a8f0b8', b: '#1f8a40' }, 'A shiny green moon. Collect them all!', ['jump_man', 'light', 'original'], O);
   shaped('odyssey_moon', 1, ['.EE', 'EE.', '.EE'], { E: 'emerald' }, { orig: true, msg: 'You got a Moon! It sparkles so green.' });
+  item('cappy', 'Cappy', 'jump_man', 5, { t: 'eyed_cap', a: '#d8302a', c: '#f06a5a', b: '#8a1a14' }, 'A friendly red cap with two big eyes.', ['jump_man', 'hat', 'original'], O);
+  shaped('cappy', 1, ['E.E', '.H.', '.R.'], { E: 'ender_eye', H: 'leather_helmet', R: 'red_dye' }, { orig: true, msg: 'Meet Cappy! A hat that can see!' });
 })(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));

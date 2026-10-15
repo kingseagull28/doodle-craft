@@ -6,6 +6,7 @@
 * Added the Extra Life Mushroom to the Jump Man category (Red Mushroom and Green Dye, original recipe).
 * Added the Invincibility Star to the Jump Man category (6 Gold Ingots in a star shape, original recipe).
 * Added the Odyssey Moon to the Jump Man category (6 Emeralds in a moon shape, original recipe).
+* Added Cappy to the Jump Man category (Leather Helmet, 2 Eyes of Ender and Red Dye, original recipe).
 
 ## 1.1.0 (2026-10-15)
 * Added TNT (5 Gunpowder and 4 Sand in a checkerboard, Java 1.21 recipe) and Minecart with TNT.

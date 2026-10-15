@@ -23266,6 +23266,71 @@
   ]
  },
  {
+  "id": "cappy",
+  "name": "Cappy",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "ender_eye",
+    null,
+    "ender_eye"
+   ],
+   [
+    null,
+    "leather_helmet",
+    null
+   ],
+   [
+    null,
+    "red_dye",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "ender_eye",
+    "quantity": 2
+   },
+   {
+    "itemId": "leather_helmet",
+    "quantity": 1
+   },
+   {
+    "itemId": "red_dye",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "cappy",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:5"
+  ],
+  "category": "jump_man",
+  "tier": 5,
+  "hints": [
+   "It is a Jump Man thing.",
+   "It uses Eye of Ender and 2 other kinds of ingredient.",
+   "Arrange: 2 Eye of Ender, 1 Leather Helmet, 1 Red Dye in the pattern shown."
+  ],
+  "discoveryMessage": "Meet Cappy! A hat that can see!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "jump_man",
+   "hat",
+   "original"
+  ]
+ },
+ {
   "id": "netherite_scrap",
   "name": "Netherite Scrap",
   "method": "smelting",
