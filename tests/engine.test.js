@@ -474,7 +474,7 @@ test('Spicy Wheels icons draw with no missing colors', () => {
 
 // ---------------- Chip Shot expansion ----------------
 const CS = ['golf_ball', 'putter', 'putting_green', 'golf_hole_flag', 'scorecard', 'windmill_obstacle', 'golf_ramp', 'golf_loop', 'golf_tunnel', 'water_hazard',
-  'sand_trap', 'pirate_ship_hole', 'castle_hole', 'volcano_hole', 'dinosaur_hole', 'golden_golf_ball', 'fizzy_golf_ball', 'rainbow_golf_ball', 'potato_putter', 'diamond_golf_trophy'];
+  'sand_trap', 'pirate_ship_hole', 'castle_hole', 'volcano_hole', 'dinosaur_hole', 'golden_golf_ball', 'exploding_golf_ball', 'rainbow_golf_ball', 'potato_putter', 'diamond_golf_trophy'];
 test('Chip Shot has exactly 20 original items, each with one original recipe', () => {
   eq(E.collectionItems('chip_shot').join(','), CS.join(','));
   ok(D.categories.some(c => c[0] === 'chip_shot' && c[1] === 'Chip Shot')); eq(D.collections.chip_shot.name, 'Chip Shot');
@@ -500,7 +500,7 @@ test('every Chip Shot recipe matches its exact pattern and makes the right amoun
     ['volcano_hole', 1, [[_, 'magma_cream', _], ['obsidian', 'campfire', 'obsidian'], [PG, HF, PG]]],
     ['dinosaur_hole', 1, [[_, 'bone_block', _], [Gw, 'bone_block', Gw], [PG, HF, PG]]],
     ['golden_golf_ball', 1, [[Go, Go, Go], [Go, GB, Go], [_, Go, _]]],
-    ['fizzy_golf_ball', 1, [[_, Gp, _], [Gp, GB, Gp], [_, 'tnt', _]]],
+    ['exploding_golf_ball', 1, [[_, Gp, _], [Gp, GB, Gp], [_, 'tnt', _]]],
     ['rainbow_golf_ball', 1, [['red_dye', 'orange_dye', 'yellow_dye'], ['green_dye', GB, 'blue_dye'], ['purple_dye', 'white_dye', 'black_dye']]],
     ['potato_putter', 1, [[_, 'potato', _], [_, 'putter', _], [_, St, _]]],
     ['diamond_golf_trophy', 1, [[Dm, Dm, Dm], [Dm, 'golden_golf_ball', Dm], [_, Go, _]]]

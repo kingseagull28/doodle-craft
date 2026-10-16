@@ -26841,8 +26841,8 @@
   ]
  },
  {
-  "id": "fizzy_golf_ball",
-  "name": "Fizzy Golf Ball",
+  "id": "exploding_golf_ball",
+  "name": "Exploding Golf Ball",
   "method": "crafting_grid",
   "type": "shaped",
   "gridSize": 3,
@@ -26879,7 +26879,7 @@
    }
   ],
   "output": {
-   "itemId": "fizzy_golf_ball",
+   "itemId": "exploding_golf_ball",
    "quantity": 1
   },
   "remainders": [],
@@ -26895,7 +26895,7 @@
    "It uses Gunpowder and 2 other kinds of ingredient.",
    "Arrange: 3 Gunpowder, 1 Golf Ball, 1 TNT in the pattern shown."
   ],
-  "discoveryMessage": "A Fizzy Golf Ball! Fizz, pop, sparkle!",
+  "discoveryMessage": "An Exploding Golf Ball! Do not worry. It just goes pop!",
   "sourceType": "original_extension",
   "referenceVersion": "Workshop of Wonders original",
   "secret": false,

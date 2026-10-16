@@ -14503,13 +14503,13 @@
   ]
  },
  {
-  "id": "fizzy_golf_ball",
-  "name": "Fizzy Golf Ball",
-  "description": "A red and black ball that fizzes with sparkles. Just for fun!",
+  "id": "exploding_golf_ball",
+  "name": "Exploding Golf Ball",
+  "description": "A silly red and black ball with a fuse. It only goes pop!",
   "category": "chip_shot",
   "tier": 4,
   "icon": {
-   "t": "fizzy_ball",
+   "t": "exploding_ball",
    "a": "#d8302a",
    "c": "#f06a5a"
   },
@@ -14525,7 +14525,7 @@
   "resource": false,
   "fuel": 0,
   "unlockRequirements": [
-   "recipe:fizzy_golf_ball"
+   "recipe:exploding_golf_ball"
   ]
  },
  {

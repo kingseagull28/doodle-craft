@@ -76,8 +76,8 @@
   golf('golden_golf_ball', 'Golden Golf Ball', 'shiny_ball', { a: '#f7c843', c: '#fff0a0', b: '#c8901a' }, 'A shiny gold golf ball. So rare!', ['gold_ingot', 'golf_ball']);
   shaped('golden_golf_ball', 1, ['GGG', 'GBG', '.G.'], { G: 'gold_ingot', B: 'golf_ball' }, { orig: true, msg: 'A Golden Golf Ball! It sparkles in the sun.' });
 
-  golf('fizzy_golf_ball', 'Fizzy Golf Ball', 'fizzy_ball', { a: '#d8302a', c: '#f06a5a' }, 'A red and black ball that fizzes with sparkles. Just for fun!', ['gunpowder', 'golf_ball', 'tnt']);
-  shaped('fizzy_golf_ball', 1, ['.P.', 'PBP', '.T.'], { P: 'gunpowder', B: 'golf_ball', T: 'tnt' }, { orig: true, msg: 'A Fizzy Golf Ball! Fizz, pop, sparkle!' });
+  golf('exploding_golf_ball', 'Exploding Golf Ball', 'exploding_ball', { a: '#d8302a', c: '#f06a5a' }, 'A silly red and black ball with a fuse. It only goes pop!', ['gunpowder', 'golf_ball', 'tnt']);
+  shaped('exploding_golf_ball', 1, ['.P.', 'PBP', '.T.'], { P: 'gunpowder', B: 'golf_ball', T: 'tnt' }, { orig: true, msg: 'An Exploding Golf Ball! Do not worry. It just goes pop!' });
 
   golf('rainbow_golf_ball', 'Rainbow Golf Ball', 'rainbow_ball', {}, 'A golf ball with every color of the rainbow.', ['red_dye', 'golf_ball']);
   shaped('rainbow_golf_ball', 1, ['ROY', 'GBL', 'PWK'], { R: 'red_dye', O: 'orange_dye', Y: 'yellow_dye', G: 'green_dye', B: 'golf_ball', L: 'blue_dye', P: 'purple_dye', W: 'white_dye', K: 'black_dye' }, O);
