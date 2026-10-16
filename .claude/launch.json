@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "game",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:/Users/Mus65/AppData/Local/Temp/claude/C--Users-Mus65-Documents-GitHub-doodle-craft/78ba7bcb-a39f-4adf-a9e5-6bd7f6b01f91/scratchpad/serve.js", "docs"],
+      "port": 8137,
+      "url": "http://127.0.0.1:8137"
+    }
+  ]
+}
