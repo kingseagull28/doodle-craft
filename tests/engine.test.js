@@ -22,7 +22,7 @@ const P = 'oak_planks', S = 'stick', _ = null;
 
 // ---------------- dataset ----------------
 test('dataset validates with no errors', () => { const v = E.validateData(); eq(v.errors.length, 0, v.errors.slice(0, 5).join('; ')); });
-test('recipe count is within 300-500', () => { ok(D.recipes.length >= 300 && D.recipes.length <= 500, 'count ' + D.recipes.length); });
+test('recipe count is within 300-600', () => { ok(D.recipes.length >= 300 && D.recipes.length <= 600, 'count ' + D.recipes.length); });
 test('every recipe has hints, tier, category and source', () => { D.recipes.forEach(r => { ok(r.hints.length === 3 && r.tier >= 1 && r.category && r.sourceType && r.referenceVersion, r.id); }); });
 test('no ambiguous grid recipes', () => { eq(E.findConflicts().length, 0); });
 test('conflict detector catches an injected duplicate pattern', () => {
@@ -407,6 +407,69 @@ test('Cappy is a Leather Helmet with two Eyes of Ender above and Red Dye below',
   const Ey = 'ender_eye';
   const r = E.match(grid([[Ey, _, Ey], [_, 'leather_helmet', _], [_, 'red_dye', _]]), 3); eq(r && r.id, 'cappy'); eq(r.output.quantity, 1);
   eq(r.sourceType, 'original_extension'); eq(D.items.cappy.category, 'jump_man');
+});
+
+// ---------------- Spicy Wheels expansion ----------------
+const SW = ['toy_wheel', 'basic_toy_car', 'sports_car', 'monster_truck', 'school_bus', 'orange_track', 'curved_track', 'loop_the_loop',
+  'car_launcher', 'toy_car_garage', 'golden_toy_car', 'rocket_car', 'rainbow_car', 'hot_dog_car', 'diamond_toy_car'];
+test('Spicy Wheels has exactly 15 original items, each with one original recipe', () => {
+  eq(E.collectionItems('spicy_wheels').join(','), SW.join(','));
+  ok(D.categories.some(c => c[0] === 'spicy_wheels' && c[1] === 'Spicy Wheels'));
+  eq(D.collections.spicy_wheels.name, 'Spicy Wheels');
+  SW.forEach(id => { ok(D.items[id].isOriginalContent, id); const rs = E.index.byOutput[id] || []; eq(rs.length, 1, id); eq(rs[0].sourceType, 'original_extension', id); });
+});
+test('every Spicy Wheels recipe matches its exact pattern and makes the right amount', () => {
+  const K = 'black_dye', N = 'iron_nugget', I = 'iron_ingot', Wh = 'toy_wheel', C = 'basic_toy_car', Rs = 'redstone', T = 'orange_track', CT = 'curved_track', G = 'gold_ingot', Dm = 'diamond', F = 'firework_rocket', Br = 'bread';
+  const cases = [
+    ['toy_wheel', 4, [[_, K, _], [K, N, K], [_, K, _]]],
+    ['basic_toy_car', 1, [[_, 'blue_dye', _], [I, I, I], [Wh, _, Wh]]],
+    ['sports_car', 1, [[_, 'red_dye', _], [I, C, I], [_, Rs, _]]],
+    ['monster_truck', 1, [[Wh, _, Wh], [Wh, C, Wh], [I, I, I]]],
+    ['school_bus', 1, [['yellow_dye', 'yellow_dye', 'yellow_dye'], [I, C, I], [Wh, _, Wh]]],
+    ['orange_track', 4, [[_, _, _], ['orange_dye', 'smooth_stone', 'orange_dye'], ['orange_dye', 'smooth_stone', 'orange_dye']]],
+    ['curved_track', 2, [[T, T, _], [_, T, _], [_, _, _]]],
+    ['loop_the_loop', 1, [[T, T, T], [CT, _, CT], [T, T, T]]],
+    ['car_launcher', 1, [[_, 'piston', _], [T, Rs, T], [_, I, _]]],
+    ['toy_car_garage', 1, [['oak_planks', 'oak_planks', 'oak_planks'], ['oak_planks', 'chest', 'oak_planks'], [T, _, T]]],
+    ['golden_toy_car', 1, [[G, G, G], [G, C, G], [_, G, _]]],
+    ['rocket_car', 1, [[_, F, _], [F, 'sports_car', F], [_, Rs, _]]],
+    ['rainbow_car', 1, [['red_dye', 'orange_dye', 'yellow_dye'], ['green_dye', C, 'blue_dye'], ['purple_dye', 'white_dye', K]]],
+    ['hot_dog_car', 1, [[_, Br, _], [Br, 'cooked_beef', Br], [Wh, C, Wh]]],
+    ['diamond_toy_car', 1, [[Dm, Dm, Dm], [Dm, 'golden_toy_car', Dm], [_, Dm, _]]]
+  ];
+  eq(cases.length, 15);
+  cases.forEach(c => { const r = E.match(grid(c[2]), 3); eq(r && r.output.itemId, c[0], c[0]); eq(r.output.quantity, c[1], c[0] + ' amount'); });
+});
+test('Spicy Wheels items can be crafted, stored and used in later recipes', () => {
+  const st = fresh({ grid3: true });
+  place(st, grid([[_, 'black_dye', _], ['black_dye', 'iron_nugget', 'black_dye'], [_, 'black_dye', _]]));
+  let r = E.collect(st); ok(r.ok && r.firstItem); eq(E.count(st, 'toy_wheel'), 4);
+  place(st, grid([[_, 'blue_dye', _], ['iron_ingot', 'iron_ingot', 'iron_ingot'], [_, _, _]]));
+  ok(E.placeInGrid(st, 'toy_wheel', 6).ok && E.placeInGrid(st, 'toy_wheel', 8).ok, 'wheels come from the bag');
+  r = E.collect(st); ok(r.ok); eq(E.count(st, 'basic_toy_car'), 1); eq(E.count(st, 'toy_wheel'), 2, 'two wheels were used');
+  ok(st.discoveredItems.basic_toy_car); eq(E.collectionProgress(st, 'spicy_wheels').found, 2);
+  ok(E.validateSave(E.serialize(st)).ok, 'save stays valid');
+});
+test('Spicy Wheels collection tracks progress and completes at 15 of 15', () => {
+  const st = fresh();
+  let p = E.collectionProgress(st, 'spicy_wheels'); eq(p.found, 0); eq(p.total, 15); eq(p.complete, false);
+  SW.slice(0, 14).forEach(id => { st.discoveredItems[id] = 1; });
+  eq(E.collectionProgress(st, 'spicy_wheels').complete, false);
+  st.discoveredItems.diamond_toy_car = 1;
+  p = E.collectionProgress(st, 'spicy_wheels'); eq(p.found, 15); eq(p.complete, true);
+  eq(E.collectionOf('rocket_car'), 'spicy_wheels'); eq(E.collectionOf('oak_planks'), null);
+});
+test('dev unlock discovers every item and recipe and opens Creative', () => {
+  const st = fresh(); E.devUnlockAll(st);
+  eq(E.discoveryStats(st).items, D.itemOrder.length); eq(Object.keys(st.discoveredRecipes).length, D.recipes.length);
+  ok(st.grid3 && st.sandboxUnlocked); eq(st.tier, D.tiers.length - 1); eq(st.biomes.length, D.biomes.length);
+  ok(E.validateSave(E.serialize(st)).ok, 'save stays valid');
+});
+test('Spicy Wheels icons draw with no missing colors', () => {
+  const Icons = W.Icons; eq(Icons.validateTemplates().length, 0);
+  SW.map(id => D.items[id].icon).concat([D.collections.spicy_wheels.icon]).forEach((spec, i) => {
+    const px = Icons.render(spec, 'test' + i); ok(px.filter(Boolean).length > 20, 'icon ' + i + ' is empty'); ok(px.indexOf('#ff00ff') < 0, 'icon ' + i + ' has a missing color');
+  });
 });
 
 console.log('\n' + pass + ' passed, ' + fail + ' failed');

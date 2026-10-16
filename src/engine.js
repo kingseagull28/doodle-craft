@@ -88,7 +88,7 @@
     building: 'It is a building block or decoration.', metals_gems: 'It is made of metal or gems.', farming_food: 'It is food or comes from the farm.',
     animals: 'It has to do with animals or creatures.', transport: 'It helps you travel.', machinery: 'It is part of a machine.',
     armor: 'It is armor or adventure gear.', magic: 'It is magical.', legendary: 'It is a legendary creation.',
-    jump_man: 'It is a Jump Man thing.'
+    jump_man: 'It is a Jump Man thing.', spicy_wheels: 'It is a toy car or a piece of toy track.'
   };
   function rarest(r) {
     let best = null, bt = -1;
@@ -766,6 +766,26 @@
     if (mode === 'sandbox' && !st.sandboxUnlocked) return { ok: false, message: 'Finish the Wonder Engine to unlock Creative Sandbox.' };
     if (mode !== 'sandbox' && mode !== 'adventure') return { ok: false };
     st.mode = mode;
+    return { ok: true };
+  };
+
+  // ---------- book collections (a category with its own page, progress and badge) ----------
+  E.collectionItems = function (cat) { return D.itemOrder.filter(function (id) { return D.items[id].category === cat; }); };
+  E.collectionOf = function (itemId) { const it = D.items[itemId]; return it && D.collections && D.collections[it.category] ? it.category : null; };
+  E.collectionProgress = function (st, cat) {
+    const ids = E.collectionItems(cat);
+    const found = ids.filter(function (id) { return st.discoveredItems[id]; }).length;
+    return { found: found, total: ids.length, complete: ids.length > 0 && found === ids.length };
+  };
+
+  // ---------- dev mode: unlock everything (only used with a separate dev save) ----------
+  E.devUnlockAll = function (st) {
+    const unlocks = [];
+    E.applyReward(st, { grid3: true, tier: D.tiers.length - 1, sandbox: true }, unlocks);
+    D.biomes.forEach(function (b) { E.applyReward(st, { biome: b.id }, unlocks); });
+    D.itemOrder.forEach(function (id) { discover(st, id); });
+    D.recipes.forEach(function (r) { st.discoveredRecipes[r.id] = true; });
+    E.evaluateQuests(st);
     return { ok: true };
   };
 

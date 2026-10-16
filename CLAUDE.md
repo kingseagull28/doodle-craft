@@ -14,6 +14,7 @@ A crafting and discovery browser game for kids aged 6 to 9 (Minecraft-style reci
 | `src/data_core.js` | Item and recipe builders, wood, stone, basic tools |
 | `src/data_more.js` | Metals, farming, colors, redstone, magic, creatures |
 | `src/data_world.js` | Legendary tier, biomes (areas), quests |
+| `src/data_wheels.js` | Spicy Wheels expansion (toy cars, track) and its book collection |
 | `src/engine.js` | All game rules, validation, saving. No DOM access. |
 | `src/audio.js` | Procedural Web Audio sound and music |
 | `src/ui.js` | Interface. Reads all rules from the engine and data. |
@@ -39,6 +40,8 @@ The version goes up once per push, not per change. When the owner says they are 
 3. Run the tests and the build, then commit as "Release <version>".
 
 If `GAME_VERSION` was already bumped in commits that are not pushed yet (`git log origin/main..HEAD`), fold the changes into that version instead of bumping again.
+
+To test without touching the real save, open `docs/index.html?dev`. Dev mode uses a separate save and has an Unlock everything button in Settings.
 
 `tests/browser.test.py` needs Python and Playwright. Treat it as optional and skip it if those are not installed.
 

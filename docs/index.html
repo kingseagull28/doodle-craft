@@ -365,6 +365,18 @@ button { font: inherit; color: inherit; }
 }
 @media (max-width: 350px) { :root { --cell: 56px; } }
 
+/* ---------- book collections (Spicy Wheels) ---------- */
+.filters button.collbtn { display: inline-flex; align-items: center; gap: 6px; }
+.filters button.collbtn img { width: 26px; height: 26px; }
+.collcard { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 6px 0 12px; padding: 10px 12px; border: 3px solid #b8641a; border-radius: 8px; background: linear-gradient(135deg, #ffe0b0, #ffc070); color: #3a1a08; }
+.collcard.done { border-color: var(--gold-dk); background: linear-gradient(135deg, #fff4b0, var(--gold)); }
+.collcard h3 { margin: 0 0 2px; }
+.collcard p { margin: 0 0 6px; }
+.collicon img { width: 72px; height: 72px; }
+.chip.badge-chip { background: var(--gold); color: #3a2a08; border-color: var(--gold-dk); }
+.celebrate .card.master h2 { font-size: 26px; }
+.devtag { position: fixed; left: 8px; bottom: 8px; z-index: 50; padding: 4px 10px; border-radius: 999px; background: #3a1458; color: #fff; font-size: 13px; font-weight: 700; pointer-events: none; }
+
 </style>
 </head>
 <body>
@@ -821,6 +833,82 @@ button { font: inherit; color: inherit; }
       '...acwwaawwab...', '...acwkaawkab...', '...aawkaawkab...', '..aaaaaaaaaaab..',
       '..aaaaaaaaaaaaa.', '..bbbbbbbbbbbbb.', '................', '................',
       '................', '................', '................', '................'],
+    // Spicy Wheels toy cars and track pieces
+    toy_wheel: [
+      '................', '................', '................', '.....kkkkk......',
+      '....kkkkkkk.....', '...kkkgggkkk....', '...kkgwggGkk....', '...kkggggGkk....',
+      '...kkgggGGkk....', '...kkkGGGkkk....', '....kkkkkkk.....', '.....kkkkk......',
+      '................', '................', '................', '................'],
+    toy_car: [
+      '................', '................', '................', '................',
+      '.....cccccc.....', '....axxxaxxa....', '...aaxxxaxxaa...', '.ccccccccccccc..',
+      '.aaaaaaaaaaaaaa.', '.aaaaaaaaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    sports_car: [
+      '................', '................', '................', '................',
+      '.kkk............', '..k...cccc......', '..k..axxxxa.....', '.cccccccccccccc.',
+      '.aakkkkkkkkkaaa.', '.aaaaaaaaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    monster_truck: [
+      '................', '................', '.....cccccc.....', '....axxxaxxa....',
+      '..cccccccccccc..', '..aaaaaaaaaaaa..', '..bbbbbbbbbbbb..', '....g......g....',
+      '..kkkk....kkkk..', '.kkGGkk..kkGGkk.', '.kGggGk..kGggGk.', '.kGggGk..kGggGk.',
+      '.kkGGkk..kkGGkk.', '..kkkk....kkkk..', '................', '................'],
+    school_bus: [
+      '................', '................', '................', '.cccccccccccccc.',
+      '.axxaxxaxxaxxaa.', '.axxaxxaxxaxxaa.', '.aaaaaaaaaaaaaa.', '.kkkkkkkkkkkkkk.',
+      '.aaaaaaaaaaaaaa.', '.bbkkkbbbbbkkkb.', '...kgk.....kgk..', '...kkk.....kkk..',
+      '................', '................', '................', '................'],
+    track: [
+      '................', '................', '................', '................',
+      '................', '.bbbbbbbbbbbbbb.', '.aaaaaaaaaaaaaa.', '.aaaaaaaaaaaaaa.',
+      '.aaaaaaaaaaaaaa.', '.cccccccccccccc.', '.bbbbbbbbbbbbbb.', '................',
+      '................', '................', '................', '................'],
+    curved_track: [
+      '................', 'bbbbbb..........', 'aaaaaabb........', 'aaaaaaaabb......',
+      'cccccaaaaab.....', 'aaaaaccaaaab....', 'aaaaaaaccaaab...', 'bbbbaaaaccaab...',
+      '....bbaaacaaab..', '......baaacaab..', '.......baacaaab.', '.......baaacaab.',
+      '........baacaab.', '........baacaab.', '........baacaab.', '........baacaab.'],
+    track_loop: [
+      '.......bb.......', '....bbaaaabb....', '...baaccccaab...', '..bacc....ccab..',
+      '..bac......cab..', '..ac........ca..', '.bac........cab.', '.bac........cab.',
+      '..ac........ca..', '..bac......cab..', '..bacc....ccab..', '...baaccccaab...',
+      '.bbbbbbbbbbbbbb.', '.aaaaaaaaaaaaaa.', '.bbbbbbbbbbbbbb.', '................'],
+    launcher: [
+      '................', '................', '................', '.....111........',
+      '...GGGGGGG......', '...GkgkgkG......', '...GgkgkgG......', '...GkgkgkG......',
+      '.bbbbbbbbbbbbbb.', '.aaaaaaaaaaaaaa.', '.aaaaaaaaaaaaaa.', '.cccccccccccccc.',
+      '.bbbbbbbbbbbbbb.', '................', '................', '................'],
+    garage: [
+      '................', '................', '..aaaaaaaaaaaa..', '.cccccccccccccc.',
+      '.aaaaaaaaaaaaaa.', '.aakkkkkkkkkkaa.', '.aakkkkkkkkkkaa.', '.aak11111kkkkaa.',
+      '.aak1111111kkaa.', '.aakGkkkGkkkkaa.', '.bbbbbbbbbbbbbb.', '...xxxxxxxxxx...',
+      '..xxxxxxxxxxxx..', '................', '................', '................'],
+    rocket_car: [
+      '.3xgggg1........', '................', '..3xgggg1.......', '................',
+      '.3xgggg1........', '......cccc......', '.....awwwwa.....', '.cccccccccccccc.',
+      '.aaaaaaaaaaaaaa.', 'xaaaaaaaaaaaaaa.', '3bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    hot_dog_car: [
+      '................', '................', '................', '................',
+      '...cccccccccc...', '..aaaaaaaaaaaa..', '.xxx3xxx3xxx3xx.', '.yx3xxx3xxx3xxy.',
+      '..aaaaaaaaaaaa..', '..bbbbbbbbbbbb..', '...kkk....kkk...', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    rainbow_car: [
+      '................', '................', '................', '................',
+      '.....223344.....', '....2xxx4xx5....', '...12xxx4xx56...', '.11223344556677.',
+      '.11223344556677.', '.11223344556677.', '.11kkk3344kkk77.', '...k1k....k5k...',
+      '...kkk....kkk...', '................', '................', '................'],
+    shiny_car: [
+      '................', '.............w..', '............www.', '.............w..',
+      '.....ccwccc.....', '....axxxaxxa....', '...aaxxxaxxaa...', '.cccwcccccccwc..',
+      '.aaaaaaaaaaaaaa.', '.aaaaaawaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    spicy_car: [
+      '.............4..', '............11..', '...........11...', '..........1.....',
+      '................', '......cccc......', '.....awwwwa.....', '.cccccccccccccc.',
+      '.a3x3x3aaaaaaaa.', '.ax3x3aaaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
     heart: [
       '................', '................', '................', '...aaa...aaa....',
       '..acwaa.aaaab...', '..acaaaaaaaab...', '..aaaaaaaaaab...', '...aaaaaaaab....',
@@ -1373,7 +1461,7 @@ button { font: inherit; color: inherit; }
     ['building', 'Building blocks'], ['metals_gems', 'Metals and gems'], ['farming_food', 'Farming and food'],
     ['animals', 'Animals and creatures'], ['transport', 'Transportation'], ['machinery', 'Machinery'],
     ['armor', 'Armor and equipment'], ['magic', 'Potions and magic'], ['legendary', 'Legendary creations'],
-    ['jump_man', 'Jump Man']
+    ['jump_man', 'Jump Man'], ['spicy_wheels', 'Spicy Wheels']
   ];
   D.tiers = [
     null,
@@ -2263,6 +2351,81 @@ button { font: inherit; color: inherit; }
   quest('t6_collector', 'Grand Collector', 'Discover 300 items.', 6, { discoverCount: 300 }, {}, { pre: ['t5_archmage'], opt: true });
 })(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));
 
+/* ---- data_wheels.js ---- */
+/* Workshop of Wonders - Spicy Wheels expansion: toy cars and toy race track pieces.
+   All 15 items are original content and live in the 'spicy_wheels' book collection. */
+(function (W) {
+  'use strict';
+  const D = W.Data, b = D.build, item = b.item, shaped = b.shaped;
+  const O = { orig: true };
+  const CAT = 'spicy_wheels';
+  // An item's tier is the highest tier among its ingredients, so it unlocks with them.
+  const tierOf = function (ids) { return Math.max.apply(null, ids.map(function (id) { return D.items[id].tier; })); };
+  const car = function (id, name, tpl, colors, desc, ingredients) {
+    item(id, name, CAT, tierOf(ingredients), Object.assign({ t: tpl }, colors), desc, [CAT, 'toy', 'original'], O);
+  };
+  const SILVER = '#d0d8e0', ORANGE = { a: '#f39a2e', c: '#ffc070', b: '#b8641a' };
+
+  // Each collection groups one book category. The book shows its icon, blurb, progress and badge.
+  D.collections = D.collections || {};
+  D.collections[CAT] = {
+    name: 'Spicy Wheels',
+    description: 'Tiny cars, giant adventures! Craft wild rides, build crazy tracks, and discover the rarest wheels around!',
+    icon: { t: 'spicy_car', a: '#d8302a', x: '#f39a2e' },
+    masterTitle: '🏆 SPICY WHEELS MASTER! 🏆',
+    masterText: 'You\'ve collected every car, conquered every track, and become the ultimate Spicy Wheels champion!',
+    badge: 'Spicy Wheels Master'
+  };
+
+  // ---------- toy car parts and vehicles ----------
+  car('toy_wheel', 'Toy Wheel', 'toy_wheel', {}, 'A tiny rubber wheel for toy cars.', ['black_dye', 'iron_nugget']);
+  shaped('toy_wheel', 4, ['.K.', 'KNK', '.K.'], { K: 'black_dye', N: 'iron_nugget' }, { orig: true, msg: 'Toy Wheels! Every car needs some.' });
+
+  car('basic_toy_car', 'Basic Toy Car', 'toy_car', { a: '#3a7ad8', x: SILVER }, 'A little blue toy car. Vroom!', ['blue_dye', 'iron_ingot', 'toy_wheel']);
+  shaped('basic_toy_car', 1, ['.B.', 'III', 'W.W'], { B: 'blue_dye', I: 'iron_ingot', W: 'toy_wheel' }, { orig: true, msg: 'Your first toy car! Vroom vroom!' });
+
+  car('sports_car', 'Sports Car', 'sports_car', { a: '#d8302a', x: SILVER }, 'A fast red toy car with a spoiler.', ['red_dye', 'iron_ingot', 'basic_toy_car', 'redstone']);
+  shaped('sports_car', 1, ['.R.', 'ICI', '.D.'], { R: 'red_dye', I: 'iron_ingot', C: 'basic_toy_car', D: 'redstone' }, O);
+
+  car('monster_truck', 'Monster Truck', 'monster_truck', { a: '#3fae4a', x: SILVER }, 'A toy truck with giant bouncy tires.', ['toy_wheel', 'basic_toy_car', 'iron_ingot']);
+  shaped('monster_truck', 1, ['W.W', 'WCW', 'III'], { W: 'toy_wheel', C: 'basic_toy_car', I: 'iron_ingot' }, O);
+
+  car('school_bus', 'School Bus', 'school_bus', { a: '#f7c843', x: '#26201c' }, 'A little yellow bus. All aboard!', ['yellow_dye', 'iron_ingot', 'basic_toy_car', 'toy_wheel']);
+  shaped('school_bus', 1, ['YYY', 'ICI', 'W.W'], { Y: 'yellow_dye', I: 'iron_ingot', C: 'basic_toy_car', W: 'toy_wheel' }, O);
+
+  // ---------- toy race track ----------
+  car('orange_track', 'Orange Track', 'track', ORANGE, 'A piece of bright orange toy track.', ['orange_dye', 'smooth_stone']);
+  shaped('orange_track', 4, ['OSO', 'OSO'], { O: 'orange_dye', S: 'smooth_stone' }, { orig: true, msg: 'Orange Track! Build a race course.' });
+
+  car('curved_track', 'Curved Track', 'curved_track', ORANGE, 'Toy track that turns a corner.', ['orange_track']);
+  shaped('curved_track', 2, ['TT', '.T'], { T: 'orange_track' }, O);
+
+  car('loop_the_loop', 'Loop-the-Loop', 'track_loop', ORANGE, 'A big loop. Cars zoom upside down!', ['orange_track', 'curved_track']);
+  shaped('loop_the_loop', 1, ['TTT', 'C.C', 'TTT'], { T: 'orange_track', C: 'curved_track' }, O);
+
+  car('car_launcher', 'Car Launcher', 'launcher', ORANGE, 'Press the button. Zoom! Off goes the car.', ['piston', 'orange_track', 'redstone', 'iron_ingot']);
+  shaped('car_launcher', 1, ['.P.', 'TDT', '.I.'], { P: 'piston', T: 'orange_track', D: 'redstone', I: 'iron_ingot' }, O);
+
+  car('toy_car_garage', 'Toy Car Garage', 'garage', { a: '#3a7ad8', x: '#f39a2e' }, 'A cozy home for your toy cars.', ['oak_planks', 'chest', 'orange_track']);
+  shaped('toy_car_garage', 1, ['PPP', 'PCP', 'T.T'], { P: 'oak_planks', C: 'chest', T: 'orange_track' }, O);
+
+  // ---------- rare and silly collectibles ----------
+  car('golden_toy_car', 'Golden Toy Car', 'shiny_car', { a: '#f7c843', c: '#fff0a0', b: '#c8901a', x: '#fff8d0' }, 'A shiny gold toy car. So rare!', ['gold_ingot', 'basic_toy_car']);
+  shaped('golden_toy_car', 1, ['GGG', 'GCG', '.G.'], { G: 'gold_ingot', C: 'basic_toy_car' }, { orig: true, msg: 'A Golden Toy Car! It shines like the sun.' });
+
+  car('rocket_car', 'Rocket Car', 'rocket_car', { a: '#d8302a', x: '#f39a2e' }, 'A toy car with three rockets. Whoosh!', ['firework_rocket', 'sports_car', 'redstone']);
+  shaped('rocket_car', 1, ['.F.', 'FSF', '.D.'], { F: 'firework_rocket', S: 'sports_car', D: 'redstone' }, O);
+
+  car('rainbow_car', 'Rainbow Car', 'rainbow_car', { x: SILVER }, 'A toy car painted every color.', ['red_dye', 'basic_toy_car']);
+  shaped('rainbow_car', 1, ['ROY', 'GCB', 'PWK'], { R: 'red_dye', O: 'orange_dye', Y: 'yellow_dye', G: 'green_dye', C: 'basic_toy_car', B: 'blue_dye', P: 'purple_dye', W: 'white_dye', K: 'black_dye' }, O);
+
+  car('hot_dog_car', 'Hot Dog Car', 'hot_dog_car', { a: '#e0a860', c: '#f4cc90', b: '#a86a30', x: '#c8503a' }, 'A silly car that looks like a hot dog.', ['bread', 'cooked_beef', 'toy_wheel', 'basic_toy_car']);
+  shaped('hot_dog_car', 1, ['.B.', 'BMB', 'WCW'], { B: 'bread', M: 'cooked_beef', W: 'toy_wheel', C: 'basic_toy_car' }, { orig: true, msg: 'A Hot Dog Car! It looks yummy. Do not eat it!' });
+
+  car('diamond_toy_car', 'Diamond Toy Car', 'shiny_car', { a: '#5fe0e8', c: '#c8fbff', b: '#2a9aa8', x: '#e8ffff' }, 'A sparkly diamond car. The rarest of all!', ['diamond', 'golden_toy_car']);
+  shaped('diamond_toy_car', 1, ['DDD', 'DGD', '.D.'], { D: 'diamond', G: 'golden_toy_car' }, { orig: true, msg: 'The Diamond Toy Car! The rarest car of all!' });
+})(typeof window !== 'undefined' ? (window.WOW = window.WOW || {}) : (globalThis.WOW = globalThis.WOW || {}));
+
 /* ---- engine.js ---- */
 /* Workshop of Wonders - game engine. Pure game logic with no DOM access.
    All crafting, hints, quests and unlocks read from WOW.Data. */
@@ -2354,7 +2517,7 @@ button { font: inherit; color: inherit; }
     building: 'It is a building block or decoration.', metals_gems: 'It is made of metal or gems.', farming_food: 'It is food or comes from the farm.',
     animals: 'It has to do with animals or creatures.', transport: 'It helps you travel.', machinery: 'It is part of a machine.',
     armor: 'It is armor or adventure gear.', magic: 'It is magical.', legendary: 'It is a legendary creation.',
-    jump_man: 'It is a Jump Man thing.'
+    jump_man: 'It is a Jump Man thing.', spicy_wheels: 'It is a toy car or a piece of toy track.'
   };
   function rarest(r) {
     let best = null, bt = -1;
@@ -3035,6 +3198,26 @@ button { font: inherit; color: inherit; }
     return { ok: true };
   };
 
+  // ---------- book collections (a category with its own page, progress and badge) ----------
+  E.collectionItems = function (cat) { return D.itemOrder.filter(function (id) { return D.items[id].category === cat; }); };
+  E.collectionOf = function (itemId) { const it = D.items[itemId]; return it && D.collections && D.collections[it.category] ? it.category : null; };
+  E.collectionProgress = function (st, cat) {
+    const ids = E.collectionItems(cat);
+    const found = ids.filter(function (id) { return st.discoveredItems[id]; }).length;
+    return { found: found, total: ids.length, complete: ids.length > 0 && found === ids.length };
+  };
+
+  // ---------- dev mode: unlock everything (only used with a separate dev save) ----------
+  E.devUnlockAll = function (st) {
+    const unlocks = [];
+    E.applyReward(st, { grid3: true, tier: D.tiers.length - 1, sandbox: true }, unlocks);
+    D.biomes.forEach(function (b) { E.applyReward(st, { biome: b.id }, unlocks); });
+    D.itemOrder.forEach(function (id) { discover(st, id); });
+    D.recipes.forEach(function (r) { st.discoveredRecipes[r.id] = true; });
+    E.evaluateQuests(st);
+    return { ok: true };
+  };
+
   E.discoveryStats = function (st) {
     const total = D.itemOrder.length;
     const found = D.itemOrder.filter(function (id) { return st.discoveredItems[id]; }).length;
@@ -3196,6 +3379,7 @@ button { font: inherit; color: inherit; }
   }
   function add(el, c) { if (c === null || c === undefined || c === false) return; if (Array.isArray(c)) c.forEach(function (x) { add(el, x); }); else el.appendChild(typeof c === 'string' || typeof c === 'number' ? document.createTextNode(String(c)) : c); }
   function icon(id, cls) { const it = D.items[id]; return h('img', { class: 'px' + (cls ? ' ' + cls : ''), src: it ? Icons.toDataURL(it.icon, id) : '', alt: '', draggable: 'false' }); }
+  function specIcon(spec, key) { return h('img', { class: 'px', src: Icons.toDataURL(spec, key), alt: '', draggable: 'false' }); }
   function name(id) { return D.items[id] ? D.items[id].name : id; }
   function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); return el; }
 
@@ -3203,6 +3387,8 @@ button { font: inherit; color: inherit; }
   function memoryStorage() { const m = {}; return { getItem: function (k) { return k in m ? m[k] : null; }, setItem: function (k, v) { m[k] = String(v); }, removeItem: function (k) { delete m[k]; } }; }
   function pickStorage() { try { const t = '__wow_test'; localStorage.setItem(t, '1'); localStorage.removeItem(t); return { s: localStorage, persistent: true }; } catch (e) { return { s: memoryStorage(), persistent: false }; } }
   let persistent = true;
+  // Secret dev mode: open the game with ?dev at the end of the address. It uses its own save, so the real game is never touched.
+  const DEV = /[?&]dev(=|&|$)/.test(window.location.search);
   function scheduleSave() {
     setSaveText('Saving...');
     clearTimeout(ui.saveTimer);
@@ -3476,6 +3662,8 @@ button { font: inherit; color: inherit; }
   function handleCraftResult(r) {
     ui.flash = r.output.itemId; if (ui.bagTab !== 'bag') ui.bagTab = 'bag';
     if (r.firstItem) queueCelebration({ type: 'item', item: r.output.itemId, recipe: r.recipe });
+    const cat = r.firstItem && E.collectionOf(r.output.itemId);
+    if (cat && E.collectionProgress(st, cat).complete) queueCelebration({ type: 'collection', cat: cat });
     r.quests.forEach(function (q) { Snd.play('quest'); toast('Quest complete: ' + q.name); });
     r.unlocks.forEach(function (u) { queueCelebration(Object.assign({ type: 'unlock' }, u)); });
   }
@@ -3625,7 +3813,8 @@ button { font: inherit; color: inherit; }
     body.appendChild(h('div', { class: 'stats' },
       h('span', { class: 'chip', text: stats.items + ' / ' + stats.totalItems + ' items' }),
       h('span', { class: 'chip', text: stats.recipes + ' / ' + stats.totalRecipes + ' recipes' }),
-      h('span', { class: 'chip', text: secrets.filter(function (s) { return st.discoveredItems[s]; }).length + ' / ' + secrets.length + ' secrets' })));
+      h('span', { class: 'chip', text: secrets.filter(function (s) { return st.discoveredItems[s]; }).length + ' / ' + secrets.length + ' secrets' }),
+      Object.keys(D.collections || {}).filter(function (cat) { return E.collectionProgress(st, cat).complete; }).map(function (cat) { return h('span', { class: 'chip badge-chip', text: '\uD83C\uDFC6 ' + D.collections[cat].badge }); })));
     const search = h('input', { class: 'search', type: 'search', placeholder: 'Search the book', 'aria-label': 'Search the book', value: ui.bookSearch, style: 'width:100%;margin-top:10px' });
     search.addEventListener('input', function () { ui.bookSearch = search.value; renderEntries(); });
     body.appendChild(search);
@@ -3636,9 +3825,12 @@ button { font: inherit; color: inherit; }
     body.appendChild(modes);
     const cats = h('div', { class: 'filters', role: 'group', 'aria-label': 'Category' });
     [['all', 'Everything']].concat(D.categories).forEach(function (c) {
-      cats.appendChild(h('button', { 'aria-pressed': String(ui.bookCat === c[0]), onclick: function () { ui.bookCat = c[0]; rebuildOverlay(); }, text: c[1] }));
+      const coll = D.collections && D.collections[c[0]];
+      cats.appendChild(h('button', { class: coll ? 'collbtn' : null, 'aria-pressed': String(ui.bookCat === c[0]), onclick: function () { ui.bookCat = c[0]; rebuildOverlay(); } }, coll ? specIcon(coll.icon, 'collection:' + c[0]) : null, h('span', { text: c[1] })));
     });
     body.appendChild(cats);
+    const coll = D.collections && D.collections[ui.bookCat];
+    if (coll) body.appendChild(collectionCard(ui.bookCat));
     const list = h('div', { class: 'cat', id: 'bookList' });
     body.appendChild(list);
     const later = h('p', { id: 'bookLater', style: 'font-weight:700' });
@@ -3649,7 +3841,9 @@ button { font: inherit; color: inherit; }
       const q = ui.bookSearch.trim().toLowerCase();
       let hiddenLater = 0, shown = 0;
       D.itemOrder.forEach(function (id) {
-        const vis = bookVisible(id), it = D.items[id];
+        const it = D.items[id];
+        let vis = bookVisible(id);
+        if (!vis && coll && it.category === ui.bookCat) vis = 'mystery';
         if (!vis) { if (!st.discoveredItems[id] && !it.secret) hiddenLater++; return; }
         if (ui.bookCat !== 'all' && it.category !== ui.bookCat) return;
         if (ui.bookMode !== 'all' && ui.bookMode !== vis) return;
@@ -3662,6 +3856,18 @@ button { font: inherit; color: inherit; }
       later.textContent = hiddenLater ? hiddenLater + ' more items are waiting in tiers you have not reached yet.' : '';
     }
     renderEntries();
+  }
+  function collectionCard(cat) {
+    const c = D.collections[cat], p = E.collectionProgress(st, cat);
+    return h('div', { class: 'collcard' + (p.complete ? ' done' : '') },
+      h('div', { class: 'collicon' }, specIcon(c.icon, 'collection:' + cat)),
+      h('div', { style: 'flex:1;min-width:200px' },
+        h('h3', { text: c.name }),
+        h('p', { text: c.description }),
+        h('div', { class: 'qbar', role: 'progressbar', 'aria-label': c.name + ' progress', 'aria-valuenow': String(p.found), 'aria-valuemin': '0', 'aria-valuemax': String(p.total) }, h('i', { style: 'width:' + Math.round(100 * p.found / Math.max(1, p.total)) + '%' })),
+        h('div', { style: 'display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px' },
+          h('strong', { text: p.found + '/' + p.total + ' Discovered' }),
+          p.complete ? h('span', { class: 'chip badge-chip', text: '\uD83C\uDFC6 ' + c.badge }) : h('span', { style: 'font-size:14px', text: 'Find them all to earn the ' + c.badge + ' badge!' }))));
   }
   function patternGrid(r, mini) {
     const w = r.type === 'shaped' ? 3 : 3;
@@ -3822,6 +4028,14 @@ button { font: inherit; color: inherit; }
         h('div', { style: 'display:flex;gap:6px;flex-wrap:wrap' }, h('button', { class: 'btn small', onclick: exportSave, text: 'Export save' }), h('button', { class: 'btn small', onclick: importSave, text: 'Import save' }))));
       b.appendChild(h('div', { class: 'setrow' }, h('div', null, h('strong', { text: 'Tutorial' })), h('button', { class: 'btn small', onclick: function () { ui.tutStep = 0; openTutorial(); }, text: 'Show tutorial' })));
       b.appendChild(h('div', { class: 'setrow' }, h('div', null, h('strong', { text: 'Start over' }), h('div', { style: 'font-size:14px', text: 'Erases all progress on this device.' })), h('button', { class: 'btn danger small', onclick: confirmReset, text: 'Reset progress' })));
+      if (DEV) {
+        b.appendChild(h('h3', { text: 'Dev tools' }));
+        b.appendChild(h('p', { style: 'font-size:14px', text: 'You are in dev mode. This is a separate test save. The real game is not changed.' }));
+        b.appendChild(h('div', { style: 'display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px' },
+          h('button', { class: 'btn gold small', onclick: function () { E.devUnlockAll(st); saveNow(); closeOverlay(); render(); toast('Everything unlocked! Switch to Creative to get any item.'); }, text: 'Unlock everything' }),
+          Object.keys(D.collections || {}).map(function (cat) { return h('button', { class: 'btn small', onclick: function () { closeOverlay(); queueCelebration({ type: 'collection', cat: cat }); }, text: 'Show ' + D.collections[cat].badge + ' party' }); }),
+          h('button', { class: 'btn small', onclick: function () { window.location.search = ''; }, text: 'Leave dev mode' })));
+      }
       if (!persistent) b.appendChild(h('p', { style: 'font-weight:700', text: 'This browser is blocking saved games, so progress lasts until you close the page. Use Export save to keep it.' }));
       b.appendChild(h('p', { style: 'font-size:13px', text: 'Workshop of Wonders ' + E.GAME_VERSION + '. Recipes reference ' + D.referenceVersion + '. Not affiliated with Mojang or Microsoft.' }));
       dlg.appendChild(b);
@@ -3955,25 +4169,28 @@ button { font: inherit; color: inherit; }
     const old = $('#celebrate'); if (old) old.remove();
     if (!c) { ui.celebrating = false; return; }
     ui.celebrating = true;
-    let iconId, kicker, title, text;
+    let iconId, iconEl = null, kicker, title, text, big = false;
     if (c.type === 'item') {
-      iconId = c.item; kicker = D.items[c.item].secret ? 'Secret discovery!' : 'New discovery!'; title = name(c.item);
+      const cat = E.collectionOf(c.item), cp = cat && E.collectionProgress(st, cat);
+      iconId = c.item; kicker = D.items[c.item].secret ? 'Secret discovery!' : cat ? 'New ' + D.collections[cat].name + ' find! ' + cp.found + '/' + cp.total : 'New discovery!'; title = name(c.item);
       text = c.recipe.discoveryMessage || D.items[c.item].description;
       const uses = (E.index.usedIn[c.item] || []).length;
       if (!c.recipe.discoveryMessage && uses) text += ' It is used in ' + uses + ' recipe' + (uses > 1 ? 's' : '') + '.';
       Snd.play('discover');
     } else if (c.type === 'grid3') { iconId = 'crafting_table'; kicker = 'Upgrade!'; title = 'Big crafting table'; text = 'Your table is now 3 by 3. Tools, doors and lots more can be made now!'; Snd.play('unlock'); }
     else if (c.type === 'biome') { const b = D.biomes.find(function (x) { return x.id === c.biome; }); iconId = b.icon; kicker = 'New area unlocked!'; title = b.name; text = b.blurb + ' New supplies are in your Supply Crate.'; Snd.play('unlock'); }
+    else if (c.type === 'collection') { const col = D.collections[c.cat]; iconEl = specIcon(col.icon, 'collection:' + c.cat); kicker = 'Collection complete!'; title = col.masterTitle; text = col.masterText; big = true; Snd.play('unlock'); }
     else if (c.type === 'tier') { iconId = ['', 'oak_log', 'iron_ingot', 'wheat', 'redstone', 'nether_wart', 'nether_star'][c.tier]; kicker = 'Tier ' + c.tier + '!'; title = D.tiers[c.tier].name; text = 'A whole new set of things to discover.'; Snd.play('unlock'); }
     else { iconId = 'wonder_engine'; kicker = 'You did it!'; title = 'Creative Sandbox'; text = 'Switch to Creative at the top to build with every item for free. Your adventure stays saved.'; Snd.play('unlock'); }
     const done = function () { wrap.remove(); nextCelebration(); };
     const wrap = h('div', { class: 'celebrate', id: 'celebrate', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'celTitle', onclick: function (e) { if (e.target === wrap) done(); } },
-      h('div', { class: 'panel card' }, h('div', { class: 'rays', 'aria-hidden': 'true' }), h('div', { class: 'icon' }, icon(iconId)),
+      h('div', { class: 'panel card' + (big ? ' master' : '') }, h('div', { class: 'rays', 'aria-hidden': 'true' }), h('div', { class: 'icon' }, iconEl || icon(iconId)),
         h('div', { class: 'kicker', text: kicker }), h('h2', { id: 'celTitle', text: title }), h('p', { text: text }),
         h('button', { class: 'btn gold', 'data-autofocus': true, onclick: done, text: 'Awesome!' })));
     document.body.appendChild(wrap);
     const b = wrap.querySelector('button'); if (b) b.focus();
     confetti();
+    if (big) setTimeout(confetti, 700);
   }
   function confetti() {
     if (reduceMotion()) return;
@@ -4092,7 +4309,7 @@ button { font: inherit; color: inherit; }
   }
   function boot() {
     const pick = pickStorage(); persistent = pick.persistent;
-    store = E.Store(pick.s, 'workshop-of-wonders');
+    store = E.Store(pick.s, 'workshop-of-wonders' + (DEV ? '-dev' : ''));
     const loaded = store.load();
     st = loaded.state;
     applySettings();
@@ -4118,7 +4335,8 @@ button { font: inherit; color: inherit; }
     if (loaded.status === 'updated') toast('The game was updated. Your progress is safe!');
     else if (loaded.status === 'recovered') toast('Your last save had a problem, so we loaded your backup.');
     else if (loaded.status === 'reset_corrupt') toast('Your save could not be read, so a new game started. The old data was kept safe.');
-    if (!st.settings.tutorialDone) openWelcome();
+    if (DEV) document.body.appendChild(h('div', { class: 'devtag', role: 'status', text: 'Dev mode: test save' }));
+    if (!st.settings.tutorialDone && !DEV) openWelcome();
     warmIcons();
     W.UI = { state: function () { return st; }, render: render, select: select, gridTap: gridTap, collect: collect, openBook: openBook, saveNow: saveNow };
   }

@@ -24824,5 +24824,979 @@
    "original",
    "equipment"
   ]
+ },
+ {
+  "id": "toy_wheel",
+  "name": "Toy Wheel",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "black_dye",
+    null
+   ],
+   [
+    "black_dye",
+    "iron_nugget",
+    "black_dye"
+   ],
+   [
+    null,
+    "black_dye",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "black_dye",
+    "quantity": 4
+   },
+   {
+    "itemId": "iron_nugget",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "toy_wheel",
+   "quantity": 4
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Black Dye and 1 other kind of ingredient.",
+   "Arrange: 4 Black Dye, 1 Iron Nugget in the pattern shown."
+  ],
+  "discoveryMessage": "Toy Wheels! Every car needs some.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "basic_toy_car",
+  "name": "Basic Toy Car",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "blue_dye",
+    null
+   ],
+   [
+    "iron_ingot",
+    "iron_ingot",
+    "iron_ingot"
+   ],
+   [
+    "toy_wheel",
+    null,
+    "toy_wheel"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "blue_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "iron_ingot",
+    "quantity": 3
+   },
+   {
+    "itemId": "toy_wheel",
+    "quantity": 2
+   }
+  ],
+  "output": {
+   "itemId": "basic_toy_car",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Toy Wheel and 2 other kinds of ingredient.",
+   "Arrange: 1 Blue Dye, 3 Iron Ingot, 2 Toy Wheel in the pattern shown."
+  ],
+  "discoveryMessage": "Your first toy car! Vroom vroom!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "sports_car",
+  "name": "Sports Car",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "red_dye",
+    null
+   ],
+   [
+    "iron_ingot",
+    "basic_toy_car",
+    "iron_ingot"
+   ],
+   [
+    null,
+    "redstone",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "red_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "iron_ingot",
+    "quantity": 2
+   },
+   {
+    "itemId": "basic_toy_car",
+    "quantity": 1
+   },
+   {
+    "itemId": "redstone",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "sports_car",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:4"
+  ],
+  "category": "spicy_wheels",
+  "tier": 4,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Redstone Dust and 3 other kinds of ingredient.",
+   "Arrange: 1 Red Dye, 2 Iron Ingot, 1 Basic Toy Car, 1 Redstone Dust in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "monster_truck",
+  "name": "Monster Truck",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "toy_wheel",
+    null,
+    "toy_wheel"
+   ],
+   [
+    "toy_wheel",
+    "basic_toy_car",
+    "toy_wheel"
+   ],
+   [
+    "iron_ingot",
+    "iron_ingot",
+    "iron_ingot"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "toy_wheel",
+    "quantity": 4
+   },
+   {
+    "itemId": "basic_toy_car",
+    "quantity": 1
+   },
+   {
+    "itemId": "iron_ingot",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "monster_truck",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Toy Wheel and 2 other kinds of ingredient.",
+   "Arrange: 4 Toy Wheel, 1 Basic Toy Car, 3 Iron Ingot in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "school_bus",
+  "name": "School Bus",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "yellow_dye",
+    "yellow_dye",
+    "yellow_dye"
+   ],
+   [
+    "iron_ingot",
+    "basic_toy_car",
+    "iron_ingot"
+   ],
+   [
+    "toy_wheel",
+    null,
+    "toy_wheel"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "yellow_dye",
+    "quantity": 3
+   },
+   {
+    "itemId": "iron_ingot",
+    "quantity": 2
+   },
+   {
+    "itemId": "basic_toy_car",
+    "quantity": 1
+   },
+   {
+    "itemId": "toy_wheel",
+    "quantity": 2
+   }
+  ],
+  "output": {
+   "itemId": "school_bus",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Yellow Dye and 3 other kinds of ingredient.",
+   "Arrange: 3 Yellow Dye, 2 Iron Ingot, 1 Basic Toy Car, 2 Toy Wheel in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "orange_track",
+  "name": "Orange Track",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "orange_dye",
+    "smooth_stone",
+    "orange_dye"
+   ],
+   [
+    "orange_dye",
+    "smooth_stone",
+    "orange_dye"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "orange_dye",
+    "quantity": 4
+   },
+   {
+    "itemId": "smooth_stone",
+    "quantity": 2
+   }
+  ],
+  "output": {
+   "itemId": "orange_track",
+   "quantity": 4
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Orange Dye and 1 other kind of ingredient.",
+   "Arrange: 4 Orange Dye, 2 Smooth Stone in the pattern shown."
+  ],
+  "discoveryMessage": "Orange Track! Build a race course.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "curved_track",
+  "name": "Curved Track",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 2,
+  "pattern": [
+   [
+    "orange_track",
+    "orange_track"
+   ],
+   [
+    null,
+    "orange_track"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "orange_track",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "curved_track",
+   "quantity": 2
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Orange Track.",
+   "Arrange: 3 Orange Track in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "loop_the_loop",
+  "name": "Loop-the-Loop",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "orange_track",
+    "orange_track",
+    "orange_track"
+   ],
+   [
+    "curved_track",
+    null,
+    "curved_track"
+   ],
+   [
+    "orange_track",
+    "orange_track",
+    "orange_track"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "orange_track",
+    "quantity": 6
+   },
+   {
+    "itemId": "curved_track",
+    "quantity": 2
+   }
+  ],
+  "output": {
+   "itemId": "loop_the_loop",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Orange Track and 1 other kind of ingredient.",
+   "Arrange: 6 Orange Track, 2 Curved Track in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "car_launcher",
+  "name": "Car Launcher",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "piston",
+    null
+   ],
+   [
+    "orange_track",
+    "redstone",
+    "orange_track"
+   ],
+   [
+    null,
+    "iron_ingot",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "piston",
+    "quantity": 1
+   },
+   {
+    "itemId": "orange_track",
+    "quantity": 2
+   },
+   {
+    "itemId": "redstone",
+    "quantity": 1
+   },
+   {
+    "itemId": "iron_ingot",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "car_launcher",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:4"
+  ],
+  "category": "spicy_wheels",
+  "tier": 4,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Piston and 3 other kinds of ingredient.",
+   "Arrange: 1 Piston, 2 Orange Track, 1 Redstone Dust, 1 Iron Ingot in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "toy_car_garage",
+  "name": "Toy Car Garage",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "oak_planks",
+    "oak_planks",
+    "oak_planks"
+   ],
+   [
+    "oak_planks",
+    "chest",
+    "oak_planks"
+   ],
+   [
+    "orange_track",
+    null,
+    "orange_track"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "oak_planks",
+    "quantity": 5
+   },
+   {
+    "itemId": "chest",
+    "quantity": 1
+   },
+   {
+    "itemId": "orange_track",
+    "quantity": 2
+   }
+  ],
+  "output": {
+   "itemId": "toy_car_garage",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Orange Track and 2 other kinds of ingredient.",
+   "Arrange: 5 Oak Planks, 1 Chest, 2 Orange Track in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "golden_toy_car",
+  "name": "Golden Toy Car",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "gold_ingot",
+    "gold_ingot",
+    "gold_ingot"
+   ],
+   [
+    "gold_ingot",
+    "basic_toy_car",
+    "gold_ingot"
+   ],
+   [
+    null,
+    "gold_ingot",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "gold_ingot",
+    "quantity": 6
+   },
+   {
+    "itemId": "basic_toy_car",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "golden_toy_car",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Basic Toy Car and 1 other kind of ingredient.",
+   "Arrange: 6 Gold Ingot, 1 Basic Toy Car in the pattern shown."
+  ],
+  "discoveryMessage": "A Golden Toy Car! It shines like the sun.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "rocket_car",
+  "name": "Rocket Car",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "firework_rocket",
+    null
+   ],
+   [
+    "firework_rocket",
+    "sports_car",
+    "firework_rocket"
+   ],
+   [
+    null,
+    "redstone",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "firework_rocket",
+    "quantity": 3
+   },
+   {
+    "itemId": "sports_car",
+    "quantity": 1
+   },
+   {
+    "itemId": "redstone",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "rocket_car",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:4"
+  ],
+  "category": "spicy_wheels",
+  "tier": 4,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Firework Rocket and 2 other kinds of ingredient.",
+   "Arrange: 3 Firework Rocket, 1 Sports Car, 1 Redstone Dust in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "rainbow_car",
+  "name": "Rainbow Car",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "red_dye",
+    "orange_dye",
+    "yellow_dye"
+   ],
+   [
+    "green_dye",
+    "basic_toy_car",
+    "blue_dye"
+   ],
+   [
+    "purple_dye",
+    "white_dye",
+    "black_dye"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "red_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "orange_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "yellow_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "green_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "basic_toy_car",
+    "quantity": 1
+   },
+   {
+    "itemId": "blue_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "purple_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "white_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "black_dye",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "rainbow_car",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Red Dye and 8 other kinds of ingredient.",
+   "Arrange: 1 Red Dye, 1 Orange Dye, 1 Yellow Dye, 1 Green Dye, 1 Basic Toy Car, 1 Blue Dye, 1 Purple Dye, 1 White Dye, 1 Black Dye in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "hot_dog_car",
+  "name": "Hot Dog Car",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "bread",
+    null
+   ],
+   [
+    "bread",
+    "cooked_beef",
+    "bread"
+   ],
+   [
+    "toy_wheel",
+    "basic_toy_car",
+    "toy_wheel"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "bread",
+    "quantity": 3
+   },
+   {
+    "itemId": "cooked_beef",
+    "quantity": 1
+   },
+   {
+    "itemId": "toy_wheel",
+    "quantity": 2
+   },
+   {
+    "itemId": "basic_toy_car",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "hot_dog_car",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Bread and 3 other kinds of ingredient.",
+   "Arrange: 3 Bread, 1 Steak, 2 Toy Wheel, 1 Basic Toy Car in the pattern shown."
+  ],
+  "discoveryMessage": "A Hot Dog Car! It looks yummy. Do not eat it!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
+ },
+ {
+  "id": "diamond_toy_car",
+  "name": "Diamond Toy Car",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "diamond",
+    "diamond",
+    "diamond"
+   ],
+   [
+    "diamond",
+    "golden_toy_car",
+    "diamond"
+   ],
+   [
+    null,
+    "diamond",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "diamond",
+    "quantity": 6
+   },
+   {
+    "itemId": "golden_toy_car",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "diamond_toy_car",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "spicy_wheels",
+  "tier": 3,
+  "hints": [
+   "It is a toy car or a piece of toy track.",
+   "It uses Golden Toy Car and 1 other kind of ingredient.",
+   "Arrange: 6 Diamond, 1 Golden Toy Car in the pattern shown."
+  ],
+  "discoveryMessage": "The Diamond Toy Car! The rarest car of all!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ]
  }
 ]

@@ -13687,5 +13687,402 @@
   "unlockRequirements": [
    "recipe:sky_boots"
   ]
+ },
+ {
+  "id": "toy_wheel",
+  "name": "Toy Wheel",
+  "description": "A tiny rubber wheel for toy cars.",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "toy_wheel"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:toy_wheel"
+  ]
+ },
+ {
+  "id": "basic_toy_car",
+  "name": "Basic Toy Car",
+  "description": "A little blue toy car. Vroom!",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "toy_car",
+   "a": "#3a7ad8",
+   "x": "#d0d8e0"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:basic_toy_car"
+  ]
+ },
+ {
+  "id": "sports_car",
+  "name": "Sports Car",
+  "description": "A fast red toy car with a spoiler.",
+  "category": "spicy_wheels",
+  "tier": 4,
+  "icon": {
+   "t": "sports_car",
+   "a": "#d8302a",
+   "x": "#d0d8e0"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:sports_car"
+  ]
+ },
+ {
+  "id": "monster_truck",
+  "name": "Monster Truck",
+  "description": "A toy truck with giant bouncy tires.",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "monster_truck",
+   "a": "#3fae4a",
+   "x": "#d0d8e0"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:monster_truck"
+  ]
+ },
+ {
+  "id": "school_bus",
+  "name": "School Bus",
+  "description": "A little yellow bus. All aboard!",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "school_bus",
+   "a": "#f7c843",
+   "x": "#26201c"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:school_bus"
+  ]
+ },
+ {
+  "id": "orange_track",
+  "name": "Orange Track",
+  "description": "A piece of bright orange toy track.",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "track",
+   "a": "#f39a2e",
+   "c": "#ffc070",
+   "b": "#b8641a"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:orange_track"
+  ]
+ },
+ {
+  "id": "curved_track",
+  "name": "Curved Track",
+  "description": "Toy track that turns a corner.",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "curved_track",
+   "a": "#f39a2e",
+   "c": "#ffc070",
+   "b": "#b8641a"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:curved_track"
+  ]
+ },
+ {
+  "id": "loop_the_loop",
+  "name": "Loop-the-Loop",
+  "description": "A big loop. Cars zoom upside down!",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "track_loop",
+   "a": "#f39a2e",
+   "c": "#ffc070",
+   "b": "#b8641a"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:loop_the_loop"
+  ]
+ },
+ {
+  "id": "car_launcher",
+  "name": "Car Launcher",
+  "description": "Press the button. Zoom! Off goes the car.",
+  "category": "spicy_wheels",
+  "tier": 4,
+  "icon": {
+   "t": "launcher",
+   "a": "#f39a2e",
+   "c": "#ffc070",
+   "b": "#b8641a"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:car_launcher"
+  ]
+ },
+ {
+  "id": "toy_car_garage",
+  "name": "Toy Car Garage",
+  "description": "A cozy home for your toy cars.",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "garage",
+   "a": "#3a7ad8",
+   "x": "#f39a2e"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:toy_car_garage"
+  ]
+ },
+ {
+  "id": "golden_toy_car",
+  "name": "Golden Toy Car",
+  "description": "A shiny gold toy car. So rare!",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "shiny_car",
+   "a": "#f7c843",
+   "c": "#fff0a0",
+   "b": "#c8901a",
+   "x": "#fff8d0"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:golden_toy_car"
+  ]
+ },
+ {
+  "id": "rocket_car",
+  "name": "Rocket Car",
+  "description": "A toy car with three rockets. Whoosh!",
+  "category": "spicy_wheels",
+  "tier": 4,
+  "icon": {
+   "t": "rocket_car",
+   "a": "#d8302a",
+   "x": "#f39a2e"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:rocket_car"
+  ]
+ },
+ {
+  "id": "rainbow_car",
+  "name": "Rainbow Car",
+  "description": "A toy car painted every color.",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "rainbow_car",
+   "x": "#d0d8e0"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:rainbow_car"
+  ]
+ },
+ {
+  "id": "hot_dog_car",
+  "name": "Hot Dog Car",
+  "description": "A silly car that looks like a hot dog.",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "hot_dog_car",
+   "a": "#e0a860",
+   "c": "#f4cc90",
+   "b": "#a86a30",
+   "x": "#c8503a"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:hot_dog_car"
+  ]
+ },
+ {
+  "id": "diamond_toy_car",
+  "name": "Diamond Toy Car",
+  "description": "A sparkly diamond car. The rarest of all!",
+  "category": "spicy_wheels",
+  "tier": 3,
+  "icon": {
+   "t": "shiny_car",
+   "a": "#5fe0e8",
+   "c": "#c8fbff",
+   "b": "#2a9aa8",
+   "x": "#e8ffff"
+  },
+  "tags": [
+   "spicy_wheels",
+   "toy",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:diamond_toy_car"
+  ]
  }
 ]

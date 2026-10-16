@@ -404,6 +404,82 @@
       '...acwwaawwab...', '...acwkaawkab...', '...aawkaawkab...', '..aaaaaaaaaaab..',
       '..aaaaaaaaaaaaa.', '..bbbbbbbbbbbbb.', '................', '................',
       '................', '................', '................', '................'],
+    // Spicy Wheels toy cars and track pieces
+    toy_wheel: [
+      '................', '................', '................', '.....kkkkk......',
+      '....kkkkkkk.....', '...kkkgggkkk....', '...kkgwggGkk....', '...kkggggGkk....',
+      '...kkgggGGkk....', '...kkkGGGkkk....', '....kkkkkkk.....', '.....kkkkk......',
+      '................', '................', '................', '................'],
+    toy_car: [
+      '................', '................', '................', '................',
+      '.....cccccc.....', '....axxxaxxa....', '...aaxxxaxxaa...', '.ccccccccccccc..',
+      '.aaaaaaaaaaaaaa.', '.aaaaaaaaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    sports_car: [
+      '................', '................', '................', '................',
+      '.kkk............', '..k...cccc......', '..k..axxxxa.....', '.cccccccccccccc.',
+      '.aakkkkkkkkkaaa.', '.aaaaaaaaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    monster_truck: [
+      '................', '................', '.....cccccc.....', '....axxxaxxa....',
+      '..cccccccccccc..', '..aaaaaaaaaaaa..', '..bbbbbbbbbbbb..', '....g......g....',
+      '..kkkk....kkkk..', '.kkGGkk..kkGGkk.', '.kGggGk..kGggGk.', '.kGggGk..kGggGk.',
+      '.kkGGkk..kkGGkk.', '..kkkk....kkkk..', '................', '................'],
+    school_bus: [
+      '................', '................', '................', '.cccccccccccccc.',
+      '.axxaxxaxxaxxaa.', '.axxaxxaxxaxxaa.', '.aaaaaaaaaaaaaa.', '.kkkkkkkkkkkkkk.',
+      '.aaaaaaaaaaaaaa.', '.bbkkkbbbbbkkkb.', '...kgk.....kgk..', '...kkk.....kkk..',
+      '................', '................', '................', '................'],
+    track: [
+      '................', '................', '................', '................',
+      '................', '.bbbbbbbbbbbbbb.', '.aaaaaaaaaaaaaa.', '.aaaaaaaaaaaaaa.',
+      '.aaaaaaaaaaaaaa.', '.cccccccccccccc.', '.bbbbbbbbbbbbbb.', '................',
+      '................', '................', '................', '................'],
+    curved_track: [
+      '................', 'bbbbbb..........', 'aaaaaabb........', 'aaaaaaaabb......',
+      'cccccaaaaab.....', 'aaaaaccaaaab....', 'aaaaaaaccaaab...', 'bbbbaaaaccaab...',
+      '....bbaaacaaab..', '......baaacaab..', '.......baacaaab.', '.......baaacaab.',
+      '........baacaab.', '........baacaab.', '........baacaab.', '........baacaab.'],
+    track_loop: [
+      '.......bb.......', '....bbaaaabb....', '...baaccccaab...', '..bacc....ccab..',
+      '..bac......cab..', '..ac........ca..', '.bac........cab.', '.bac........cab.',
+      '..ac........ca..', '..bac......cab..', '..bacc....ccab..', '...baaccccaab...',
+      '.bbbbbbbbbbbbbb.', '.aaaaaaaaaaaaaa.', '.bbbbbbbbbbbbbb.', '................'],
+    launcher: [
+      '................', '................', '................', '.....111........',
+      '...GGGGGGG......', '...GkgkgkG......', '...GgkgkgG......', '...GkgkgkG......',
+      '.bbbbbbbbbbbbbb.', '.aaaaaaaaaaaaaa.', '.aaaaaaaaaaaaaa.', '.cccccccccccccc.',
+      '.bbbbbbbbbbbbbb.', '................', '................', '................'],
+    garage: [
+      '................', '................', '..aaaaaaaaaaaa..', '.cccccccccccccc.',
+      '.aaaaaaaaaaaaaa.', '.aakkkkkkkkkkaa.', '.aakkkkkkkkkkaa.', '.aak11111kkkkaa.',
+      '.aak1111111kkaa.', '.aakGkkkGkkkkaa.', '.bbbbbbbbbbbbbb.', '...xxxxxxxxxx...',
+      '..xxxxxxxxxxxx..', '................', '................', '................'],
+    rocket_car: [
+      '.3xgggg1........', '................', '..3xgggg1.......', '................',
+      '.3xgggg1........', '......cccc......', '.....awwwwa.....', '.cccccccccccccc.',
+      '.aaaaaaaaaaaaaa.', 'xaaaaaaaaaaaaaa.', '3bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    hot_dog_car: [
+      '................', '................', '................', '................',
+      '...cccccccccc...', '..aaaaaaaaaaaa..', '.xxx3xxx3xxx3xx.', '.yx3xxx3xxx3xxy.',
+      '..aaaaaaaaaaaa..', '..bbbbbbbbbbbb..', '...kkk....kkk...', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    rainbow_car: [
+      '................', '................', '................', '................',
+      '.....223344.....', '....2xxx4xx5....', '...12xxx4xx56...', '.11223344556677.',
+      '.11223344556677.', '.11223344556677.', '.11kkk3344kkk77.', '...k1k....k5k...',
+      '...kkk....kkk...', '................', '................', '................'],
+    shiny_car: [
+      '................', '.............w..', '............www.', '.............w..',
+      '.....ccwccc.....', '....axxxaxxa....', '...aaxxxaxxaa...', '.cccwcccccccwc..',
+      '.aaaaaaaaaaaaaa.', '.aaaaaawaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
+    spicy_car: [
+      '.............4..', '............11..', '...........11...', '..........1.....',
+      '................', '......cccc......', '.....awwwwa.....', '.cccccccccccccc.',
+      '.a3x3x3aaaaaaaa.', '.ax3x3aaaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
+      '...kkk....kkk...', '................', '................', '................'],
     heart: [
       '................', '................', '................', '...aaa...aaa....',
       '..acwaa.aaaab...', '..acaaaaaaaab...', '..aaaaaaaaaab...', '...aaaaaaaab....',

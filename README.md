@@ -31,6 +31,7 @@ To add recipes or items, see [ADDING-RECIPES.md](ADDING-RECIPES.md).
 | `src/data_core.js` | Item/recipe builders, wood families, stone, tools. |
 | `src/data_more.js` | Metals and gems, farming and food, colors, redstone, magic, creatures. |
 | `src/data_world.js` | Legendary tier, biomes, quests. |
+| `src/data_wheels.js` | Spicy Wheels expansion: toy cars, toy track, and the book collection. |
 | `src/engine.js` | All game rules: indexes, recipe matcher, hints, inventory, stations, quests, progression simulation, dataset validation, save validation, migration, backup storage, import/export. No DOM. |
 | `src/audio.js` | Procedural sound effects and music box tune (Web Audio). Created only after the player turns sound on. |
 | `src/ui.js` | Interface: rendering, tap-to-place, pointer drag and drop, keyboard, book, map, quests, settings, help, tutorial, celebrations. |
@@ -44,9 +45,9 @@ The UI never contains recipe rules. Crafting, the book, hints, quests and unlock
 
 ## Content
 
-* **546 items, 489 recipes, 57 quests, 8 areas, 6 tiers.**
+* **561 items, 504 recipes, 57 quests, 8 areas, 6 tiers.**
 * Recipes by method: 434 crafting grid (321 shaped, 113 shapeless), 21 smelting, 20 brewing, 9 smithing.
-* 453 recipes are Minecraft-style references (Java Edition 1.21) and 36 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
+* 453 recipes are Minecraft-style references (Java Edition 1.21) and 51 are original to this game. Every recipe and item carries `sourceType` / `isOriginalContent`, and the book shows a badge.
 * 4 secret recipes (Disco Ball, Rubber Duck, Bubble Wand, Party Cake Hat).
 * Recipes by the tier they first become reachable: 169, 90, 134, 35, 33, 21.
 
@@ -85,13 +86,17 @@ Plus 23 optional bonus challenges. Each area adds new materials to the Supply Cr
 
 **Creative Sandbox** has its own bag and table, every item in the crate, every station, and no fuel needed. The adventure is kept separately and you can switch back at any time.
 
+**Spicy Wheels** is a collection page in the Discovery Book with 15 toy cars and track pieces. It shows all 15 as mystery shapes from the start, counts how many you have found, and gives a Spicy Wheels Master badge and a big celebration when you find them all.
+
+**Dev mode (for testing):** open the game with `?dev` at the end of the address, for example `docs/index.html?dev`. Dev mode uses its own separate save, so the real game is never changed. In Settings you get Unlock everything (every item, recipe, area and Creative Sandbox), a button to preview the Spicy Wheels Master celebration, and Leave dev mode.
+
 ## Saving
 
 Saves to `localStorage` after every change (debounced) and when the page is hidden. Before overwriting, the previous valid save is kept as a backup. Loading validates every field; a corrupt save falls back to the backup, and if both fail a new game starts while the unreadable data is preserved under a separate key. Saves carry a schema version, schema 1 saves are migrated, and newer versions are refused politely. If a game update removes an item, your own saved game drops just that item instead of being rejected. If an update adds a new supply to an area you already opened, it shows up in your Supply Crate right away. Import validates structure, types and every item, recipe and quest ID, rebuilds a clean state object (unknown keys are dropped), and asks before replacing progress. Reset needs explicit confirmation.
 
 ## Verified (tests actually run)
 
-Engine tests, 76 passing: dataset validity and reachability, recipe count, conflict detection (including an injected conflict), shaped/shapeless/translation/mirroring/empty-cell rules, quantities, grid size limits, station gating, fuel, brewing and smithing, consumption, double-collect protection, harmless failures, returning items, swaps, replenishing, locked supplies, sorting, 200 repeated crafts, Make again, remainders, discoveries, quest prerequisites, 3x3 unlock, tier and biome unlocks, sandbox isolation, hints (arrangement, missing ingredient, no unrelated reveals, secrets never hinted), save round trip, import/export, invalid JSON, unknown IDs, wrong types, newer versions, migration, bad imports not touching progress, no key injection, backup recovery, reset confirmation, refusing to save invalid state, book autofill, saves surviving an update that removes an item, the TNT recipe, the Jump Man recipes, and older saves receiving supplies added to areas they already opened.
+Engine tests, 82 passing: dataset validity and reachability, recipe count, conflict detection (including an injected conflict), shaped/shapeless/translation/mirroring/empty-cell rules, quantities, grid size limits, station gating, fuel, brewing and smithing, consumption, double-collect protection, harmless failures, returning items, swaps, replenishing, locked supplies, sorting, 200 repeated crafts, Make again, remainders, discoveries, quest prerequisites, 3x3 unlock, tier and biome unlocks, sandbox isolation, hints (arrangement, missing ingredient, no unrelated reveals, secrets never hinted), save round trip, import/export, invalid JSON, unknown IDs, wrong types, newer versions, migration, bad imports not touching progress, no key injection, backup recovery, reset confirmation, refusing to save invalid state, book autofill, saves surviving an update that removes an item, the TNT recipe, the Jump Man recipes, every Spicy Wheels recipe and its collection progress, dev unlock, icon rendering, and older saves receiving supplies added to areas they already opened.
 
 Browser tests in Chromium, 40 passing: mouse click-to-place, double-click safety, mouse drag to the table and back to the bag, friendly failure messages, book search and detail, mystery silhouettes, progressive hints, 3x3 unlock in play, keyboard Enter to select and place, Supply Crate x64, progress surviving reload, furnace smelting, hints toggle, reset cancel and confirm, invalid import rejected, no console errors, phone width with no horizontal scroll, touch tap-to-place, touch hold-then-drag, quick swipes not starting drags, table and bag visible together on a phone, new items scrolled into view, every dialog fitting a 375px phone, zero network requests at runtime, and corrupt-save recovery.
 

@@ -25,6 +25,7 @@
   }
   function add(el, c) { if (c === null || c === undefined || c === false) return; if (Array.isArray(c)) c.forEach(function (x) { add(el, x); }); else el.appendChild(typeof c === 'string' || typeof c === 'number' ? document.createTextNode(String(c)) : c); }
   function icon(id, cls) { const it = D.items[id]; return h('img', { class: 'px' + (cls ? ' ' + cls : ''), src: it ? Icons.toDataURL(it.icon, id) : '', alt: '', draggable: 'false' }); }
+  function specIcon(spec, key) { return h('img', { class: 'px', src: Icons.toDataURL(spec, key), alt: '', draggable: 'false' }); }
   function name(id) { return D.items[id] ? D.items[id].name : id; }
   function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); return el; }
 
@@ -32,6 +33,8 @@
   function memoryStorage() { const m = {}; return { getItem: function (k) { return k in m ? m[k] : null; }, setItem: function (k, v) { m[k] = String(v); }, removeItem: function (k) { delete m[k]; } }; }
   function pickStorage() { try { const t = '__wow_test'; localStorage.setItem(t, '1'); localStorage.removeItem(t); return { s: localStorage, persistent: true }; } catch (e) { return { s: memoryStorage(), persistent: false }; } }
   let persistent = true;
+  // Secret dev mode: open the game with ?dev at the end of the address. It uses its own save, so the real game is never touched.
+  const DEV = /[?&]dev(=|&|$)/.test(window.location.search);
   function scheduleSave() {
     setSaveText('Saving...');
     clearTimeout(ui.saveTimer);
@@ -305,6 +308,8 @@
   function handleCraftResult(r) {
     ui.flash = r.output.itemId; if (ui.bagTab !== 'bag') ui.bagTab = 'bag';
     if (r.firstItem) queueCelebration({ type: 'item', item: r.output.itemId, recipe: r.recipe });
+    const cat = r.firstItem && E.collectionOf(r.output.itemId);
+    if (cat && E.collectionProgress(st, cat).complete) queueCelebration({ type: 'collection', cat: cat });
     r.quests.forEach(function (q) { Snd.play('quest'); toast('Quest complete: ' + q.name); });
     r.unlocks.forEach(function (u) { queueCelebration(Object.assign({ type: 'unlock' }, u)); });
   }
@@ -454,7 +459,8 @@
     body.appendChild(h('div', { class: 'stats' },
       h('span', { class: 'chip', text: stats.items + ' / ' + stats.totalItems + ' items' }),
       h('span', { class: 'chip', text: stats.recipes + ' / ' + stats.totalRecipes + ' recipes' }),
-      h('span', { class: 'chip', text: secrets.filter(function (s) { return st.discoveredItems[s]; }).length + ' / ' + secrets.length + ' secrets' })));
+      h('span', { class: 'chip', text: secrets.filter(function (s) { return st.discoveredItems[s]; }).length + ' / ' + secrets.length + ' secrets' }),
+      Object.keys(D.collections || {}).filter(function (cat) { return E.collectionProgress(st, cat).complete; }).map(function (cat) { return h('span', { class: 'chip badge-chip', text: '\uD83C\uDFC6 ' + D.collections[cat].badge }); })));
     const search = h('input', { class: 'search', type: 'search', placeholder: 'Search the book', 'aria-label': 'Search the book', value: ui.bookSearch, style: 'width:100%;margin-top:10px' });
     search.addEventListener('input', function () { ui.bookSearch = search.value; renderEntries(); });
     body.appendChild(search);
@@ -465,9 +471,12 @@
     body.appendChild(modes);
     const cats = h('div', { class: 'filters', role: 'group', 'aria-label': 'Category' });
     [['all', 'Everything']].concat(D.categories).forEach(function (c) {
-      cats.appendChild(h('button', { 'aria-pressed': String(ui.bookCat === c[0]), onclick: function () { ui.bookCat = c[0]; rebuildOverlay(); }, text: c[1] }));
+      const coll = D.collections && D.collections[c[0]];
+      cats.appendChild(h('button', { class: coll ? 'collbtn' : null, 'aria-pressed': String(ui.bookCat === c[0]), onclick: function () { ui.bookCat = c[0]; rebuildOverlay(); } }, coll ? specIcon(coll.icon, 'collection:' + c[0]) : null, h('span', { text: c[1] })));
     });
     body.appendChild(cats);
+    const coll = D.collections && D.collections[ui.bookCat];
+    if (coll) body.appendChild(collectionCard(ui.bookCat));
     const list = h('div', { class: 'cat', id: 'bookList' });
     body.appendChild(list);
     const later = h('p', { id: 'bookLater', style: 'font-weight:700' });
@@ -478,7 +487,9 @@
       const q = ui.bookSearch.trim().toLowerCase();
       let hiddenLater = 0, shown = 0;
       D.itemOrder.forEach(function (id) {
-        const vis = bookVisible(id), it = D.items[id];
+        const it = D.items[id];
+        let vis = bookVisible(id);
+        if (!vis && coll && it.category === ui.bookCat) vis = 'mystery';
         if (!vis) { if (!st.discoveredItems[id] && !it.secret) hiddenLater++; return; }
         if (ui.bookCat !== 'all' && it.category !== ui.bookCat) return;
         if (ui.bookMode !== 'all' && ui.bookMode !== vis) return;
@@ -491,6 +502,18 @@
       later.textContent = hiddenLater ? hiddenLater + ' more items are waiting in tiers you have not reached yet.' : '';
     }
     renderEntries();
+  }
+  function collectionCard(cat) {
+    const c = D.collections[cat], p = E.collectionProgress(st, cat);
+    return h('div', { class: 'collcard' + (p.complete ? ' done' : '') },
+      h('div', { class: 'collicon' }, specIcon(c.icon, 'collection:' + cat)),
+      h('div', { style: 'flex:1;min-width:200px' },
+        h('h3', { text: c.name }),
+        h('p', { text: c.description }),
+        h('div', { class: 'qbar', role: 'progressbar', 'aria-label': c.name + ' progress', 'aria-valuenow': String(p.found), 'aria-valuemin': '0', 'aria-valuemax': String(p.total) }, h('i', { style: 'width:' + Math.round(100 * p.found / Math.max(1, p.total)) + '%' })),
+        h('div', { style: 'display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px' },
+          h('strong', { text: p.found + '/' + p.total + ' Discovered' }),
+          p.complete ? h('span', { class: 'chip badge-chip', text: '\uD83C\uDFC6 ' + c.badge }) : h('span', { style: 'font-size:14px', text: 'Find them all to earn the ' + c.badge + ' badge!' }))));
   }
   function patternGrid(r, mini) {
     const w = r.type === 'shaped' ? 3 : 3;
@@ -651,6 +674,14 @@
         h('div', { style: 'display:flex;gap:6px;flex-wrap:wrap' }, h('button', { class: 'btn small', onclick: exportSave, text: 'Export save' }), h('button', { class: 'btn small', onclick: importSave, text: 'Import save' }))));
       b.appendChild(h('div', { class: 'setrow' }, h('div', null, h('strong', { text: 'Tutorial' })), h('button', { class: 'btn small', onclick: function () { ui.tutStep = 0; openTutorial(); }, text: 'Show tutorial' })));
       b.appendChild(h('div', { class: 'setrow' }, h('div', null, h('strong', { text: 'Start over' }), h('div', { style: 'font-size:14px', text: 'Erases all progress on this device.' })), h('button', { class: 'btn danger small', onclick: confirmReset, text: 'Reset progress' })));
+      if (DEV) {
+        b.appendChild(h('h3', { text: 'Dev tools' }));
+        b.appendChild(h('p', { style: 'font-size:14px', text: 'You are in dev mode. This is a separate test save. The real game is not changed.' }));
+        b.appendChild(h('div', { style: 'display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px' },
+          h('button', { class: 'btn gold small', onclick: function () { E.devUnlockAll(st); saveNow(); closeOverlay(); render(); toast('Everything unlocked! Switch to Creative to get any item.'); }, text: 'Unlock everything' }),
+          Object.keys(D.collections || {}).map(function (cat) { return h('button', { class: 'btn small', onclick: function () { closeOverlay(); queueCelebration({ type: 'collection', cat: cat }); }, text: 'Show ' + D.collections[cat].badge + ' party' }); }),
+          h('button', { class: 'btn small', onclick: function () { window.location.search = ''; }, text: 'Leave dev mode' })));
+      }
       if (!persistent) b.appendChild(h('p', { style: 'font-weight:700', text: 'This browser is blocking saved games, so progress lasts until you close the page. Use Export save to keep it.' }));
       b.appendChild(h('p', { style: 'font-size:13px', text: 'Workshop of Wonders ' + E.GAME_VERSION + '. Recipes reference ' + D.referenceVersion + '. Not affiliated with Mojang or Microsoft.' }));
       dlg.appendChild(b);
@@ -784,25 +815,28 @@
     const old = $('#celebrate'); if (old) old.remove();
     if (!c) { ui.celebrating = false; return; }
     ui.celebrating = true;
-    let iconId, kicker, title, text;
+    let iconId, iconEl = null, kicker, title, text, big = false;
     if (c.type === 'item') {
-      iconId = c.item; kicker = D.items[c.item].secret ? 'Secret discovery!' : 'New discovery!'; title = name(c.item);
+      const cat = E.collectionOf(c.item), cp = cat && E.collectionProgress(st, cat);
+      iconId = c.item; kicker = D.items[c.item].secret ? 'Secret discovery!' : cat ? 'New ' + D.collections[cat].name + ' find! ' + cp.found + '/' + cp.total : 'New discovery!'; title = name(c.item);
       text = c.recipe.discoveryMessage || D.items[c.item].description;
       const uses = (E.index.usedIn[c.item] || []).length;
       if (!c.recipe.discoveryMessage && uses) text += ' It is used in ' + uses + ' recipe' + (uses > 1 ? 's' : '') + '.';
       Snd.play('discover');
     } else if (c.type === 'grid3') { iconId = 'crafting_table'; kicker = 'Upgrade!'; title = 'Big crafting table'; text = 'Your table is now 3 by 3. Tools, doors and lots more can be made now!'; Snd.play('unlock'); }
     else if (c.type === 'biome') { const b = D.biomes.find(function (x) { return x.id === c.biome; }); iconId = b.icon; kicker = 'New area unlocked!'; title = b.name; text = b.blurb + ' New supplies are in your Supply Crate.'; Snd.play('unlock'); }
+    else if (c.type === 'collection') { const col = D.collections[c.cat]; iconEl = specIcon(col.icon, 'collection:' + c.cat); kicker = 'Collection complete!'; title = col.masterTitle; text = col.masterText; big = true; Snd.play('unlock'); }
     else if (c.type === 'tier') { iconId = ['', 'oak_log', 'iron_ingot', 'wheat', 'redstone', 'nether_wart', 'nether_star'][c.tier]; kicker = 'Tier ' + c.tier + '!'; title = D.tiers[c.tier].name; text = 'A whole new set of things to discover.'; Snd.play('unlock'); }
     else { iconId = 'wonder_engine'; kicker = 'You did it!'; title = 'Creative Sandbox'; text = 'Switch to Creative at the top to build with every item for free. Your adventure stays saved.'; Snd.play('unlock'); }
     const done = function () { wrap.remove(); nextCelebration(); };
     const wrap = h('div', { class: 'celebrate', id: 'celebrate', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'celTitle', onclick: function (e) { if (e.target === wrap) done(); } },
-      h('div', { class: 'panel card' }, h('div', { class: 'rays', 'aria-hidden': 'true' }), h('div', { class: 'icon' }, icon(iconId)),
+      h('div', { class: 'panel card' + (big ? ' master' : '') }, h('div', { class: 'rays', 'aria-hidden': 'true' }), h('div', { class: 'icon' }, iconEl || icon(iconId)),
         h('div', { class: 'kicker', text: kicker }), h('h2', { id: 'celTitle', text: title }), h('p', { text: text }),
         h('button', { class: 'btn gold', 'data-autofocus': true, onclick: done, text: 'Awesome!' })));
     document.body.appendChild(wrap);
     const b = wrap.querySelector('button'); if (b) b.focus();
     confetti();
+    if (big) setTimeout(confetti, 700);
   }
   function confetti() {
     if (reduceMotion()) return;
@@ -921,7 +955,7 @@
   }
   function boot() {
     const pick = pickStorage(); persistent = pick.persistent;
-    store = E.Store(pick.s, 'workshop-of-wonders');
+    store = E.Store(pick.s, 'workshop-of-wonders' + (DEV ? '-dev' : ''));
     const loaded = store.load();
     st = loaded.state;
     applySettings();
@@ -947,7 +981,8 @@
     if (loaded.status === 'updated') toast('The game was updated. Your progress is safe!');
     else if (loaded.status === 'recovered') toast('Your last save had a problem, so we loaded your backup.');
     else if (loaded.status === 'reset_corrupt') toast('Your save could not be read, so a new game started. The old data was kept safe.');
-    if (!st.settings.tutorialDone) openWelcome();
+    if (DEV) document.body.appendChild(h('div', { class: 'devtag', role: 'status', text: 'Dev mode: test save' }));
+    if (!st.settings.tutorialDone && !DEV) openWelcome();
     warmIcons();
     W.UI = { state: function () { return st; }, render: render, select: select, gridTap: gridTap, collect: collect, openBook: openBook, saveNow: saveNow };
   }
