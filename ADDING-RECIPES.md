@@ -8,6 +8,7 @@ All game content lives in three files. The interface reads everything from them,
 | `src/data_more.js` | Metals, farm, colors, redstone, magic, creatures |
 | `src/data_world.js` | Legendary tier, areas (biomes), quests |
 | `src/data_wheels.js` | Spicy Wheels toy cars and track, and its book collection |
+| `src/data_golf.js` | Chip Shot mini golf items, and its book collection |
 
 ## A new item
 
@@ -18,9 +19,9 @@ item('pizza', 'Pizza', 'farming_food', 3,
   ['food', 'original'], { orig: true });               // tags, and mark it original
 ```
 
-Categories: `materials, wood_stone, tools, building, metals_gems, farming_food, animals, transport, machinery, armor, magic, legendary, jump_man, spicy_wheels`.
+Categories: `materials, wood_stone, tools, building, metals_gems, farming_food, animals, transport, machinery, armor, magic, legendary, jump_man, spicy_wheels, chip_shot`.
 
-A category can also be a book collection with its own page, progress count and badge. See `D.collections` in `src/data_wheels.js`.
+A category can also be a book collection with its own page, progress count and badge. See `D.collections` in `src/data_wheels.js` or `src/data_golf.js`.
 Icon templates are listed in `src/icons.js` (`pickaxe`, `gem`, `bottle`, `pie`, `duck`, `star`...), or use `{ t: 'block', s: 'planks', a: '#color' }` for blocks.
 
 ## A new recipe

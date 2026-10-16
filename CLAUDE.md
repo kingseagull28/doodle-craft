@@ -15,6 +15,7 @@ A crafting and discovery browser game for kids aged 6 to 9 (Minecraft-style reci
 | `src/data_more.js` | Metals, farming, colors, redstone, magic, creatures |
 | `src/data_world.js` | Legendary tier, biomes (areas), quests |
 | `src/data_wheels.js` | Spicy Wheels expansion (toy cars, track) and its book collection |
+| `src/data_golf.js` | Chip Shot expansion (mini golf) and its book collection |
 | `src/engine.js` | All game rules, validation, saving. No DOM access. |
 | `src/audio.js` | Procedural Web Audio sound and music |
 | `src/ui.js` | Interface. Reads all rules from the engine and data. |

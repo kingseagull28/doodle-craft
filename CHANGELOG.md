@@ -2,6 +2,7 @@
 
 ## 1.2.1 (2026-10-15)
 * New Spicy Wheels collection in the Discovery Book: 15 toy cars and toy race track pieces, all original recipes. The collection page shows its own icon, a progress count, and a Spicy Wheels Master badge when all 15 are found, with a big celebration.
+* New Chip Shot collection: 20 mini golf items (golf gear, course obstacles, themed holes and rare golf treasures), all original recipes, with a Chip Shot Champion badge and celebration for finding all 20.
 * Secret dev mode: add `?dev` to the game's address to use a separate test save with an Unlock everything button in Settings. The real save is never touched.
 
 ## 1.2.0 (2026-10-15)

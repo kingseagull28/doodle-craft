@@ -25798,5 +25798,1324 @@
    "toy",
    "original"
   ]
+ },
+ {
+  "id": "golf_ball",
+  "name": "Golf Ball",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "white_wool",
+    null
+   ],
+   [
+    "white_wool",
+    "snowball",
+    "white_wool"
+   ],
+   [
+    null,
+    "white_wool",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "white_wool",
+    "quantity": 4
+   },
+   {
+    "itemId": "snowball",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "golf_ball",
+   "quantity": 4
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:1"
+  ],
+  "category": "chip_shot",
+  "tier": 1,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses White Wool and 1 other kind of ingredient.",
+   "Arrange: 4 White Wool, 1 Snowball in the pattern shown."
+  ],
+  "discoveryMessage": "Golf Balls! Ready to putt.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "putter",
+  "name": "Putter",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "stick"
+   ],
+   [
+    null,
+    "stick"
+   ],
+   [
+    "iron_ingot",
+    "stick"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "stick",
+    "quantity": 3
+   },
+   {
+    "itemId": "iron_ingot",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "putter",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:2"
+  ],
+  "category": "chip_shot",
+  "tier": 2,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Iron Ingot and 1 other kind of ingredient.",
+   "Arrange: 3 Stick, 1 Iron Ingot in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "putting_green",
+  "name": "Putting Green",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "green_wool",
+    "green_wool",
+    "green_wool"
+   ],
+   [
+    "dirt",
+    "dirt",
+    "dirt"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "green_wool",
+    "quantity": 3
+   },
+   {
+    "itemId": "dirt",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "putting_green",
+   "quantity": 4
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Green Wool and 1 other kind of ingredient.",
+   "Arrange: 3 Green Wool, 3 Dirt in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "golf_hole_flag",
+  "name": "Golf Hole and Flag",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "red_wool",
+    null
+   ],
+   [
+    null,
+    "stick",
+    null
+   ],
+   [
+    "putting_green",
+    "golf_ball",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "red_wool",
+    "quantity": 1
+   },
+   {
+    "itemId": "stick",
+    "quantity": 1
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   },
+   {
+    "itemId": "golf_ball",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "golf_hole_flag",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Red Wool and 3 other kinds of ingredient.",
+   "Arrange: 1 Red Wool, 1 Stick, 2 Putting Green, 1 Golf Ball in the pattern shown."
+  ],
+  "discoveryMessage": "A Golf Hole and Flag! Now build a course.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "scorecard",
+  "name": "Scorecard",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "paper",
+    "paper",
+    "paper"
+   ],
+   [
+    null,
+    "ink_sac",
+    null
+   ],
+   [
+    null,
+    "feather",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "paper",
+    "quantity": 3
+   },
+   {
+    "itemId": "ink_sac",
+    "quantity": 1
+   },
+   {
+    "itemId": "feather",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "scorecard",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Paper and 2 other kinds of ingredient.",
+   "Arrange: 3 Paper, 1 Ink Sac, 1 Feather in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "windmill_obstacle",
+  "name": "Windmill Obstacle",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "oak_planks",
+    null
+   ],
+   [
+    "oak_planks",
+    "iron_ingot",
+    "oak_planks"
+   ],
+   [
+    "putting_green",
+    "putting_green",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "oak_planks",
+    "quantity": 3
+   },
+   {
+    "itemId": "iron_ingot",
+    "quantity": 1
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "windmill_obstacle",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Putting Green and 2 other kinds of ingredient.",
+   "Arrange: 3 Oak Planks, 1 Iron Ingot, 3 Putting Green in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "golf_ramp",
+  "name": "Ramp",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    null,
+    "oak_slab"
+   ],
+   [
+    null,
+    "oak_slab",
+    "oak_slab"
+   ],
+   [
+    "putting_green",
+    "putting_green",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "oak_slab",
+    "quantity": 3
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "golf_ramp",
+   "quantity": 2
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Putting Green and 1 other kind of ingredient.",
+   "Arrange: 3 Oak Slab, 3 Putting Green in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "golf_loop",
+  "name": "Golf Loop-the-Loop",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "golf_ramp",
+    "putting_green",
+    "golf_ramp"
+   ],
+   [
+    "golf_ramp",
+    null,
+    "golf_ramp"
+   ],
+   [
+    null,
+    "putting_green",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "golf_ramp",
+    "quantity": 4
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   }
+  ],
+  "output": {
+   "itemId": "golf_loop",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Ramp and 1 other kind of ingredient.",
+   "Arrange: 4 Ramp, 2 Putting Green in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "golf_tunnel",
+  "name": "Tunnel",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "stone_bricks",
+    "stone_bricks",
+    "stone_bricks"
+   ],
+   [
+    "stone_bricks",
+    null,
+    "stone_bricks"
+   ],
+   [
+    "putting_green",
+    "putting_green",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "stone_bricks",
+    "quantity": 5
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "golf_tunnel",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Putting Green and 1 other kind of ingredient.",
+   "Arrange: 5 Stone Bricks, 3 Putting Green in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "water_hazard",
+  "name": "Water Hazard",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "water_bucket",
+    null
+   ],
+   [
+    "putting_green",
+    "blue_wool",
+    "putting_green"
+   ],
+   [
+    "dirt",
+    "dirt",
+    "dirt"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "water_bucket",
+    "quantity": 1
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   },
+   {
+    "itemId": "blue_wool",
+    "quantity": 1
+   },
+   {
+    "itemId": "dirt",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "water_hazard",
+   "quantity": 1
+  },
+  "remainders": [
+   {
+    "itemId": "bucket",
+    "quantity": 1
+   }
+  ],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Water Bucket and 3 other kinds of ingredient.",
+   "Arrange: 1 Water Bucket, 2 Putting Green, 1 Blue Wool, 3 Dirt in the pattern shown."
+  ],
+  "discoveryMessage": "A Water Hazard! The empty bucket goes back in your bag.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "sand_trap",
+  "name": "Sand Trap",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "sand",
+    null
+   ],
+   [
+    "putting_green",
+    "sand",
+    "putting_green"
+   ],
+   [
+    "dirt",
+    "dirt",
+    "dirt"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "sand",
+    "quantity": 2
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   },
+   {
+    "itemId": "dirt",
+    "quantity": 3
+   }
+  ],
+  "output": {
+   "itemId": "sand_trap",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Putting Green and 2 other kinds of ingredient.",
+   "Arrange: 2 Sand, 2 Putting Green, 3 Dirt in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "pirate_ship_hole",
+  "name": "Pirate Ship Hole",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "white_wool",
+    null
+   ],
+   [
+    "oak_planks",
+    "stick",
+    "oak_planks"
+   ],
+   [
+    "putting_green",
+    "golf_hole_flag",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "white_wool",
+    "quantity": 1
+   },
+   {
+    "itemId": "oak_planks",
+    "quantity": 2
+   },
+   {
+    "itemId": "stick",
+    "quantity": 1
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   },
+   {
+    "itemId": "golf_hole_flag",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "pirate_ship_hole",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Putting Green and 4 other kinds of ingredient.",
+   "Arrange: 1 White Wool, 2 Oak Planks, 1 Stick, 2 Putting Green, 1 Golf Hole and Flag in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "castle_hole",
+  "name": "Castle Hole",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "stone_bricks",
+    null,
+    "stone_bricks"
+   ],
+   [
+    "stone_bricks",
+    "golf_tunnel",
+    "stone_bricks"
+   ],
+   [
+    "putting_green",
+    "golf_hole_flag",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "stone_bricks",
+    "quantity": 4
+   },
+   {
+    "itemId": "golf_tunnel",
+    "quantity": 1
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   },
+   {
+    "itemId": "golf_hole_flag",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "castle_hole",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Tunnel and 3 other kinds of ingredient.",
+   "Arrange: 4 Stone Bricks, 1 Tunnel, 2 Putting Green, 1 Golf Hole and Flag in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "volcano_hole",
+  "name": "Volcano Hole",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "magma_cream",
+    null
+   ],
+   [
+    "obsidian",
+    "campfire",
+    "obsidian"
+   ],
+   [
+    "putting_green",
+    "golf_hole_flag",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "magma_cream",
+    "quantity": 1
+   },
+   {
+    "itemId": "obsidian",
+    "quantity": 2
+   },
+   {
+    "itemId": "campfire",
+    "quantity": 1
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   },
+   {
+    "itemId": "golf_hole_flag",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "volcano_hole",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:5"
+  ],
+  "category": "chip_shot",
+  "tier": 5,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Magma Cream and 4 other kinds of ingredient.",
+   "Arrange: 1 Magma Cream, 2 Obsidian, 1 Campfire, 2 Putting Green, 1 Golf Hole and Flag in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "dinosaur_hole",
+  "name": "Dinosaur Hole",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "bone_block",
+    null
+   ],
+   [
+    "green_wool",
+    "bone_block",
+    "green_wool"
+   ],
+   [
+    "putting_green",
+    "golf_hole_flag",
+    "putting_green"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "bone_block",
+    "quantity": 2
+   },
+   {
+    "itemId": "green_wool",
+    "quantity": 2
+   },
+   {
+    "itemId": "putting_green",
+    "quantity": 2
+   },
+   {
+    "itemId": "golf_hole_flag",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "dinosaur_hole",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Bone Block and 3 other kinds of ingredient.",
+   "Arrange: 2 Bone Block, 2 Green Wool, 2 Putting Green, 1 Golf Hole and Flag in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "golden_golf_ball",
+  "name": "Golden Golf Ball",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "gold_ingot",
+    "gold_ingot",
+    "gold_ingot"
+   ],
+   [
+    "gold_ingot",
+    "golf_ball",
+    "gold_ingot"
+   ],
+   [
+    null,
+    "gold_ingot",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "gold_ingot",
+    "quantity": 6
+   },
+   {
+    "itemId": "golf_ball",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "golden_golf_ball",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:2"
+  ],
+  "category": "chip_shot",
+  "tier": 2,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Gold Ingot and 1 other kind of ingredient.",
+   "Arrange: 6 Gold Ingot, 1 Golf Ball in the pattern shown."
+  ],
+  "discoveryMessage": "A Golden Golf Ball! It sparkles in the sun.",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "fizzy_golf_ball",
+  "name": "Fizzy Golf Ball",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    null,
+    "gunpowder",
+    null
+   ],
+   [
+    "gunpowder",
+    "golf_ball",
+    "gunpowder"
+   ],
+   [
+    null,
+    "tnt",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "gunpowder",
+    "quantity": 3
+   },
+   {
+    "itemId": "golf_ball",
+    "quantity": 1
+   },
+   {
+    "itemId": "tnt",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "fizzy_golf_ball",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:4"
+  ],
+  "category": "chip_shot",
+  "tier": 4,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Gunpowder and 2 other kinds of ingredient.",
+   "Arrange: 3 Gunpowder, 1 Golf Ball, 1 TNT in the pattern shown."
+  ],
+  "discoveryMessage": "A Fizzy Golf Ball! Fizz, pop, sparkle!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "rainbow_golf_ball",
+  "name": "Rainbow Golf Ball",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "red_dye",
+    "orange_dye",
+    "yellow_dye"
+   ],
+   [
+    "green_dye",
+    "golf_ball",
+    "blue_dye"
+   ],
+   [
+    "purple_dye",
+    "white_dye",
+    "black_dye"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "red_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "orange_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "yellow_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "green_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "golf_ball",
+    "quantity": 1
+   },
+   {
+    "itemId": "blue_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "purple_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "white_dye",
+    "quantity": 1
+   },
+   {
+    "itemId": "black_dye",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "rainbow_golf_ball",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Red Dye and 8 other kinds of ingredient.",
+   "Arrange: 1 Red Dye, 1 Orange Dye, 1 Yellow Dye, 1 Green Dye, 1 Golf Ball, 1 Blue Dye, 1 Purple Dye, 1 White Dye, 1 Black Dye in the pattern shown."
+  ],
+  "discoveryMessage": "",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "potato_putter",
+  "name": "Potato Putter",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "potato"
+   ],
+   [
+    "putter"
+   ],
+   [
+    "stick"
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "potato",
+    "quantity": 1
+   },
+   {
+    "itemId": "putter",
+    "quantity": 1
+   },
+   {
+    "itemId": "stick",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "potato_putter",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:3"
+  ],
+  "category": "chip_shot",
+  "tier": 3,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Potato and 2 other kinds of ingredient.",
+   "Arrange: 1 Potato, 1 Putter, 1 Stick in the pattern shown."
+  ],
+  "discoveryMessage": "A Potato Putter! Who put a potato on it?",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
+ },
+ {
+  "id": "diamond_golf_trophy",
+  "name": "Diamond Golf Trophy",
+  "method": "crafting_grid",
+  "type": "shaped",
+  "gridSize": 3,
+  "pattern": [
+   [
+    "diamond",
+    "diamond",
+    "diamond"
+   ],
+   [
+    "diamond",
+    "golden_golf_ball",
+    "diamond"
+   ],
+   [
+    null,
+    "gold_ingot",
+    null
+   ]
+  ],
+  "list": null,
+  "ingredients": [
+   {
+    "itemId": "diamond",
+    "quantity": 5
+   },
+   {
+    "itemId": "golden_golf_ball",
+    "quantity": 1
+   },
+   {
+    "itemId": "gold_ingot",
+    "quantity": 1
+   }
+  ],
+  "output": {
+   "itemId": "diamond_golf_trophy",
+   "quantity": 1
+  },
+  "remainders": [],
+  "mirror": true,
+  "unlockRequirements": [
+   "grid3",
+   "tier:2"
+  ],
+  "category": "chip_shot",
+  "tier": 2,
+  "hints": [
+   "It is part of a mini golf course.",
+   "It uses Diamond and 2 other kinds of ingredient.",
+   "Arrange: 5 Diamond, 1 Golden Golf Ball, 1 Gold Ingot in the pattern shown."
+  ],
+  "discoveryMessage": "The Diamond Golf Trophy! You are a golf legend!",
+  "sourceType": "original_extension",
+  "referenceVersion": "Workshop of Wonders original",
+  "secret": false,
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ]
  }
 ]

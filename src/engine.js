@@ -88,7 +88,7 @@
     building: 'It is a building block or decoration.', metals_gems: 'It is made of metal or gems.', farming_food: 'It is food or comes from the farm.',
     animals: 'It has to do with animals or creatures.', transport: 'It helps you travel.', machinery: 'It is part of a machine.',
     armor: 'It is armor or adventure gear.', magic: 'It is magical.', legendary: 'It is a legendary creation.',
-    jump_man: 'It is a Jump Man thing.', spicy_wheels: 'It is a toy car or a piece of toy track.'
+    jump_man: 'It is a Jump Man thing.', spicy_wheels: 'It is a toy car or a piece of toy track.', chip_shot: 'It is part of a mini golf course.'
   };
   function rarest(r) {
     let best = null, bt = -1;

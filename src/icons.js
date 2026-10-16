@@ -480,6 +480,107 @@
       '................', '......cccc......', '.....awwwwa.....', '.cccccccccccccc.',
       '.a3x3x3aaaaaaaa.', '.ax3x3aaaaaaaaa.', '.bbkkkbbbbkkkbb.', '...kgk....kgk...',
       '...kkk....kkk...', '................', '................', '................'],
+    // Chip Shot mini golf items
+    golf_ball: [
+      '................', '................', '................', '.....cccaaa.....',
+      '....cccabaaa....', '...ccabaaabaa...', '...ccaaabaaaa...', '..ccaabaaabaaa..',
+      '..cabaaabaaabb..', '..aaaabaaababb..', '...abaaabaabb...', '...aaabaaabbb...',
+      '....aaaabbbb....', '.....aaabbb.....', '................', '................'],
+    shiny_ball: [
+      '................', '................', '.............w..', '.....cccaaa.w.w.',
+      '....cccabaaa.w..', '...ccwbaaabaa...', '...cwaaabaaaa...', '..ccaabaaabaaa..',
+      '..cabaaabaaabb..', '..aaaabaaababb..', '...abaaabaabb...', '...aaabaaabbb...',
+      '....aaaabbbb....', '.....aaabbb.....', '................', '................'],
+    rainbow_ball: [
+      '................', '................', '................', '.....111111.....',
+      '....11111111....', '...222w222222...', '...3333333333...', '..333333333333..',
+      '..444444444444..', '..5555555w5555..', '...5555555555...', '...6666w66666...',
+      '....77777777....', '.....777777.....', '................', '................'],
+    fizzy_ball: [
+      '........2.......', '.....2.....2....', '........3.......', '...3.........3..',
+      '.......ca.......', '.....ccaaaa.....', '....ccaaaaaa....', '...ccawaaaaaa...',
+      '...caaaaaaaaa...', '...kkkkkkkkkk...', '...kkkkkkkkkk...', '...kkkkkkGkkk...',
+      '....kkkkkkkk....', '.....kkkkkk.....', '.......kk.......', '................'],
+    putter: [
+      '............kk..', '............kk..', '............kk..', '...........hH...',
+      '...........hH...', '..........hH....', '..........hH....', '.........hH.....',
+      '.........hH.....', '........hH......', '........hH......', '.......hH.......',
+      '..gggggggg......', '..GGGGGGGG......', '................', '................'],
+    potato_putter: [
+      '............kk..', '............kk..', '............kk..', '...........hH...',
+      '...........hH...', '..........hH....', '..........hH....', '.........hH.....',
+      '.........hH.....', '...aaabaaH......', '..aawbawaa......', '.aaakaakaba.....',
+      '.aabaaaabaa.....', '..baaaabab......', '...bbbbbb.......', '................'],
+    turf_patch: [
+      '................', '................', '................', '................',
+      '.mnnmmnnmmnnmmn.', '.mnnmmnnmmnnmmn.', '.mnnmmnnmmnnmmn.', '.mnnmmnnmmnnmmn.',
+      '.mnnmmnnmmnnmmn.', '.dddddddddddddd.', '.xxxxxxxxxxxxxx.', '.xzxxxzxxxzxxxx.',
+      '.zzzzzzzzzzzzzz.', '................', '................', '................'],
+    hole_flag: [
+      '................', '.......w11......', '.......w1111....', '.......w11111...',
+      '.......w111.....', '.......w1.......', '.......w........', '.......w........',
+      '.......w........', '....mmnwmmnn....', '..nnmmnwmmnnmm..', '.mnnmmnwkknnmmn.',
+      '.mnnmmnkkknnmmn.', '..nnmmnnmmnnmm..', '....mmnnmmnn....', '................'],
+    scorecard: [
+      '................', '................', '.bbbbbbbbbbb..11', '.bxxxxxxxxxb..3.',
+      '.bxxxxxxxxxb..3.', '.bbbbbbbbbbb.3..', '.baabaabaabb.3..', '.baabaabaabb3...',
+      '.bbbbbbbbbbb3...', '.baabaabaab3....', '.baabaabaab3....', '.bbbbbbbbb3b....',
+      '.baabaabaa3k....', '.bbbbbbbbbkb....', '................', '................'],
+    windmill: [
+      '..w..........w..', '...w........w...', '....w......w....', '.....w....w.....',
+      '......w11w......', '......1GG1......', '......1ww1......', '......whhw......',
+      '.....wHHHHw.....', '....whhhhhhw....', '...wHHHkkHHHw...', '....hhhkkhhh....',
+      '...HHHHkkHHHH...', '.mnnmmnnmmnnmmn.', '.dddddddddddddd.', '................'],
+    ramp: [
+      '................', '................', '................', '................',
+      '.............cc.', '............caa.', '..........ccaHh.', '........ccaahHh.',
+      '.......caahhhHh.', '.....ccahHhhhHh.', '....caahhHhhhHh.', '..ccaHhhhHhhhHh.',
+      '.caaHHHHHHHHHHH.', '.HHHHHHHHHHHHHH.', '................', '................'],
+    tunnel: [
+      '................', '................', '................', '.cccccccccccccc.',
+      '.abaaabaaabaaab.', '.abaaakkkkbaaab.', '.bbbbkkkkkkbbbb.', '.aaabkkkkkkabaa.',
+      '.aaakkkkkkkkbaa.', '.bbbbkkkkkkbbbb.', '.abaakkkkkkaaab.', '.abaaxxxxxxaaab.',
+      'mmnnmmnnmmnnmmnn', 'dddddddddddddddd', '................', '................'],
+    pond: [
+      '................', '................', '................', '................',
+      '.....dnnmmd.....', '...nmmHhmmnnm...', '..nnmxHhxzxnmm..', '.mnnxxHhzxxxmmn.',
+      '.mnxxxHhxxxxzmn.', '.mnxxxHhxxxzxmn.', '.mnnxzHhxxzxmmn.', '..nnmxHhxzxnmm..',
+      '...nmmHhmmnnm...', '.....dHhmmd.....', '................', '................'],
+    bunker: [
+      '................', '................', '................', '................',
+      '.....dnnmmd.....', '...nmmnnmmnnm...', '..nnmzyxxxxnmm..', '.mnnyxxzxxxxmmn.',
+      '.mnxxxxxxzxyxmn.', '.mnxzxxxxyxzxmn.', '.mnnxxzyxxxxmmn.', '..nnmyxxzxxnmm..',
+      '...nmmnnmmnnm...', '.....dnnmmd.....', '................', '................'],
+    pirate_ship: [
+      '................', '.......Hkwk.....', '.......Hkkk.....', '......wH........',
+      '.....wwH........', '....wwwH........', '...wwwwH........', '...wwwwH........',
+      '...wwwwH........', '.HHHHHHHHHHHH...', '..hhkhhhkhhh....', '...hhhhhhhh.....',
+      'mmnnmmnnmmnkkknn', 'mmnnmmnnmmnkkknn', 'dddddddddddddddd', '................'],
+    castle: [
+      '................', '..G11........G11', '..G1.........G1.', '..G..........G..',
+      '.a.a.......a.a..', '.caaa......caaa.', '.aaaab.b.b.aaaa.', '.ckabbbbbbbcaka.',
+      '.aaabbbbbbbbaaa.', '.caabbbkkbbcaaa.', '.aaabbkkkkbbaaa.', '.caabbkkkkbcaaa.',
+      '.aaabbkkkkbbaaa.', 'mmnnmmnnmmnnmmnn', 'dddddddddddddddd', '................'],
+    volcano: [
+      '........3.......', '.....x...x......', '.......3........', '................',
+      '......xxxx......', '......xxxa......', '.....bb3xxb.....', '....aaaxxaaa....',
+      '....bbbbbbbb....', '...aaaaaaaaaa...', '..aaaaaaaaaaaa..', '.bbbbbbbbbbbbbb.',
+      'aaaaaaaaaaaaaaaa', 'mmnnmmzzzznnmmnn', 'ddddddzzzzdddddd', '................'],
+    dinosaur: [
+      '................', '.......c.c......', '....cccccccc....', '...cccccccccc...',
+      '..aaawaaaawaaa..', '..aaakaaaakaaa..', '..aaaaaaaaaaaa..', '..aaaaaaaaaaaa..',
+      '...aawkwkwkwa...', '...aakkkkkkkaa..', '...aakkkkkkkaa..', '...aak11111kaa..',
+      '...aak11111kaa..', 'mmnnmmnnmmnnmmnn', 'dddddddddddddddd', '................'],
+    trophy: [
+      '.......zz.......', '......zzxx......', '......zxxx......', '......xxxx......',
+      '.......xx.......', '...caaaaaaaab...', '.a.caawaaaaab.a.', '.a..cwaaaaab..a.',
+      '.....caaaab.....', '......caab......', '.......xx.......', '.......xx.......',
+      '....zzzzzzzz....', '...xxxxxxxxxx...', '...yyyyyyyyyy...', '................'],
+    chip_shot_icon: [
+      '................', '...........w11..', '...........w1111', '...........w111.',
+      '...........w1...', '...........w....', '....ww.....w....', '...wwwg....w....',
+      '..wwwggg...w....', '..wwgggg...w....', '..nggggnmmnwmm..', '.mnnggnnmmnwmmn.',
+      'mmnnmmnnmkkwkmnn', '.mnnmmnnmmnnmmn.', '..nnmmnnmmnnmm..', '................'],
     heart: [
       '................', '................', '................', '...aaa...aaa....',
       '..acwaa.aaaab...', '..acaaaaaaaab...', '..aaaaaaaaaab...', '...aaaaaaaab....',
@@ -926,7 +1027,8 @@
 
   // ---------- core renderer: returns array of 256 hex colors / null ----------
   var DEF = { h: '#a8783e', H: '#6e4a22', w: '#ffffff', k: '#26201c', g: '#c8c8c8', G: '#5a5a5a',
-    '1': '#e8403a', '2': '#f39a2e', '3': '#f7d94a', '4': '#5fc04a', '5': '#3ab3da', '6': '#4a5ad8', '7': '#a04ad8' };
+    '1': '#e8403a', '2': '#f39a2e', '3': '#f7d94a', '4': '#5fc04a', '5': '#3ab3da', '6': '#4a5ad8', '7': '#a04ad8',
+    m: '#7ad858', n: '#4fb03a', d: '#7a5230' }; // m/n grass stripes, d dirt edge (mini golf turf)
 
   function palette(spec) {
     var a = spec.a || '#9a9a9a';

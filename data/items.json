@@ -14084,5 +14084,527 @@
   "unlockRequirements": [
    "recipe:diamond_toy_car"
   ]
+ },
+ {
+  "id": "golf_ball",
+  "name": "Golf Ball",
+  "description": "A tiny white golf ball with little dimples.",
+  "category": "chip_shot",
+  "tier": 1,
+  "icon": {
+   "t": "golf_ball",
+   "a": "#f2f2ea",
+   "c": "#ffffff",
+   "b": "#c4c4bc"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:golf_ball"
+  ]
+ },
+ {
+  "id": "putter",
+  "name": "Putter",
+  "description": "A little club for tapping the ball.",
+  "category": "chip_shot",
+  "tier": 2,
+  "icon": {
+   "t": "putter"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:putter"
+  ]
+ },
+ {
+  "id": "putting_green",
+  "name": "Putting Green",
+  "description": "Soft green grass for a golf course.",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "turf_patch",
+   "x": "#8a5a30"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:putting_green"
+  ]
+ },
+ {
+  "id": "golf_hole_flag",
+  "name": "Golf Hole and Flag",
+  "description": "A hole with a red flag. Aim here!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "hole_flag"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:golf_hole_flag"
+  ]
+ },
+ {
+  "id": "scorecard",
+  "name": "Scorecard",
+  "description": "Write down your score with the tiny pencil.",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "scorecard",
+   "a": "#f4ecd0",
+   "b": "#b8a888",
+   "x": "#4fb03a"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:scorecard"
+  ]
+ },
+ {
+  "id": "windmill_obstacle",
+  "name": "Windmill Obstacle",
+  "description": "A little windmill. Its blades go round and round.",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "windmill"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:windmill_obstacle"
+  ]
+ },
+ {
+  "id": "golf_ramp",
+  "name": "Ramp",
+  "description": "A green ramp. Up and over!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "ramp",
+   "a": "#4fb03a",
+   "c": "#7ad858"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:golf_ramp"
+  ]
+ },
+ {
+  "id": "golf_loop",
+  "name": "Golf Loop-the-Loop",
+  "description": "A big green loop. The ball rolls upside down!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "track_loop",
+   "a": "#4fb03a",
+   "c": "#7ad858",
+   "b": "#2e7a24"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:golf_loop"
+  ]
+ },
+ {
+  "id": "golf_tunnel",
+  "name": "Tunnel",
+  "description": "A stone tunnel. Roll the ball through!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "tunnel",
+   "a": "#9a9a9a",
+   "b": "#6a6a6a",
+   "c": "#c0c0c0",
+   "x": "#4fb03a"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:golf_tunnel"
+  ]
+ },
+ {
+  "id": "water_hazard",
+  "name": "Water Hazard",
+  "description": "A little pond with a bridge. Try not to splash!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "pond",
+   "x": "#3a8ad8",
+   "z": "#8ac8f0"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:water_hazard"
+  ]
+ },
+ {
+  "id": "sand_trap",
+  "name": "Sand Trap",
+  "description": "A patch of soft sand. Watch out!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "bunker",
+   "x": "#e8d090",
+   "z": "#f4e4b0",
+   "y": "#c8a860"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:sand_trap"
+  ]
+ },
+ {
+  "id": "pirate_ship_hole",
+  "name": "Pirate Ship Hole",
+  "description": "A golf hole on a little pirate ship. Ahoy!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "pirate_ship"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:pirate_ship_hole"
+  ]
+ },
+ {
+  "id": "castle_hole",
+  "name": "Castle Hole",
+  "description": "Putt the ball through the castle gate.",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "castle",
+   "a": "#a0a0a0",
+   "b": "#7a7a7a",
+   "c": "#c8c8c8"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:castle_hole"
+  ]
+ },
+ {
+  "id": "volcano_hole",
+  "name": "Volcano Hole",
+  "description": "A golf hole by a tiny glowing volcano.",
+  "category": "chip_shot",
+  "tier": 5,
+  "icon": {
+   "t": "volcano",
+   "a": "#4a3a3a",
+   "b": "#2a2020",
+   "x": "#f39a2e",
+   "z": "#d8b878"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:volcano_hole"
+  ]
+ },
+ {
+  "id": "dinosaur_hole",
+  "name": "Dinosaur Hole",
+  "description": "Putt the ball into a friendly dino's mouth!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "dinosaur",
+   "a": "#5cc040",
+   "c": "#8ae070"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:dinosaur_hole"
+  ]
+ },
+ {
+  "id": "golden_golf_ball",
+  "name": "Golden Golf Ball",
+  "description": "A shiny gold golf ball. So rare!",
+  "category": "chip_shot",
+  "tier": 2,
+  "icon": {
+   "t": "shiny_ball",
+   "a": "#f7c843",
+   "c": "#fff0a0",
+   "b": "#c8901a"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:golden_golf_ball"
+  ]
+ },
+ {
+  "id": "fizzy_golf_ball",
+  "name": "Fizzy Golf Ball",
+  "description": "A red and black ball that fizzes with sparkles. Just for fun!",
+  "category": "chip_shot",
+  "tier": 4,
+  "icon": {
+   "t": "fizzy_ball",
+   "a": "#d8302a",
+   "c": "#f06a5a"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:fizzy_golf_ball"
+  ]
+ },
+ {
+  "id": "rainbow_golf_ball",
+  "name": "Rainbow Golf Ball",
+  "description": "A golf ball with every color of the rainbow.",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "rainbow_ball"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:rainbow_golf_ball"
+  ]
+ },
+ {
+  "id": "potato_putter",
+  "name": "Potato Putter",
+  "description": "A putter with a potato on the end. So silly!",
+  "category": "chip_shot",
+  "tier": 3,
+  "icon": {
+   "t": "potato_putter",
+   "a": "#c8a060",
+   "b": "#9a7840"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:potato_putter"
+  ]
+ },
+ {
+  "id": "diamond_golf_trophy",
+  "name": "Diamond Golf Trophy",
+  "description": "The greatest golf prize of all!",
+  "category": "chip_shot",
+  "tier": 2,
+  "icon": {
+   "t": "trophy",
+   "a": "#5fe0e8",
+   "c": "#c8fbff",
+   "b": "#2a9aa8",
+   "x": "#f7c843",
+   "z": "#fff0a0"
+  },
+  "tags": [
+   "chip_shot",
+   "golf",
+   "original"
+  ],
+  "stackLimit": 64,
+  "isVanillaReference": false,
+  "isOriginalContent": true,
+  "secret": false,
+  "resource": false,
+  "fuel": 0,
+  "unlockRequirements": [
+   "recipe:diamond_golf_trophy"
+  ]
  }
 ]

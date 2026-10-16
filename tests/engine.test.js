@@ -472,6 +472,67 @@ test('Spicy Wheels icons draw with no missing colors', () => {
   });
 });
 
+// ---------------- Chip Shot expansion ----------------
+const CS = ['golf_ball', 'putter', 'putting_green', 'golf_hole_flag', 'scorecard', 'windmill_obstacle', 'golf_ramp', 'golf_loop', 'golf_tunnel', 'water_hazard',
+  'sand_trap', 'pirate_ship_hole', 'castle_hole', 'volcano_hole', 'dinosaur_hole', 'golden_golf_ball', 'fizzy_golf_ball', 'rainbow_golf_ball', 'potato_putter', 'diamond_golf_trophy'];
+test('Chip Shot has exactly 20 original items, each with one original recipe', () => {
+  eq(E.collectionItems('chip_shot').join(','), CS.join(','));
+  ok(D.categories.some(c => c[0] === 'chip_shot' && c[1] === 'Chip Shot')); eq(D.collections.chip_shot.name, 'Chip Shot');
+  CS.forEach(id => { ok(D.items[id].isOriginalContent, id); const rs = E.index.byOutput[id] || []; eq(rs.length, 1, id); eq(rs[0].sourceType, 'original_extension', id); });
+  eq(E.collectionItems('spicy_wheels').length, 15, 'Spicy Wheels unchanged');
+});
+test('every Chip Shot recipe matches its exact pattern and makes the right amount', () => {
+  const Ww = 'white_wool', St = 'stick', I = 'iron_ingot', Gw = 'green_wool', Di = 'dirt', PG = 'putting_green', GB = 'golf_ball', HF = 'golf_hole_flag', OP = 'oak_planks', SB = 'stone_bricks', Go = 'gold_ingot', Dm = 'diamond', Gp = 'gunpowder', R = 'golf_ramp', Sl = 'oak_slab';
+  const cases = [
+    ['golf_ball', 4, [[_, Ww, _], [Ww, 'snowball', Ww], [_, Ww, _]]],
+    ['putter', 1, [[_, St, _], [_, St, _], [I, St, _]]],
+    ['putting_green', 4, [[_, _, _], [Gw, Gw, Gw], [Di, Di, Di]]],
+    ['golf_hole_flag', 1, [[_, 'red_wool', _], [_, St, _], [PG, GB, PG]]],
+    ['scorecard', 1, [['paper', 'paper', 'paper'], [_, 'ink_sac', _], [_, 'feather', _]]],
+    ['windmill_obstacle', 1, [[_, OP, _], [OP, I, OP], [PG, PG, PG]]],
+    ['golf_ramp', 2, [[_, _, Sl], [_, Sl, Sl], [PG, PG, PG]]],
+    ['golf_loop', 1, [[R, PG, R], [R, _, R], [_, PG, _]]],
+    ['golf_tunnel', 1, [[SB, SB, SB], [SB, _, SB], [PG, PG, PG]]],
+    ['water_hazard', 1, [[_, 'water_bucket', _], [PG, 'blue_wool', PG], [Di, Di, Di]]],
+    ['sand_trap', 1, [[_, 'sand', _], [PG, 'sand', PG], [Di, Di, Di]]],
+    ['pirate_ship_hole', 1, [[_, Ww, _], [OP, St, OP], [PG, HF, PG]]],
+    ['castle_hole', 1, [[SB, _, SB], [SB, 'golf_tunnel', SB], [PG, HF, PG]]],
+    ['volcano_hole', 1, [[_, 'magma_cream', _], ['obsidian', 'campfire', 'obsidian'], [PG, HF, PG]]],
+    ['dinosaur_hole', 1, [[_, 'bone_block', _], [Gw, 'bone_block', Gw], [PG, HF, PG]]],
+    ['golden_golf_ball', 1, [[Go, Go, Go], [Go, GB, Go], [_, Go, _]]],
+    ['fizzy_golf_ball', 1, [[_, Gp, _], [Gp, GB, Gp], [_, 'tnt', _]]],
+    ['rainbow_golf_ball', 1, [['red_dye', 'orange_dye', 'yellow_dye'], ['green_dye', GB, 'blue_dye'], ['purple_dye', 'white_dye', 'black_dye']]],
+    ['potato_putter', 1, [[_, 'potato', _], [_, 'putter', _], [_, St, _]]],
+    ['diamond_golf_trophy', 1, [[Dm, Dm, Dm], [Dm, 'golden_golf_ball', Dm], [_, Go, _]]]
+  ];
+  eq(cases.length, 20);
+  cases.forEach(c => { const r = E.match(grid(c[2]), 3); eq(r && r.output.itemId, c[0], c[0]); eq(r.output.quantity, c[1], c[0] + ' amount'); });
+});
+test('Chip Shot crafting uses up ingredients and gives the bucket back from the Water Hazard', () => {
+  const st = fresh({ grid3: true });
+  place(st, grid([[_, _, _], ['green_wool', 'green_wool', 'green_wool'], ['dirt', 'dirt', 'dirt']]));
+  const before = E.count(st, 'green_wool');
+  let r = E.collect(st); ok(r.ok); eq(E.count(st, 'putting_green'), 4); eq(E.count(st, 'green_wool'), before, 'wool was used up from the table');
+  place(st, grid([[_, 'water_bucket', _], [_, 'blue_wool', _], ['dirt', 'dirt', 'dirt']]));
+  ok(E.placeInGrid(st, 'putting_green', 3).ok && E.placeInGrid(st, 'putting_green', 5).ok);
+  r = E.collect(st); ok(r.ok); eq(E.count(st, 'water_hazard'), 1); eq(E.count(st, 'putting_green'), 2); eq(E.count(st, 'bucket'), 1, 'empty bucket comes back');
+});
+test('Chip Shot Champion triggers at exactly 20 of 20 and survives a save export and import', () => {
+  const st = fresh();
+  CS.slice(0, 19).forEach(id => { st.discoveredItems[id] = 1; });
+  let p = E.collectionProgress(st, 'chip_shot'); eq(p.found, 19); eq(p.complete, false);
+  st.crafted.golf_ball = 40; eq(E.collectionProgress(st, 'chip_shot').found, 19, 'counts unique items, not amounts');
+  st.discoveredItems.diamond_golf_trophy = 1;
+  p = E.collectionProgress(st, 'chip_shot'); eq(p.found, 20); eq(p.complete, true);
+  const back = E.importSave(E.exportSave(st)); ok(back.ok); eq(E.collectionProgress(back.state, 'chip_shot').complete, true);
+  eq(E.collectionProgress(back.state, 'spicy_wheels').complete, false, 'Spicy Wheels is separate');
+});
+test('Chip Shot icons draw with no missing colors', () => {
+  CS.map(id => D.items[id].icon).concat([D.collections.chip_shot.icon]).forEach((spec, i) => {
+    const px = W.Icons.render(spec, 'golftest' + i); ok(px.filter(Boolean).length > 20, 'icon ' + i + ' is empty'); ok(px.indexOf('#ff00ff') < 0, 'icon ' + i + ' has a missing color');
+  });
+});
+
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 failures.forEach(f => console.log('  FAIL ' + f));
 process.exit(fail ? 1 : 0);
