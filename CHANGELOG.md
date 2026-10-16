@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 (2026-10-15)
+* New Spicy Wheels collection in the Discovery Book: 15 toy cars and toy race track pieces, all original recipes. The collection page shows its own icon, a progress count, and a Spicy Wheels Master badge when all 15 are found, with a big celebration.
+* Secret dev mode: add `?dev` to the game's address to use a separate test save with an Unlock everything button in Settings. The real save is never touched.
+
 ## 1.2.0 (2026-10-15)
 * New book category: Jump Man.
 * Added the Question Block, a glowing yellow block with a question mark (8 Bricks around a Chest, original recipe).
@@ -7,8 +11,6 @@
 * Added the Invincibility Star to the Jump Man category (6 Gold Ingots in a star shape, original recipe).
 * Added the Odyssey Moon to the Jump Man category (6 Emeralds in a moon shape, original recipe).
 * Added Cappy to the Jump Man category (Leather Helmet, 2 Eyes of Ender and Red Dye, original recipe).
-* New Spicy Wheels collection in the Discovery Book: 15 toy cars and toy race track pieces, all original recipes. The collection page shows its own icon, a progress count, and a Spicy Wheels Master badge when all 15 are found, with a big celebration.
-* Secret dev mode: add `?dev` to the game's address to use a separate test save with an Unlock everything button in Settings. The real save is never touched.
 
 ## 1.1.0 (2026-10-15)
 * Added TNT (5 Gunpowder and 4 Sand in a checkerboard, Java 1.21 recipe) and Minecart with TNT.
